@@ -159,6 +159,11 @@ GitHub Actions が JSON を書き換えたら、Netlify に「サイト再ビル
   3. Build Command：`pip install -r requirements.txt`、Start Command：`streamlit run dashboard.py --server.port $PORT --server.address 0.0.0.0`。  
   4. Instance Type：`Free`（15分無アクセスでスリープ）。`Deploy Web Service` を押すと URL が発行される。  
   5. ダッシュボードで保存した `data/history.csv` は GitHub に pull/push しておくと Actions／Netlify と整合が取れる。  
+- **ローカルで観測ログを更新する手順**  
+  1. Sourcetree で `Pull` を実行して GitHub 上の最新 `data/history.csv` を取得する。  
+  2. ローカル環境で `streamlit run dashboard.py`（またはエディタ）を使い、霧/天空の実績やメモを編集する。  
+  3. 変更後の `history.csv` を保存し、Sourcetree で `Stage` → `Commit` → `Push`。  
+  4. GitHub Actions が次のスケジュールで新しい `history.csv` を参照し、Netlify も自動更新される。  
 - **GitHub Actions の権限**：`contents: write` を付けたので、ブランチ保護ルールがある場合は bot の push を許可する。  
 - **Netlify Hook**：Secrets に登録し忘れると自動デプロイされない。必要なら複数 Hook を使い分ける。  
 - **トラブル時**：Actions のログと Netlify の Deploy log を確認。手動で `python main.py` を動かしてから push し直せば復旧できる。
