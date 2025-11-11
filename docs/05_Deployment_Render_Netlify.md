@@ -8,6 +8,12 @@ IT リテラシーに自信がなくても順番に進められるよう、や�
 ## 0. 事前準備
 
 1. **GitHub リポジトリを用意**：このプロジェクト（`skycastle-ai`）を GitHub 上に Push しておく。無料枠でもプライベートで OK。  
+   1. ターミナルで `cd /Volumes/IODATA/skycastle-ai` → `git init`。  
+   2. `.gitignore` を作成し、`.DS_Store` や `data/*.csv`、`logs/` など追跡不要なファイルを記述。  
+   3. Sourcetree の「既存のローカルリポジトリを追加」でこのフォルダを登録。  
+   4. GitHub で Private リポジトリ（例：`skycastle-ai`）を README なしで作成。  
+   5. Sourcetree の「リポジトリ設定 → リモート」で Name=`origin`、URL=GitHub の HTTPS URL を設定。  
+   6. Sourcetree で `Initial commit` を作り、ローカル `main` ブランチを選択して `origin/main` へ Push。
 2. **Render アカウント作成**：<https://render.com/> にアクセスし、GitHub と連携しておく。  
 3. **Netlify アカウント作成**：<https://www.netlify.com/> にアクセスし、GitHub 連携を有効化。
 
@@ -15,8 +21,9 @@ IT リテラシーに自信がなくても順番に進められるよう、や�
 
 ## 1. Netlify で静的サイトを公開
 
-1. Netlify ダッシュボードで「Add new site」→「Import an existing project」。  
-2. GitHub から `skycastle-ai` リポジトリを選択。  
+1. Netlify に GitHub アカウントでログインし、「Netlify Auth にメールアドレス読み取りを許可」する。  
+2. ダッシュボードで「Add new site」→「Import an existing project」。  
+3. GitHub から `skycastle-ai` リポジトリを選択。  
 3. Build コマンド：`npm run build` などは不要なので空欄。Publish ディレクトリを `public` に設定。  
 4. デプロイ完了後、サイト URL（例: `https://your-site.netlify.app`）を控えておく。  
    - この URL で `public/forecast.html` が公開され、後で JSON を読み込める状態になる。
