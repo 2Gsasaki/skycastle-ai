@@ -37,6 +37,15 @@ def fetch_weather(target_date: dt.date, use_archive: bool) -> dict:
     }
     base_url = ARCHIVE_URL if use_archive else FORECAST_URL
     resp = requests.get(base_url, params=params, timeout=30)
+
+    if use_archive and resp.status_code == 400:
+        # Archive API は当日データの確定版が未公開だと 400 を返すため、予報 API へフォールバックする。
+        print(
+            f"Archive API unavailable for {target_date.isoformat()}; falling back to forecast.",
+            flush=True,
+        )
+        resp = requests.get(FORECAST_URL, params=params, timeout=30)
+
     resp.raise_for_status()
     return resp.json()
 
