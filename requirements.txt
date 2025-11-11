@@ -1,0 +1,12 @@
+pandas
+numpy
+lightgbm
+scikit-learn
+streamlit
+fastapi
+uvicorn
+requests
+python-dotenv
+joblib
+# opencv-python   # 画像解析を始めるタイミングで有効化
+# yagmail         # メール通知を導入するときに有効化
