@@ -19,6 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      NETLIFY_BUILD_HOOK_URL: ${{ secrets.NETLIFY_BUILD_HOOK_URL }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -66,14 +68,16 @@ jobs:
           fi
 
       - name: Trigger Netlify deploy
-        if: secrets.NETLIFY_BUILD_HOOK_URL != ''
-        run: curl -X POST "${{ secrets.NETLIFY_BUILD_HOOK_URL }}"
+        if: ${{ env.NETLIFY_BUILD_HOOK_URL != '' }}
+        run: curl -X POST "${{ env.NETLIFY_BUILD_HOOK_URL }}"
 
   midnight-forecast:
     if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 15 * * *'
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      NETLIFY_BUILD_HOOK_URL: ${{ secrets.NETLIFY_BUILD_HOOK_URL }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -108,5 +112,5 @@ jobs:
           fi
 
       - name: Trigger Netlify deploy
-        if: secrets.NETLIFY_BUILD_HOOK_URL != ''
-        run: curl -X POST "${{ secrets.NETLIFY_BUILD_HOOK_URL }}"
+        if: ${{ env.NETLIFY_BUILD_HOOK_URL != '' }}
+        run: curl -X POST "${{ env.NETLIFY_BUILD_HOOK_URL }}"
