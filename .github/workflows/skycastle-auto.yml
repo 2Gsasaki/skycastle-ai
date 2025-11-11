@@ -55,18 +55,6 @@ jobs:
           mkdir -p public/data
           cp data/forecast_predictions.json public/data/forecast_predictions.json
 
-      - name: Commit changes
-        run: |
-          if git status --short | grep -qv '^??'; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -A
-            git commit -m "chore: automated update at ${{ steps.dates.outputs.timestamp }}"
-            git push
-          else
-            echo "Nothing to commit."
-          fi
-
       - name: Trigger Netlify deploy
         if: ${{ env.NETLIFY_BUILD_HOOK_URL != '' }}
         run: curl -X POST "${{ env.NETLIFY_BUILD_HOOK_URL }}"
@@ -98,18 +86,6 @@ jobs:
           python predict_forecast_window.py
           mkdir -p public/data
           cp data/forecast_predictions.json public/data/forecast_predictions.json
-
-      - name: Commit changes
-        run: |
-          if git status --short | grep -qv '^??'; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -A
-            git commit -m "chore: midnight forecast refresh"
-            git push
-          else
-            echo "Nothing to commit."
-          fi
 
       - name: Trigger Netlify deploy
         if: ${{ env.NETLIFY_BUILD_HOOK_URL != '' }}
