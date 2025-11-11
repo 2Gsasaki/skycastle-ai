@@ -19,26 +19,35 @@ IT リテラシーに自信がなくても順番に進められるよう、や�
 
 ---
 
-## 1. Netlify で静的サイトを公開
+## 1. Netlify （ネットリファイ）で静的サイトを公開
 
-1. Netlify に GitHub アカウントでログインし、「Netlify Auth にメールアドレス読み取りを許可」する。  
+1. Netlify に GitHub（2Gsasaki） アカウントでログインし、「Netlify Auth にメールアドレス読み取りを許可」する。  
 2. ダッシュボードで「Add new site」→「Import an existing project」。  
-3. GitHub から `skycastle-ai` リポジトリを選択。  
-3. Build コマンド：`npm run build` などは不要なので空欄。Publish ディレクトリを `public` に設定。  
-4. デプロイ完了後、サイト URL（例: `https://your-site.netlify.app`）を控えておく。  
-   - この URL で `public/forecast.html` が公開され、後で JSON を読み込める状態になる。
+3. GitHub から `skycastle-ai` リポジトリを選択（Netlify アプリの対象リポジトリに `skycastle-ai` を追加するのを忘れずに）。  
+4. Build 設定は `Branch: main / Build command: 空欄 / Publish directory: public` で一旦デプロイ。 
+「Deploy（デプロイ）」は、開発したアプリやサイトを利用者がアクセスできる環境へ配置して動かせる状態にすることです。
+開発 → テスト → Deploy → 公開、という流れで使われ、Netlify の場合は「GitHub からコードを取り込み、ビルドしてネット上で公開する作業」を指しています。 
+5. Python 依存のビルドを避けるため、リポジトリ直下に `netlify.toml` を作成して以下を記述：
+   ```toml
+   [build]
+     base = "public"
+     command = ""
+     publish = "."
+   ```
+   コミット＆プッシュすると Netlify が再デプロイし、静的サイトとして成功する。  
+6. 公開 URL 例：`https://skycastle-ai.netlify.app/forecast.html`。`public/data/forecast_predictions.json` を配置し、Render ジョブで更新 → Netlify Deploy Hook を叩いて最新化する運用にする。
 
 ---
 
 ## 2. Render で Web Service（ダッシュボード用）を作成
 
-1. Render ダッシュボード →「New +」→「Web Service」。  
-2. リポジトリに `skycastle-ai` を選び、**Free プラン**を選択。  
-3. Build Command：`pip install -r requirements.txt`（初回ビルド時）  
-4. Start Command：`streamlit run dashboard.py --server.port $PORT --server.address 0.0.0.0`  
-5. デプロイ後、URL（例: `https://skycastle-dashboard.onrender.com`）を控える。  
-   - 誰かがアクセスすると起動し、SkyCastle AI ダッシュボードで観測ログを入力できる。  
-   - 無料枠は 15 分アクセスが無いとスリープする点に注意。
+1. <https://render.com/> にアクセスし、GitHub でログイン → Workspace（例：Secondgate Team）を作成。  
+2. 「New +」→「Web Service」→ 言語 `Python 3` を選択。  
+3. Repository: `skycastle-ai`、Branch: `main`、Root Directory: 空欄（リポジトリ直下）。  
+4. **Build Command**：`pip install -r requirements.txt`  
+5. **Start Command**：`streamlit run dashboard.py --server.port $PORT --server.address 0.0.0.0`  
+6. Instance Type は `Free` を選択（スリープ有り）。Environment Variables は未設定で OK。  
+7. 「Deploy Web Service」を押し、完了後に表示される URL（例: `https://skycastle-dashboard.onrender.com`）を控える。アクセス時に自動起動し、ダッシュボードで観測ログを入力できる。
 
 ---
 

@@ -200,7 +200,9 @@ def render_observation_form(history_df: pd.DataFrame):
 
     st.caption("下の表で直接編集できます（編集後に「保存」ボタンを押してください）。")
     editable_df = history_df.copy()
-    editable_df["date"] = editable_df["date"].dt.date
+    if "date" in editable_df.columns:
+        editable_df["date"] = pd.to_datetime(editable_df["date"], errors="coerce")
+        editable_df["date"] = editable_df["date"].dt.date
     numeric_columns = [
         "temp",
         "humidity",
