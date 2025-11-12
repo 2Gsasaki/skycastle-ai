@@ -56,6 +56,20 @@ jobs:
           mkdir -p public/data
           cp data/forecast_predictions.json public/data/forecast_predictions.json
 
+      - name: Commit generated data
+        env:
+          TIMESTAMP: ${{ steps.dates.outputs.timestamp }}
+        run: |
+          git add data/feed.json data/history.csv data/weather.csv data/forecast_predictions.json data/forecast_window.json public/data/forecast_predictions.json || true
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: automated update at ${TIMESTAMP:-$(date -Iseconds)}"
+          git push
+
       - name: Trigger Netlify deploy
         if: ${{ env.NETLIFY_BUILD_HOOK_URL != '' }}
         run: curl -X POST "${{ env.NETLIFY_BUILD_HOOK_URL }}"
@@ -87,6 +101,18 @@ jobs:
           python predict_forecast_window.py
           mkdir -p public/data
           cp data/forecast_predictions.json public/data/forecast_predictions.json
+
+      - name: Commit generated data
+        run: |
+          git add data/feed.json data/history.csv data/weather.csv data/forecast_predictions.json data/forecast_window.json public/data/forecast_predictions.json || true
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: midnight forecast refresh"
+          git push
 
       - name: Trigger Netlify deploy
         if: ${{ env.NETLIFY_BUILD_HOOK_URL != '' }}
