@@ -362,7 +362,12 @@
             );
           }
 
-          const response = await fetch("../data/forecast_predictions.json", { cache: "no-store" });
+          const pathContainsPublic = window.location.pathname.includes("/public/");
+          const dataPath = pathContainsPublic
+            ? "../data/forecast_predictions.json"
+            : "data/forecast_predictions.json";
+
+          const response = await fetch(dataPath, { cache: "no-store" });
           if (!response.ok) {
             throw new Error(`HTTP ${response.status}`);
           }
