@@ -163,7 +163,7 @@ GitHub Actions が JSON を書き換えたら、Netlify に「サイト再ビル
   1. Sourcetree で `Pull` を実行して GitHub 上の最新 `data/history.csv` を取得する。  
   2. ローカル環境で `streamlit run dashboard.py`（またはエディタ）を使い、霧/天空の実績やメモを編集する。  
   3. 変更後の `history.csv` を保存し、Sourcetree で `Stage` → `Commit` → `Push`。  
-  4. GitHub Actions が次のスケジュールで新しい `history.csv` を参照し、Netlify も自動更新される。  
+  4. GitHub Actions が次のスケジュールで `history.csv` や各 JSON を再計算し、bot が自動的に `main` へ commit/push → Netlify が最新データを配信する。  
 - **GitHub Actions の権限**：`contents: write` を付けたので、ブランチ保護ルールがある場合は bot の push を許可する。  
 - **Netlify Hook**：Secrets に登録し忘れると自動デプロイされない。必要なら複数 Hook を使い分ける。  
 - **トラブル時**：Actions のログと Netlify の Deploy log を確認。手動で `python main.py` を動かしてから push し直せば復旧できる。
