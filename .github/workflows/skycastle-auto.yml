@@ -62,7 +62,7 @@ jobs:
         env:
           TARGET_BRANCH: ${{ github.ref_name }}
         run: |
-          git pull --rebase origin "${TARGET_BRANCH}"
+          git pull --rebase --autostash origin "${TARGET_BRANCH}"
 
       - name: Commit generated data
         env:
@@ -116,7 +116,7 @@ jobs:
         env:
           TARGET_BRANCH: ${{ github.ref_name }}
         run: |
-          git pull --rebase origin "${TARGET_BRANCH}"
+          git pull --rebase --autostash origin "${TARGET_BRANCH}"
 
       - name: Commit generated data
         run: |
