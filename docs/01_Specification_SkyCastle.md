@@ -194,7 +194,7 @@ SkyCastle AI（スカイキャッスルAI）
 | API | Open-Meteo（無料・商用利用可） |
 | 使用ライブラリ | LightGBM, Scikit-learn, Streamlit, OpenCV（すべて無料） |
 | データ公開 | 出典を明記のうえ再利用可（Creative Commons BY-SA） |
-| 著作権 | © 2025 akio sasaki / SkyCastle AI Project |
+| 著作権 | © 2025 SkyCastle AI Project |
 | 再配布 | 教育・研究・自治体用途で自由利用可 |
 
 ---
@@ -205,7 +205,7 @@ SkyCastle AI（スカイキャッスルAI）
 |------|------|
 | 文書名 | SkyCastle AI 要件定義書（仕様書） |
 | バージョン | v1.0 |
-| 作成者 | akio sasaki |
+| 作成者 | SkyCastle Dev Team |
 | 作成日 | 2025-10-29 |
 | 監修 | ChatGPT（GPT-5） |
 | 関連文書 | `docs/02_Technical_Design_SkyCastle.md`、`docs/03_Development_Guide_CodeX.md` |

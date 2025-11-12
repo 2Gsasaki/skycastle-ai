@@ -12,7 +12,7 @@
 - `01_Specification_SkyCastle.md`（要件定義書）
 
 **作成日：** 2025-10-29  
-**作成者：** akio sasaki  
+**作成者：** SkyCastle Dev Team  
 **監修：** ChatGPT（GPT-5）
 
 ---
@@ -421,9 +421,8 @@ IoT連携	気温・湿度センサーとの実測比較
 文書名	SkyCastle AI 技術設計書
 バージョン	v1.0
 作成日	2025-10-29
-作成者	akio sasaki
+作成者	SkyCastle Dev Team
 監修	ChatGPT（GPT-5）
 関連文書	docs/01_Specification_SkyCastle.md / docs/03_Development_Guide_CodeX.md
 
-📘 本書は SkyCastle AI システムの技術的設計基盤を示す公式文書であり、
-教育・研究・地域DX推進目的での引用・転用を許可します。
+📘 本書は SkyCastle AI システムの技術設計書ドラフトです。内容は変更される可能性があり、引用・転用はプロジェクト関係者の合意を得た場合のみ許可します。

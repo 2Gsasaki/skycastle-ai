@@ -15,7 +15,7 @@ AI開発支援ツールを活用して、仕様書・設計書に基づいたス
 - `docs/02_Technical_Design_SkyCastle.md`（技術設計書）
 
 **作成日：** 2025-10-29  
-**作成者：** akio sasaki  
+**作成者：** SkyCastle Dev Team  
 **監修：** ChatGPT（GPT-5）
 
 ---
@@ -442,10 +442,9 @@ StreamlitやFastAPIのポート競合に注意（8501と8000を併用）。
 項目	内容
 文書名	SkyCastle AI 開発手順書（CodeX対応）
 バージョン	v1.0
-作成者	akio sasaki
+作成者	SkyCastle Dev Team
 作成日	2025-10-29
 監修	ChatGPT（GPT-5）
 関連文書	docs/01_Specification_SkyCastle.md／docs/02_Technical_Design_SkyCastle.md
 
-📘 この開発手順書は、CodeX / ChatGPT / VSCode環境において
-AI主導でSkyCastle AIを構築・拡張するための実践ガイドです。
+📘 この開発手順書は、SkyCastle AI を段階的に整備するための開発メモです。内容は随時更新されるため、最新情報はリポジトリ全体のドキュメントを併せて参照してください。
