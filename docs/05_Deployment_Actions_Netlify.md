@@ -3,6 +3,9 @@
 IT リテラシーに自信がなくても順番に進められるよう、やることを 1 つずつ整理しています。  
 ゴール：GitHub Actions の無料ランナーで定期バッチを動かし、Netlify で `public/forecast.html` を公開する。Web ダッシュボード（観測ログ入力用）は必要に応じて別途ホストする。
 
+> **開発中の注意**  
+> この手順書は現在も更新中です。ジョブ構成や公開先（Netlify/GitHub Pages）は今後変更される可能性があります。最新のフローは README も併せて確認してください。
+
 ---
 
 ## 0. 事前準備
@@ -171,3 +174,51 @@ GitHub Actions が JSON を書き換えたら、Netlify に「サイト再ビル
 ---
 
 この順番で進めれば、無料枠のまま「自動で JSON が更新され、Netlify の `public/forecast.html` が最新を表示する」仕組みが構築できます。
+
+---
+
+## 5. GitHub Pages で `public/` をホストする手順（Netlify の代替案）
+
+Netlify の無料枠（1 か月 300 クレジット＝本番デプロイ 20 回）だと、1 日 5 回の自動デプロイで 4 日ほどで枯渇してしまう。そこで GitHub Pages に切り替え、`public/` の中身だけを公開するフローを追加した。以下の手順でセットアップできる。
+
+1. **公開専用ブランチ `gh-pages` を用意（最初の 1 回だけ）**  
+   - GitHub のリポジトリ画面 → `<> Code` タブの `main` ブランチ表示 → `View all branches` → `New branch` で `gh-pages` を作成。ベースは `main` のままで OK。  
+   - ローカルで触る必要はない。以後は GitHub Actions が `public/` の内容を自動的に `gh-pages` へ上書きするため、普段の開発は `main` だけ扱えばよい。
+
+2. **GitHub Pages を `gh-pages` ブランチに設定**  
+   - GitHub → `Settings` → `Pages` → Source を `Deploy from a branch` にし、Branch=`gh-pages`、Folder=`/(root)` を選択 → Save。  
+   - これで `https://<user>.github.io/<repo>/` が発行される。`public/forecast.html` や `public/data/forecast_predictions.json` など `public` 配下だけが配信対象になる（ソースコードは非公開）。
+
+3. **GitHub Actions で `public` → `gh-pages` を自動デプロイする**  
+   - `.github/workflows/deploy-gh-pages.yml` などを作成して以下を記述。1 日 5 回の既存ワークフローが成功した後、もしくは `main` へ Push されたタイミングで走らせる。
+   ```yaml
+   name: Deploy public to GitHub Pages
+
+   on:
+     push:
+       branches: [main]
+     workflow_dispatch:
+
+   jobs:
+     deploy:
+       runs-on: ubuntu-latest
+       steps:
+         - uses: actions/checkout@v4
+         - name: Copy public -> dist
+           run: |
+             rm -rf dist
+             cp -R public dist
+         - name: Deploy to gh-pages
+           uses: peaceiris/actions-gh-pages@v3
+           with:
+             github_token: ${{ secrets.GITHUB_TOKEN }}
+             publish_branch: gh-pages
+             publish_dir: dist
+   ```
+   - `public` 以外のソースは `gh-pages` へコピーしないため、公開側からは参照できない。手元で `public/forecast.html` を修正 → `main` に Push → 数十秒後に Pages も更新、という流れになる。
+
+4. **動作確認**  
+   - GitHub Actions の `Deploy public to GitHub Pages` が緑色になることを確認。  
+   - `https://<user>.github.io/<repo>/forecast.html` へアクセスし、最新の JSON が読み込まれているか確認する。
+
+この構成なら Netlify のクレジット消費を気にせず 1 日 5 回以上の更新を継続できる。
