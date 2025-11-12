@@ -190,7 +190,7 @@ Netlify の無料枠（1 か月 300 クレジット＝本番デプロイ 20 回�
    - これで `https://<user>.github.io/<repo>/` が発行される。`public/forecast.html` や `public/data/forecast_predictions.json` など `public` 配下だけが配信対象になる（ソースコードは非公開）。
 
 3. **GitHub Actions で `public` → `gh-pages` を自動デプロイする**  
-   - `.github/workflows/deploy-gh-pages.yml`（リポジトリに追加済み）で以下のように設定している。`main` へ Push されたタイミング、または手動実行で `public/` の中身だけを `gh-pages` へ反映する。
+   - `.github/workflows/deploy-gh-pages.yml`（リポジトリに追加済み）で `workflow_run` トリガーを使用。`SkyCastle Daily Automation` が成功すると自動で呼び出され、`public/` の中身だけを `gh-pages` へ反映する。必要に応じて `workflow_dispatch` で手動実行も可能。
    ```yaml
    name: Deploy public to GitHub Pages
 

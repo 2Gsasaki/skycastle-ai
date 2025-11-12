@@ -1,14 +1,17 @@
 name: Deploy public to GitHub Pages
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows:
+      - SkyCastle Daily Automation
+    types:
+      - completed
   workflow_dispatch:
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     permissions:
       contents: write
     steps:
@@ -16,6 +19,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          repository: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.repository.full_name || github.repository }}
+          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.ref }}
 
       - name: Prepare publish directory
         run: |
