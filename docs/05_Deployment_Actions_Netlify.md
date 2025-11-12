@@ -11,7 +11,7 @@ IT リテラシーに自信がなくても順番に進められるよう、や�
 ## 0. 事前準備
 
 1. **GitHub リポジトリを用意**：このプロジェクト（`skycastle-ai`）を GitHub 上に Push しておく。無料枠でもプライベートで OK。  
-   1. ターミナルで `cd /Volumes/IODATA/skycastle-ai` → `git init`。  
+   1. ターミナルでリポジトリのルート（例：`cd ~/workspace/skycastle-ai`）へ移動し、`git init`。  
    2. `.gitignore` を作成し、`.DS_Store` や `data/*.csv`、`logs/` など追跡不要なファイルを記述。  
    3. Sourcetree の「既存のローカルリポジトリを追加」でこのフォルダを登録。  
    4. GitHub で Private リポジトリ（例：`skycastle-ai`）を README なしで作成。  
@@ -24,7 +24,7 @@ IT リテラシーに自信がなくても順番に進められるよう、や�
 
 ## 1. Netlify （ネットリファイ）で静的サイトを公開
 
-1. Netlify に GitHub（2Gsasaki） アカウントでログインし、「Netlify Auth にメールアドレス読み取りを許可」する。  
+1. Netlify に GitHub（自分のアカウント）でログインし、「Netlify Auth にメールアドレス読み取りを許可」する。  
 2. ダッシュボードで「Add new site」→「Import an existing project」。  
 3. GitHub から `skycastle-ai` リポジトリを選択（Netlify アプリの対象リポジトリに `skycastle-ai` を追加するのを忘れずに）。  
 4. Build 設定は `Branch: main / Build command: 空欄 / Publish directory: public` で一旦デプロイ。 
