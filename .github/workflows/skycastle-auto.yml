@@ -25,6 +25,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -56,6 +58,12 @@ jobs:
           mkdir -p public/data
           cp data/forecast_predictions.json public/data/forecast_predictions.json
 
+      - name: Rebase with remote before committing
+        env:
+          TARGET_BRANCH: ${{ github.ref_name }}
+        run: |
+          git pull --rebase origin "${TARGET_BRANCH}"
+
       - name: Commit generated data
         env:
           TIMESTAMP: ${{ steps.dates.outputs.timestamp }}
@@ -84,6 +92,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -101,6 +111,12 @@ jobs:
           python predict_forecast_window.py
           mkdir -p public/data
           cp data/forecast_predictions.json public/data/forecast_predictions.json
+
+      - name: Rebase with remote before committing
+        env:
+          TARGET_BRANCH: ${{ github.ref_name }}
+        run: |
+          git pull --rebase origin "${TARGET_BRANCH}"
 
       - name: Commit generated data
         run: |
