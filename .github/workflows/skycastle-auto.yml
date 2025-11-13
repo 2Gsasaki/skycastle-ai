@@ -76,7 +76,18 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "chore: automated update at ${TIMESTAMP:-$(date -Iseconds)}"
-          git push
+          attempts=0
+          max_attempts=3
+          until git push; do
+            attempts=$((attempts + 1))
+            if [ "$attempts" -ge "$max_attempts" ]; then
+              echo "git push failed after ${attempts} attempts."
+              exit 1
+            fi
+            wait_seconds=$((attempts * 10))
+            echo "git push failed (attempt ${attempts}/${max_attempts}); retrying in ${wait_seconds}s..."
+            sleep "${wait_seconds}"
+          done
 
       - name: Trigger Netlify deploy
         if: ${{ env.NETLIFY_BUILD_HOOK_URL != '' }}
@@ -128,7 +139,18 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "chore: midnight forecast refresh"
-          git push
+          attempts=0
+          max_attempts=3
+          until git push; do
+            attempts=$((attempts + 1))
+            if [ "$attempts" -ge "$max_attempts" ]; then
+              echo "git push failed after ${attempts} attempts."
+              exit 1
+            fi
+            wait_seconds=$((attempts * 10))
+            echo "git push failed (attempt ${attempts}/${max_attempts}); retrying in ${wait_seconds}s..."
+            sleep "${wait_seconds}"
+          done
 
       - name: Trigger Netlify deploy
         if: ${{ env.NETLIFY_BUILD_HOOK_URL != '' }}
