@@ -61,6 +61,29 @@
         max-width: 1200px;
         margin: 0 auto;
       }
+      .nav-links {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 0.5rem;
+      }
+      .nav-links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        font-size: 0.85rem;
+        color: #1f3b6c;
+        text-decoration: none;
+        border: 1px solid rgba(31, 59, 108, 0.2);
+        border-radius: 999px;
+        padding: 0.35rem 0.9rem;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 4px 10px rgba(31, 59, 108, 0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .nav-links a:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 14px rgba(31, 59, 108, 0.14);
+      }
       .legend,
       .updated {
         margin-bottom: 1rem;
@@ -300,6 +323,9 @@
       </p>
     </header>
     <main>
+      <div class="nav-links">
+        <a href="history.html">📜 過去ログを見る</a>
+      </div>
       <div class="legend">
         <span class="legend-badge">天空の城チャンス</span><br class="legend-break" />
         <span class="legend-text">
