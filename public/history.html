@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>天空の城 越前大野城 雲海予報 | 過去ログ</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <script
+      src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"
+      defer
+    ></script>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f5f5f5;
+        --card-bg: rgba(255, 255, 255, 0.85);
+        --card-border: rgba(120, 120, 120, 0.4);
+        --text-main: #222;
+        --text-muted: #666;
+        --accent: #2563eb;
+        --glow: rgba(250, 204, 21, 0.9);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif;
+        background: var(--bg);
+        color: var(--text-main);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      header {
+        padding: 1.5rem 1rem 1rem;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+        font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+      }
+      header p {
+        margin: 0.3rem 0 0;
+        color: var(--text-muted);
+        font-size: 0.85rem;
+      }
+      main {
+        width: min(1300px, 100%);
+        margin: 0 auto;
+        padding: 0 1rem 3rem;
+        flex: 1;
+      }
+      .summary {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+      }
+      .summary-card {
+        background: rgba(255, 255, 255, 0.75);
+        border-radius: 14px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        padding: 0.8rem 1rem;
+      }
+      .summary-card span {
+        display: block;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+      .summary-card strong {
+        display: block;
+        font-size: 1.4rem;
+        margin-top: 0.2rem;
+        color: var(--text-main);
+      }
+      .summary-card small {
+        display: block;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        margin-top: 0.15rem;
+      }
+      .controls,
+      .legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 12px;
+        padding: 0.85rem 1rem;
+        margin-bottom: 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+      }
+      .legend span {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+      }
+      .legend .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        padding: 0.25rem 0.55rem;
+        border-radius: 999px;
+        font-weight: 600;
+      }
+      .back-link {
+        font-size: 0.85rem;
+        text-decoration: none;
+        color: var(--accent);
+        border: 1px solid rgba(37, 99, 235, 0.2);
+        border-radius: 999px;
+        padding: 0.3rem 0.9rem;
+        background: rgba(37, 99, 235, 0.08);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      }
+      .back-link:hover {
+        background: rgba(37, 99, 235, 0.15);
+      }
+      .badge--castle {
+        border: 1px solid var(--glow);
+        color: #92400e;
+        background: rgba(251, 191, 36, 0.18);
+      }
+      .badge--fog {
+        border: 1px solid rgba(14, 165, 233, 0.5);
+        color: #0f172a;
+        background: rgba(125, 211, 252, 0.2);
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 0.75rem;
+      }
+      @media (min-width: 1100px) {
+        .cards {
+          grid-template-columns: repeat(6, minmax(0, 1fr));
+        }
+      }
+      .card {
+        border-radius: 14px;
+        border: 1px solid var(--card-border);
+        background: var(--card-bg);
+        padding: 0.8rem;
+        filter: grayscale(0.85);
+        transition: transform 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
+        position: relative;
+        min-height: 190px;
+        font-size: 0.82rem;
+      }
+      .card:hover {
+        transform: translateY(-3px);
+      }
+      .card--castle {
+        border: 1.5px solid rgba(250, 204, 21, 0.9);
+        box-shadow: 0 0 18px rgba(250, 204, 21, 0.35);
+        filter: grayscale(0.2);
+      }
+      .card--fog {
+        border: 1.5px solid rgba(125, 211, 252, 0.4);
+        box-shadow: 0 0 14px rgba(125, 211, 252, 0.2);
+        filter: grayscale(0.4);
+      }
+      .card-header {
+        margin-bottom: 0.3rem;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+      }
+      .card-header .weekday {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        margin-left: 0.4rem;
+      }
+      .status-pill {
+        padding: 0.2rem 0.5rem;
+        border-radius: 999px;
+        font-size: 0.68rem;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+      }
+      .status-pill--castle {
+        color: #92400e;
+        border-color: rgba(250, 204, 21, 0.9);
+        background: rgba(251, 191, 36, 0.18);
+      }
+      .status-pill--fog {
+        color: #0369a1;
+        border-color: rgba(14, 165, 233, 0.6);
+        background: rgba(125, 211, 252, 0.25);
+      }
+      .status-pill--none {
+        color: var(--text-muted);
+        border-style: dashed;
+      }
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.4rem;
+      }
+      .metric {
+        border: 1px dashed rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        padding: 0.4rem 0.3rem;
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 0.7rem;
+      }
+      .metric strong {
+        display: block;
+        color: var(--text-main);
+        font-size: 0.95rem;
+        margin-top: 0.1rem;
+      }
+      .probabilities {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.2rem;
+        margin: 0.5rem 0;
+      }
+      .probabilities .chip {
+        padding: 0.3rem 0.4rem;
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.05);
+        text-align: center;
+        font-size: 0.7rem;
+      }
+      .chip strong {
+        display: block;
+        margin-top: 0.1rem;
+        font-size: 0.95rem;
+      }
+      .weather-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        font-size: 0.75rem;
+        padding: 0.2rem 0.5rem;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.05);
+        color: var(--text-muted);
+        margin-bottom: 0.4rem;
+      }
+      .note {
+        margin-top: 0.5rem;
+        padding-top: 0.4rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        min-height: 1.1rem;
+      }
+      .note strong {
+        color: var(--text-main);
+        margin-right: 0.3rem;
+      }
+      .shot-clock {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        margin-bottom: 0.4rem;
+      }
+      .badge-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        margin-bottom: 0.3rem;
+        justify-content: flex-start;
+      }
+      .badge-group.center {
+        justify-content: center;
+      }
+      .badge-forecast {
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 999px;
+        padding: 0.18rem 0.5rem;
+        font-size: 0.65rem;
+        text-transform: uppercase;
+      }
+      .badge-forecast.castle {
+        border-color: rgba(250, 204, 21, 0.8);
+        color: #92400e;
+        background: rgba(250, 204, 21, 0.2);
+      }
+      .badge-forecast.fogonly {
+        border-color: rgba(125, 211, 252, 0.6);
+        color: #0369a1;
+        background: rgba(125, 211, 252, 0.2);
+      }
+      .badge-forecast.none {
+        color: var(--text-muted);
+        border-style: dashed;
+      }
+      .badge-actual {
+        font-size: 0.68rem;
+        border-radius: 6px;
+        padding: 0.15rem 0.35rem;
+        background: rgba(250, 204, 21, 0.15);
+        border: 1px solid rgba(250, 204, 21, 0.4);
+        color: #78350f;
+      }
+      .badge-actual.fogonly {
+        background: rgba(125, 211, 252, 0.18);
+        border-color: rgba(125, 211, 252, 0.5);
+        color: #0369a1;
+      }
+      .card.hit-castle {
+        border: 3px solid rgba(255, 213, 0, 0.9);
+        box-shadow: 0 0 26px rgba(255, 196, 0, 0.55);
+        background-image: radial-gradient(
+          circle at 30% 20%,
+          rgba(255, 255, 255, 0.98),
+          rgba(255, 247, 216, 0.95) 40%,
+          rgba(255, 226, 170, 0.35) 70%,
+          rgba(255, 193, 107, 0.25)
+        );
+      }
+      .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        margin: 0.6rem 0 1rem;
+        font-size: 0.78rem;
+      }
+      .pagination button {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        background: rgba(255, 255, 255, 0.8);
+        padding: 0.35rem 0.9rem;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        cursor: pointer;
+        color: var(--text-main);
+      }
+      .pagination button:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
+      .pagination-info {
+        min-width: 200px;
+        text-align: center;
+        color: var(--text-muted);
+      }
+      .empty-state {
+        text-align: center;
+        color: var(--text-muted);
+        padding: 2rem 0;
+      }
+      .footer {
+        text-align: center;
+        font-size: 0.85rem;
+        color: rgba(33, 38, 64, 0.7);
+        margin-top: 1.5rem;
+        line-height: 1.5;
+      }
+      .footer-line.primary a {
+        color: inherit;
+        text-decoration: none;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0f172a;
+          --card-bg: rgba(15, 23, 42, 0.8);
+          --card-border: rgba(255, 255, 255, 0.12);
+          --text-main: #f8fafc;
+          --text-muted: #94a3b8;
+        }
+        .controls,
+        .legend,
+        .summary-card {
+          background: rgba(15, 23, 42, 0.8);
+          border-color: rgba(255, 255, 255, 0.08);
+        }
+        .metric {
+          border-color: rgba(255, 255, 255, 0.1);
+        }
+        .probabilities .chip {
+          background: rgba(255, 255, 255, 0.05);
+        }
+        .status-pill--none {
+          border-color: rgba(255, 255, 255, 0.2);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>天空の城 越前大野城　雲海予報｜過去ログ</h1>
+      <p>2025年10月27日以降の観測ログ。AI予想と実績が合っていたかを一覧できます。</p>
+    </header>
+    <main>
+      <section class="summary" aria-live="polite">
+        <div class="summary-card">
+          <span>天空の城を確認できた日</span>
+          <strong id="summary-castle-days">-</strong>
+        </div>
+        <div class="summary-card">
+          <span>天空の城チャンス的中率</span>
+          <strong id="summary-hit-rate">-</strong>
+          <small id="summary-hit-note"></small>
+        </div>
+        <div class="summary-card">
+          <span>霧のみだった日</span>
+          <strong id="summary-fog-days">-</strong>
+        </div>
+      <div class="summary-card">
+        <span>記録件数</span>
+        <strong id="summary-total">-</strong>
+      </div>
+    </section>
+      <div class="legend">
+        <a class="back-link" href="forecast.html">← 雲海予報に戻る</a>
+        <span class="badge badge--castle">ボーダー発光: 実際に天空が見えた日</span>
+        <span class="badge badge--fog">霧だけ出現</span>
+      </div>
+      <div class="pagination" aria-live="polite">
+        <button id="prev-page" type="button">前へ</button>
+        <span id="pagination-info" class="pagination-info">-</span>
+        <button id="next-page" type="button">次へ</button>
+      </div>
+      <section id="cards" class="cards" aria-live="polite"></section>
+      <div id="empty-state" class="empty-state" hidden>
+        データを読み込めませんでした。しばらく待って再読み込みしてください。
+      </div>
+      <div class="footer">
+        <span class="footer-line primary">© 2025 <a href="https://www.2ndgate.jp/" target="_blank" rel="noreferrer noopener">セカンドゲート</a></span>
+        <span class="footer-line secondary">| Powered by Open-Meteo | 推論モデル: SkyCastle AI</span><br />
+        本予報を利用して発生したトラブル・損害について、当方は一切責任を負いかねます。
+      </div>
+    </main>
+    <script>
+      const HISTORY_CSV_URL =
+        "https://raw.githubusercontent.com/2Gsasaki/skycastle-ai/main/data/history.csv";
+      const LOG_START_DATE = "2025-10-27";
+      const PAGE_SIZE = 60;
+      let allRows = [];
+      let currentPage = 1;
+
+      const weekdayFormatter = new Intl.DateTimeFormat("ja-JP", {
+        weekday: "short",
+        timeZone: "Asia/Tokyo",
+      });
+      const dateFormatter = new Intl.DateTimeFormat("ja-JP", {
+        year: "numeric",
+        month: "numeric",
+        day: "numeric",
+        timeZone: "Asia/Tokyo",
+      });
+
+      const weatherLegend = [
+        { codes: [0], icon: "☀️", label: "快晴" },
+        { codes: [1, 2], icon: "🌤️", label: "晴れ" },
+        { codes: [3], icon: "☁️", label: "曇り" },
+        { codes: [45, 48], icon: "🌫️", label: "霧" },
+        { codes: [51, 53, 55, 56, 57], icon: "🌦️", label: "霧雨" },
+        { codes: [61, 63, 65, 80, 81, 82], icon: "🌧️", label: "雨" },
+        { codes: [66, 67], icon: "🌧️", label: "氷雨" },
+        { codes: [71, 73, 75, 77, 85, 86], icon: "❄️", label: "雪" },
+        { codes: [95, 96, 99], icon: "⛈️", label: "雷雨" },
+      ];
+
+      function getTodayJstIsoDate() {
+        const now = new Date();
+        const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+        const jstTime = utc + 9 * 60 * 60000;
+        const jst = new Date(jstTime);
+        return jst.toISOString().split("T")[0];
+      }
+
+      function toJstDate(dateStr) {
+        if (!dateStr) return null;
+        return new Date(`${dateStr}T00:00:00+09:00`);
+      }
+
+      function formatPercent(value) {
+        const num = Number(value);
+        if (Number.isNaN(num)) return "-";
+        return `${Math.round(num * 100)}%`;
+      }
+
+      function formatValue(value, unit = "") {
+        if (value === undefined || value === null || value === "") return "-";
+        const num = Number(value);
+        const display = Number.isNaN(num) ? value : Math.round(num * 10) / 10;
+        return `${display}${unit}`;
+      }
+
+      function resolveWeatherInfo(code) {
+        if (typeof code === "string") {
+          const parsed = Number(code);
+          if (!Number.isNaN(parsed)) code = parsed;
+        }
+        if (typeof code !== "number" || Number.isNaN(code)) return null;
+        for (const entry of weatherLegend) {
+          if (entry.codes.includes(code)) return entry;
+        }
+        return null;
+      }
+
+      function determinePredictedEvent(row) {
+        return (row.event || "").toString().trim() || "None";
+      }
+
+      function buildStatus(row) {
+        if (Number(row.castle_visible) === 1) {
+          return { label: "天空 出現", type: "castle" };
+        }
+        if (Number(row.fog_observed) === 1) {
+          return { label: "霧のみ", type: "fog" };
+        }
+        return null;
+      }
+
+      function updateSummary(rows) {
+        const castleDays = rows.filter((row) => Number(row.castle_visible) === 1).length;
+        const fogDays = rows.filter(
+          (row) => Number(row.fog_observed) === 1 && Number(row.castle_visible) !== 1
+        ).length;
+        const total = rows.length;
+
+        const predictedCastle = rows.filter(
+          (row) => determinePredictedEvent(row).toLowerCase() === "castle"
+        );
+        const castleHits = predictedCastle.filter((row) => Number(row.castle_visible) === 1).length;
+
+        const hitRate =
+          predictedCastle.length > 0 ? `${((castleHits / predictedCastle.length) * 100).toFixed(1)}%` : "-";
+        const hitNote =
+          predictedCastle.length > 0
+            ? `的中 ${castleHits}/${predictedCastle.length} 日`
+            : "Castle予報なし";
+
+        document.getElementById("summary-castle-days").textContent = `${castleDays} 日`;
+        document.getElementById("summary-fog-days").textContent = `${fogDays} 日`;
+        document.getElementById("summary-total").textContent = `${total} 件`;
+        document.getElementById("summary-hit-rate").textContent = hitRate;
+        document.getElementById("summary-hit-note").textContent = hitNote;
+      }
+
+      function renderCards(rows) {
+        const container = document.getElementById("cards");
+        const emptyState = document.getElementById("empty-state");
+
+        container.innerHTML = "";
+        if (!rows.length) {
+          emptyState.hidden = false;
+          return;
+        }
+        emptyState.hidden = true;
+
+        const fragment = document.createDocumentFragment();
+        rows.forEach((row) => {
+          const card = document.createElement("article");
+          const statusInfo = buildStatus(row);
+          const actualCastle = statusInfo && statusInfo.type === "castle";
+          const actualFog = statusInfo && statusInfo.type === "fog";
+          const predicted = determinePredictedEvent(row);
+          const predictedClass = predicted.toLowerCase();
+          const weatherInfo = resolveWeatherInfo(row.weathercode);
+          const hitCastle = actualCastle && predictedClass === "castle";
+
+          const classes = ["card"];
+          if (actualCastle) classes.push("card--castle");
+          else if (actualFog) classes.push("card--fog");
+          if (hitCastle) classes.push("hit-castle");
+          card.className = classes.join(" ");
+
+          const dateObj = toJstDate(row.date);
+          const dateLabel = dateObj
+            ? dateFormatter.format(dateObj)
+            : row.date || "不明";
+          const weekday = dateObj ? weekdayFormatter.format(dateObj) : "";
+
+          card.innerHTML = `
+            <div class="card-header">
+              <span>${dateLabel}</span><span class="weekday">${weekday}</span>
+            </div>
+            <div class="badge-group center">
+              ${
+                statusInfo
+                  ? `<span class="badge-actual ${statusInfo.type === "fog" ? "fogonly" : ""}">
+                      ${statusInfo.label}
+                    </span>`
+                  : ""
+              }
+              ${
+                predictedClass === "none"
+                  ? ""
+                  : `<span class="badge-forecast ${predictedClass}">
+                      ${predictedClass === "castle" ? "天空の城チャンス" : "霧海の予感"}
+                    </span>`
+              }
+            </div>
+            ${
+              weatherInfo
+                ? `<div class="weather-chip">${weatherInfo.icon} ${weatherInfo.label}</div>`
+                : ""
+            }
+            <div class="probabilities">
+              <div class="chip">天空率<strong>${formatPercent(
+                row.castle_probability
+              )}</strong></div>
+              <div class="chip">霧率<strong>${formatPercent(
+                row.fog_probability
+              )}</strong></div>
+            </div>
+            <div class="metrics">
+              <div class="metric">
+                気温
+                <strong>${formatValue(row.temp, "℃")}</strong>
+              </div>
+              <div class="metric">
+                湿度
+                <strong>${formatValue(row.humidity, "%")}</strong>
+              </div>
+              <div class="metric">
+                風速
+                <strong>${formatValue(row.wind, "m/s")}</strong>
+              </div>
+              <div class="metric">
+                雲量
+                <strong>${formatValue(row.cloud, "%")}</strong>
+              </div>
+            </div>
+            <p class="note">
+              <strong>備考</strong>
+              ${row.note && row.note.trim() ? row.note.trim() : "記録なし"}
+            </p>
+          `;
+          fragment.appendChild(card);
+        });
+        container.appendChild(fragment);
+      }
+
+      function updatePaginationControls(totalRows) {
+        const totalPages = Math.max(1, Math.ceil(totalRows / PAGE_SIZE));
+        const infoEl = document.getElementById("pagination-info");
+        const prevBtn = document.getElementById("prev-page");
+        const nextBtn = document.getElementById("next-page");
+
+        if (!totalRows) {
+          infoEl.textContent = "データなし";
+          prevBtn.disabled = true;
+          nextBtn.disabled = true;
+          return;
+        }
+
+        const startIndex = (currentPage - 1) * PAGE_SIZE + 1;
+        const endIndex = Math.min(currentPage * PAGE_SIZE, totalRows);
+        infoEl.textContent = `${startIndex} - ${endIndex} / ${totalRows} 件（ページ ${currentPage}/${totalPages}）`;
+        prevBtn.disabled = currentPage <= 1;
+        nextBtn.disabled = currentPage >= totalPages;
+      }
+
+      function renderCurrentPage() {
+        const totalRows = allRows.length;
+        if (!totalRows) {
+          renderCards([]);
+          updatePaginationControls(0);
+          return;
+        }
+        const totalPages = Math.max(1, Math.ceil(totalRows / PAGE_SIZE));
+        currentPage = Math.min(Math.max(1, currentPage), totalPages);
+        const start = (currentPage - 1) * PAGE_SIZE;
+        const pageRows = allRows.slice(start, start + PAGE_SIZE);
+        renderCards(pageRows);
+        updatePaginationControls(totalRows);
+      }
+
+      function bindPaginationButtons() {
+        const prevBtn = document.getElementById("prev-page");
+        const nextBtn = document.getElementById("next-page");
+        prevBtn.addEventListener("click", () => {
+          if (currentPage > 1) {
+            currentPage -= 1;
+            renderCurrentPage();
+          }
+        });
+        nextBtn.addEventListener("click", () => {
+          const totalPages = Math.max(1, Math.ceil(allRows.length / PAGE_SIZE));
+          if (currentPage < totalPages) {
+            currentPage += 1;
+            renderCurrentPage();
+          }
+        });
+      }
+
+      async function loadHistory() {
+        try {
+          const response = await fetch(HISTORY_CSV_URL, { cache: "no-store" });
+          if (!response.ok) throw new Error("CSV を取得できませんでした");
+          const csvText = await response.text();
+          const parsed = Papa.parse(csvText, {
+            header: true,
+            skipEmptyLines: true,
+          });
+          const todayIso = getTodayJstIsoDate();
+          const rows = parsed.data
+            .filter((row) => row.date && row.date >= LOG_START_DATE && row.date <= todayIso)
+            .sort((a, b) => (a.date > b.date ? -1 : 1));
+          allRows = rows;
+          currentPage = 1;
+          updateSummary(allRows);
+          renderCurrentPage();
+        } catch (err) {
+          console.error(err);
+          document.getElementById("cards").innerHTML = "";
+          const emptyState = document.getElementById("empty-state");
+          emptyState.textContent =
+            "履歴データを読み込めませんでした。時間をおいて再読込してください。";
+          emptyState.hidden = false;
+          updatePaginationControls(0);
+        }
+      }
+
+      bindPaginationButtons();
+      loadHistory();
+    </script>
+  </body>
+</html>
