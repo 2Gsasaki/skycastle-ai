@@ -1,17 +1,21 @@
 {
+<<<<<<< Updated upstream
   "generated_at": "2025-11-14T07:46:46.635453+09:00",
+=======
+  "generated_at": "2025-11-14T07:46:55.697957+09:00",
+>>>>>>> Stashed changes
   "predictions": [
     {
       "date": "2025-11-14",
-      "temp": 8.93,
-      "humidity": 84.5,
-      "wind": 3.77,
-      "cloud": 12.25,
+      "temp": 7.88,
+      "humidity": 86.0,
+      "wind": 6.17,
+      "cloud": 7.5,
       "rain": 0.0,
       "weathercode": 0,
-      "fog_probability": 0.674,
-      "castle_probability": 0.893,
-      "castle_event_probability": 0.686,
+      "fog_probability": 0.948,
+      "castle_probability": 0.853,
+      "castle_event_probability": 0.916,
       "event": "Castle"
     },
     {
