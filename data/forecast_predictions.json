@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-13T09:13:29.406969+09:00",
+  "generated_at": "2025-11-13T12:20:24.213396+09:00",
   "predictions": [
     {
       "date": "2025-11-13",
@@ -8,7 +8,7 @@
       "wind": 7.43,
       "cloud": 100.0,
       "rain": 0.0,
-      "weathercode": 1,
+      "weathercode": 2,
       "fog_probability": 0.674,
       "castle_probability": 0.301,
       "castle_event_probability": 0.07,
@@ -35,9 +35,9 @@
       "cloud": 0.25,
       "rain": 0.0,
       "weathercode": 0,
-      "fog_probability": 0.362,
-      "castle_probability": 0.975,
-      "castle_event_probability": 0.264,
+      "fog_probability": 0.318,
+      "castle_probability": 0.974,
+      "castle_event_probability": 0.206,
       "event": "None"
     },
     {
