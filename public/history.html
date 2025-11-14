@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>天空の城 越前大野城 雲海予報 | 過去ログ</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2FMRXT9MHQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-2FMRXT9MHQ");
+    </script>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <script
       src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"
@@ -51,6 +61,9 @@
         padding: 0 1rem 3rem;
         flex: 1;
       }
+      .mobile-break {
+        display: none;
+      }
       .summary {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -63,6 +76,21 @@
         border: 1px solid rgba(0, 0, 0, 0.05);
         padding: 0.8rem 1rem;
       }
+      @media (max-width: 600px) {
+        .summary {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .mobile-break {
+          display: inline;
+        }
+        header p {
+          text-align: left;
+        }
+        .footer-line.secondary {
+          display: block;
+          margin-top: 0.3rem;
+        }
+      }
       .summary-card span {
         display: block;
         font-size: 0.75rem;
@@ -73,6 +101,7 @@
         font-size: 1.4rem;
         margin-top: 0.2rem;
         color: var(--text-main);
+        text-align: center;
       }
       .summary-card small {
         display: block;
@@ -105,6 +134,7 @@
         font-weight: 600;
       }
       .back-link {
+        display: inline-block;
         font-size: 0.85rem;
         text-decoration: none;
         color: var(--accent);
@@ -113,6 +143,7 @@
         padding: 0.3rem 0.9rem;
         background: rgba(37, 99, 235, 0.08);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        margin: 0.75rem 0;
       }
       .back-link:hover {
         background: rgba(37, 99, 235, 0.15);
@@ -346,15 +377,17 @@
         padding: 2rem 0;
       }
       .footer {
+        margin-top: 2rem;
+        font-size: 0.8rem;
+        color: #607d8b;
         text-align: center;
-        font-size: 0.85rem;
-        color: rgba(33, 38, 64, 0.7);
-        margin-top: 1.5rem;
-        line-height: 1.5;
       }
-      .footer-line.primary a {
+      .footer-line {
+        display: inline;
+      }
+      .footer a {
         color: inherit;
-        text-decoration: none;
+        text-decoration: underline;
       }
       @media (prefers-color-scheme: dark) {
         :root {
@@ -384,7 +417,11 @@
   </head>
   <body>
     <header>
-      <h1>天空の城 越前大野城　雲海予報｜過去ログ</h1>
+      <h1>
+        天空の城 越前大野城　雲海予報
+        <br class="mobile-break" />
+        過去ログ
+      </h1>
       <p>2025年10月27日以降の観測ログ。AI予想と実績が合っていたかを一覧できます。</p>
     </header>
     <main>
@@ -394,7 +431,7 @@
           <strong id="summary-castle-days">-</strong>
         </div>
         <div class="summary-card">
-          <span>天空の城チャンス的中率</span>
+          <span id="summary-hit-title">天空の城チャンス的中率</span>
           <strong id="summary-hit-rate">-</strong>
           <small id="summary-hit-note"></small>
         </div>
@@ -407,8 +444,8 @@
         <strong id="summary-total">-</strong>
       </div>
     </section>
+      <a class="back-link" href="forecast.html">← 雲海予報に戻る</a>
       <div class="legend">
-        <a class="back-link" href="forecast.html">← 雲海予報に戻る</a>
         <span class="badge badge--castle">ボーダー発光: 実際に天空が見えた日</span>
         <span class="badge badge--fog">霧だけ出現</span>
       </div>
@@ -421,6 +458,7 @@
       <div id="empty-state" class="empty-state" hidden>
         データを読み込めませんでした。しばらく待って再読み込みしてください。
       </div>
+      <a class="back-link" href="forecast.html">← 雲海予報に戻る</a>
       <div class="footer">
         <span class="footer-line primary">© 2025 <a href="https://www.2ndgate.jp/" target="_blank" rel="noreferrer noopener">セカンドゲート</a></span>
         <span class="footer-line secondary">| Powered by Open-Meteo | 推論モデル: SkyCastle AI</span><br />
@@ -532,8 +570,19 @@
         document.getElementById("summary-castle-days").textContent = `${castleDays} 日`;
         document.getElementById("summary-fog-days").textContent = `${fogDays} 日`;
         document.getElementById("summary-total").textContent = `${total} 件`;
-        document.getElementById("summary-hit-rate").textContent = hitRate;
-        document.getElementById("summary-hit-note").textContent = hitNote;
+        const hitTitleEl = document.getElementById("summary-hit-title");
+        const hitRateEl = document.getElementById("summary-hit-rate");
+        const hitNoteEl = document.getElementById("summary-hit-note");
+        hitRateEl.textContent = hitRate;
+        if (predictedCastle.length > 0) {
+          hitTitleEl.textContent = `天空の城チャンス的中率（${castleHits}/${predictedCastle.length}）`;
+          hitNoteEl.hidden = true;
+          hitNoteEl.textContent = "";
+        } else {
+          hitTitleEl.textContent = "天空の城チャンス的中率";
+          hitNoteEl.hidden = false;
+          hitNoteEl.textContent = hitNote;
+        }
       }
 
       function renderCards(rows) {
@@ -712,8 +761,21 @@
         }
       }
 
-      bindPaginationButtons();
-      loadHistory();
+      function startHistoryPage() {
+        if (!window.Papa) {
+          // PapaParse script might still be loading on hard reloads.
+          setTimeout(startHistoryPage, 60);
+          return;
+        }
+        bindPaginationButtons();
+        loadHistory();
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", startHistoryPage);
+      } else {
+        startHistoryPage();
+      }
     </script>
   </body>
 </html>
