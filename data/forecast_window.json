@@ -10,10 +10,10 @@
   },
   {
     "date": "2025-11-15",
-    "temp": 5.300000000000001,
-    "humidity": 68.0,
-    "wind": 4.65,
-    "cloud": 10.5,
+    "temp": 5.55,
+    "humidity": 65.5,
+    "wind": 4.7749999999999995,
+    "cloud": 21.25,
     "rain": 0.0,
     "weathercode": 0
   },
@@ -73,56 +73,56 @@
   },
   {
     "date": "2025-11-22",
-    "temp": 11.025,
-    "humidity": 81.75,
-    "wind": 3.6000000000000005,
-    "cloud": 100.0,
-    "rain": 0.1,
-    "weathercode": 51
+    "temp": 10.325,
+    "humidity": 78.0,
+    "wind": 3.275,
+    "cloud": 83.75,
+    "rain": 0.0,
+    "weathercode": 2
   },
   {
     "date": "2025-11-23",
-    "temp": 11.2,
-    "humidity": 81.0,
-    "wind": 2.5,
-    "cloud": 92.25,
-    "rain": 0.0,
-    "weathercode": 3
-  },
-  {
-    "date": "2025-11-24",
-    "temp": 7.775,
-    "humidity": 78.5,
-    "wind": 6.35,
-    "cloud": 0.0,
+    "temp": 8.05,
+    "humidity": 77.0,
+    "wind": 8.15,
+    "cloud": 30.0,
     "rain": 0.0,
     "weathercode": 0
   },
   {
+    "date": "2025-11-24",
+    "temp": 7.1499999999999995,
+    "humidity": 83.25,
+    "wind": 13.125,
+    "cloud": 97.0,
+    "rain": 0.15,
+    "weathercode": 51
+  },
+  {
     "date": "2025-11-25",
-    "temp": 11.825,
-    "humidity": 91.75,
-    "wind": 9.925,
-    "cloud": 100.0,
+    "temp": 2.0,
+    "humidity": 81.0,
+    "wind": 3.3,
+    "cloud": 92.5,
     "rain": 0.0,
     "weathercode": 3
   },
   {
     "date": "2025-11-26",
-    "temp": 5.3999999999999995,
-    "humidity": 87.5,
-    "wind": 22.650000000000002,
-    "cloud": 100.0,
-    "rain": 0.30000000000000004,
-    "weathercode": 51
+    "temp": 4.475,
+    "humidity": 71.25,
+    "wind": 6.949999999999999,
+    "cloud": 97.0,
+    "rain": 0.0,
+    "weathercode": 3
   },
   {
     "date": "2025-11-27",
-    "temp": 4.4,
-    "humidity": 97.0,
-    "wind": 7.800000000000001,
+    "temp": 9.024999999999999,
+    "humidity": 90.5,
+    "wind": 9.075,
     "cloud": 100.0,
-    "rain": 0.1,
-    "weathercode": 3
+    "rain": 2.1,
+    "weathercode": 81
   }
 ]
