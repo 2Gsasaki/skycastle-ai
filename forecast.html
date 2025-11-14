@@ -66,6 +66,9 @@
         justify-content: flex-end;
         margin-bottom: 0.5rem;
       }
+      .nav-links.bottom-link {
+        margin-top: 1.5rem;
+      }
       .nav-links a {
         display: inline-flex;
         align-items: center;
@@ -233,9 +236,12 @@
         font-size: 0.95rem;
       }
       @media (max-width: 640px) {
-        .detail-grid {
-          grid-template-columns: 1fr;
-        }
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links.bottom-link {
+        margin-top: 2rem;
+      }
         .legend-break {
           display: block;
           height: 0;
@@ -341,6 +347,9 @@
       </div>
       <div class="updated" id="updated">最新データを取得中...</div>
       <div class="cards" id="cards"></div>
+	      <div class="nav-links bottom-link">
+	        <a href="history.html">📜 過去ログを見る</a>
+	      </div>
       <div class="footer">
         <span class="footer-line primary">© 2025 <a href="https://www.2ndgate.jp/" target="_blank" rel="noreferrer noopener">セカンドゲート</a></span>
         <span class="footer-line secondary">| Powered by Open-Meteo | 推論モデル: SkyCastle AI</span><br />
