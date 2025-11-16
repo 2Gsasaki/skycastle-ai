@@ -1,9 +1,5 @@
 {
-<<<<<<< Updated upstream
-  "generated_at": "2025-11-17T08:52:48.775360+09:00",
-=======
   "generated_at": "2025-11-17T08:52:50.008038+09:00",
->>>>>>> Stashed changes
   "predictions": [
     {
       "date": "2025-11-17",
@@ -13,15 +9,9 @@
       "cloud": 2.75,
       "rain": 0.0,
       "weathercode": 0,
-<<<<<<< Updated upstream
-      "fog_probability": 0.26,
-      "castle_probability": 0.869,
-      "castle_event_probability": 0.031,
-=======
       "fog_probability": 0.222,
       "castle_probability": 0.858,
       "castle_event_probability": 0.079,
->>>>>>> Stashed changes
       "event": "None"
     },
     {
