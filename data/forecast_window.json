@@ -1,30 +1,21 @@
 [
   {
-    "date": "2025-11-16",
-    "temp": 6.85,
-    "humidity": 70.0,
-    "wind": 3.35,
-    "cloud": 1.5,
-    "rain": 0.0,
-    "weathercode": 0
-  },
-  {
     "date": "2025-11-17",
-    "temp": 11.399999999999999,
-    "humidity": 79.0,
-    "wind": 7.0,
-    "cloud": 19.0,
+    "temp": 9.175,
+    "humidity": 75.0,
+    "wind": 8.55,
+    "cloud": 8.75,
     "rain": 0.0,
     "weathercode": 0
   },
   {
     "date": "2025-11-18",
-    "temp": 7.250000000000001,
-    "humidity": 79.25,
-    "wind": 5.725,
-    "cloud": 80.25,
-    "rain": 0.025,
-    "weathercode": 3
+    "temp": 6.925000000000001,
+    "humidity": 83.75,
+    "wind": 4.325,
+    "cloud": 54.5,
+    "rain": 0.05,
+    "weathercode": 51
   },
   {
     "date": "2025-11-19",
@@ -73,56 +64,65 @@
   },
   {
     "date": "2025-11-24",
-    "temp": 9.174999999999999,
-    "humidity": 82.25,
-    "wind": 7.975,
+    "temp": 9.45,
+    "humidity": 84.75,
+    "wind": 7.1,
     "cloud": 100.0,
     "rain": 0.0,
     "weathercode": 3
   },
   {
     "date": "2025-11-25",
-    "temp": 9.275,
-    "humidity": 85.5,
-    "wind": 4.575,
-    "cloud": 45.5,
-    "rain": 0.05,
-    "weathercode": 1
+    "temp": 10.125,
+    "humidity": 92.5,
+    "wind": 3.1250000000000004,
+    "cloud": 79.25,
+    "rain": 0.2,
+    "weathercode": 51
   },
   {
     "date": "2025-11-26",
-    "temp": 4.8999999999999995,
-    "humidity": 77.75,
-    "wind": 6.1499999999999995,
-    "cloud": 29.75,
+    "temp": 5.949999999999999,
+    "humidity": 72.0,
+    "wind": 8.15,
+    "cloud": 15.0,
     "rain": 0.0,
-    "weathercode": 1
+    "weathercode": 0
   },
   {
     "date": "2025-11-27",
-    "temp": 7.550000000000001,
-    "humidity": 80.75,
-    "wind": 8.075000000000001,
-    "cloud": 0.25,
+    "temp": 7.625,
+    "humidity": 53.0,
+    "wind": 8.025,
+    "cloud": 0.0,
     "rain": 0.0,
     "weathercode": 0
   },
   {
     "date": "2025-11-28",
-    "temp": 7.675,
-    "humidity": 48.75,
-    "wind": 9.15,
-    "cloud": 4.25,
+    "temp": 8.3,
+    "humidity": 61.0,
+    "wind": 7.7749999999999995,
+    "cloud": 0.0,
     "rain": 0.0,
     "weathercode": 0
   },
   {
     "date": "2025-11-29",
-    "temp": 9.525,
-    "humidity": 79.25,
-    "wind": 11.05,
+    "temp": 7.8,
+    "humidity": 65.0,
+    "wind": 10.65,
+    "cloud": 1.0,
+    "rain": 0.0,
+    "weathercode": 0
+  },
+  {
+    "date": "2025-11-30",
+    "temp": 2.425,
+    "humidity": 79.5,
+    "wind": 26.725,
     "cloud": 100.0,
-    "rain": 0.55,
-    "weathercode": 3
+    "rain": 0.1,
+    "weathercode": 85
   }
 ]
