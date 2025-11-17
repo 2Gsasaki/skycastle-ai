@@ -560,12 +560,8 @@
         );
         const castleHits = predictedCastle.filter((row) => Number(row.castle_visible) === 1).length;
 
-        const hitRate =
+        const hitRatePercent =
           predictedCastle.length > 0 ? `${((castleHits / predictedCastle.length) * 100).toFixed(1)}%` : "-";
-        const hitNote =
-          predictedCastle.length > 0
-            ? `的中 ${castleHits}/${predictedCastle.length} 日`
-            : "Castle予報なし";
 
         document.getElementById("summary-castle-days").textContent = `${castleDays} 日`;
         document.getElementById("summary-fog-days").textContent = `${fogDays} 日`;
@@ -573,15 +569,16 @@
         const hitTitleEl = document.getElementById("summary-hit-title");
         const hitRateEl = document.getElementById("summary-hit-rate");
         const hitNoteEl = document.getElementById("summary-hit-note");
-        hitRateEl.textContent = hitRate;
         if (predictedCastle.length > 0) {
-          hitTitleEl.textContent = `天空の城チャンス的中率（${castleHits}/${predictedCastle.length}）`;
+          hitTitleEl.textContent = `天空の城チャンス的中率 ${hitRatePercent}`;
+          hitRateEl.textContent = `${predictedCastle.length} 日予想 / ${castleHits} 日的中`;
           hitNoteEl.hidden = true;
           hitNoteEl.textContent = "";
         } else {
           hitTitleEl.textContent = "天空の城チャンス的中率";
+          hitRateEl.textContent = "-";
           hitNoteEl.hidden = false;
-          hitNoteEl.textContent = hitNote;
+          hitNoteEl.textContent = "Castle予報なし";
         }
       }
 
@@ -608,9 +605,11 @@
           const hitCastle = actualCastle && predictedClass === "castle";
 
           const classes = ["card"];
-          if (actualCastle) classes.push("card--castle");
-          else if (actualFog) classes.push("card--fog");
-          if (hitCastle) classes.push("hit-castle");
+          if (actualFog) classes.push("card--fog");
+          if (hitCastle) {
+            classes.push("card--castle");
+            classes.push("hit-castle");
+          }
           card.className = classes.join(" ");
 
           const dateObj = toJstDate(row.date);
