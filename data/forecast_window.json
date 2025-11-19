@@ -10,66 +10,66 @@
   },
   {
     "date": "2025-11-20",
-    "temp": 3.05,
-    "humidity": 68.0,
-    "wind": 6.1000000000000005,
-    "cloud": 18.75,
-    "rain": 0.0,
-    "weathercode": 0
-  },
-  {
-    "date": "2025-11-21",
-    "temp": 7.1,
-    "humidity": 77.5,
-    "wind": 6.3,
-    "cloud": 43.75,
+    "temp": 3.5500000000000003,
+    "humidity": 68.5,
+    "wind": 5.875,
+    "cloud": 33.0,
     "rain": 0.0,
     "weathercode": 1
   },
   {
-    "date": "2025-11-22",
-    "temp": 7.675,
-    "humidity": 84.25,
-    "wind": 2.25,
-    "cloud": 60.0,
+    "date": "2025-11-21",
+    "temp": 7.050000000000001,
+    "humidity": 75.0,
+    "wind": 5.825,
+    "cloud": 76.0,
     "rain": 0.0,
-    "weathercode": 2
+    "weathercode": 3
+  },
+  {
+    "date": "2025-11-22",
+    "temp": 6.500000000000001,
+    "humidity": 81.0,
+    "wind": 5.050000000000001,
+    "cloud": 38.5,
+    "rain": 0.0,
+    "weathercode": 1
   },
   {
     "date": "2025-11-23",
-    "temp": 4.4,
+    "temp": 3.7249999999999996,
     "humidity": 93.0,
-    "wind": 4.7250000000000005,
-    "cloud": 37.75,
+    "wind": 5.45,
+    "cloud": 27.75,
     "rain": 0.0,
     "weathercode": 1
   },
   {
     "date": "2025-11-24",
-    "temp": 7.75,
-    "humidity": 89.5,
-    "wind": 5.65,
-    "cloud": 51.75,
+    "temp": 7.775,
+    "humidity": 89.0,
+    "wind": 6.699999999999999,
+    "cloud": 59.5,
     "rain": 0.0,
     "weathercode": 2
   },
   {
     "date": "2025-11-25",
-    "temp": 10.274999999999999,
-    "humidity": 71.5,
-    "wind": 8.3,
-    "cloud": 63.5,
-    "rain": 0.0,
-    "weathercode": 2
+    "temp": 11.575,
+    "humidity": 79.25,
+    "wind": 7.325,
+    "cloud": 98.75,
+    "rain": 0.85,
+    "weathercode": 80
   },
   {
     "date": "2025-11-26",
-    "temp": 8.325,
-    "humidity": 83.75,
-    "wind": 5.775,
-    "cloud": 81.25,
-    "rain": 0.19999999999999998,
-    "weathercode": 2
+    "temp": 3.7500000000000004,
+    "humidity": 75.25,
+    "wind": 1.75,
+    "cloud": 2.25,
+    "rain": 0.0,
+    "weathercode": 0
   },
   {
     "date": "2025-11-27",
