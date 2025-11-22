@@ -1,9 +1,5 @@
 {
-<<<<<<< Updated upstream
-  "generated_at": "2025-11-22T15:19:52.008745+09:00",
-=======
   "generated_at": "2025-11-22T15:19:56.715640+09:00",
->>>>>>> Stashed changes
   "predictions": [
     {
       "date": "2025-11-22",
@@ -13,17 +9,10 @@
       "cloud": 77.75,
       "rain": 0.03,
       "weathercode": 0,
-<<<<<<< Updated upstream
-      "fog_probability": 0.629,
-      "castle_probability": 0.933,
-      "castle_event_probability": 0.153,
-      "event": "Castle"
-=======
       "fog_probability": 0.924,
       "castle_probability": 0.291,
       "castle_event_probability": 0.153,
       "event": "FogOnly"
->>>>>>> Stashed changes
     },
     {
       "date": "2025-11-23",
@@ -33,17 +22,10 @@
       "cloud": 0.0,
       "rain": 0.0,
       "weathercode": 0,
-<<<<<<< Updated upstream
-      "fog_probability": 0.98,
-      "castle_probability": 0.981,
-      "castle_event_probability": 0.11,
-      "event": "Castle"
-=======
       "fog_probability": 0.211,
       "castle_probability": 0.978,
       "castle_event_probability": 0.11,
       "event": "None"
->>>>>>> Stashed changes
     },
     {
       "date": "2025-11-24",
