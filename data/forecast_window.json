@@ -10,66 +10,66 @@
   },
   {
     "date": "2025-11-24",
-    "temp": 6.45,
-    "humidity": 72.25,
-    "wind": 5.475,
-    "cloud": 21.25,
+    "temp": 6.2250000000000005,
+    "humidity": 70.0,
+    "wind": 5.2749999999999995,
+    "cloud": 18.75,
     "rain": 0.0,
     "weathercode": 0
   },
   {
     "date": "2025-11-25",
-    "temp": 10.049999999999999,
-    "humidity": 70.25,
-    "wind": 8.45,
-    "cloud": 48.5,
+    "temp": 8.875,
+    "humidity": 78.5,
+    "wind": 7.825,
+    "cloud": 51.0,
     "rain": 0.0,
     "weathercode": 1
   },
   {
     "date": "2025-11-26",
-    "temp": 9.125,
-    "humidity": 88.75,
-    "wind": 9.899999999999999,
-    "cloud": 97.0,
-    "rain": 0.675,
-    "weathercode": 80
+    "temp": 8.05,
+    "humidity": 92.0,
+    "wind": 12.975,
+    "cloud": 58.25,
+    "rain": 2.25,
+    "weathercode": 55
   },
   {
     "date": "2025-11-27",
-    "temp": 3.8499999999999996,
-    "humidity": 92.75,
-    "wind": 4.25,
-    "cloud": 36.25,
-    "rain": 0.0,
-    "weathercode": 0
-  },
-  {
-    "date": "2025-11-28",
-    "temp": 9.825,
-    "humidity": 83.75,
-    "wind": 8.225,
-    "cloud": 96.5,
-    "rain": 0.9,
-    "weathercode": 80
-  },
-  {
-    "date": "2025-11-29",
-    "temp": 4.225,
-    "humidity": 87.75,
-    "wind": 6.574999999999999,
-    "cloud": 28.5,
+    "temp": 3.075,
+    "humidity": 89.75,
+    "wind": 5.225,
+    "cloud": 31.0,
     "rain": 0.0,
     "weathercode": 1
   },
   {
+    "date": "2025-11-28",
+    "temp": 11.625,
+    "humidity": 72.5,
+    "wind": 11.85,
+    "cloud": 95.5,
+    "rain": 0.55,
+    "weathercode": 80
+  },
+  {
+    "date": "2025-11-29",
+    "temp": 3.525,
+    "humidity": 90.0,
+    "wind": 3.3,
+    "cloud": 0.0,
+    "rain": 0.0,
+    "weathercode": 0
+  },
+  {
     "date": "2025-11-30",
-    "temp": 9.7,
-    "humidity": 66.75,
-    "wind": 14.25,
-    "cloud": 72.0,
-    "rain": 0.19999999999999998,
-    "weathercode": 2
+    "temp": 8.05,
+    "humidity": 76.0,
+    "wind": 6.8500000000000005,
+    "cloud": 96.5,
+    "rain": 0.0,
+    "weathercode": 3
   },
   {
     "date": "2025-12-01",
