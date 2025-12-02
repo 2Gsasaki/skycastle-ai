@@ -1,11 +1,11 @@
 {
   "date": "2025-12-03",
-  "fog_score": 48.4,
-  "castle_score": 38.2,
-  "dew_point": 4.35,
-  "dew_spread": 3.28,
-  "fog_probability": 0.476,
-  "castle_probability": 0.681,
-  "castle_event_probability": 0.163,
-  "event": "None"
+  "fog_score": 44.3,
+  "castle_score": 34.9,
+  "dew_point": 4.27,
+  "dew_spread": 3.18,
+  "fog_probability": 0.522,
+  "castle_probability": 0.702,
+  "castle_event_probability": 0.221,
+  "event": "FogOnly"
 }

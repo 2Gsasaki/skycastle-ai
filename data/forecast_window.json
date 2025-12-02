@@ -10,65 +10,65 @@
   },
   {
     "date": "2025-12-03",
-    "temp": 7.624999999999999,
-    "humidity": 79.75,
-    "wind": 2.725,
-    "cloud": 75.5,
+    "temp": 7.449999999999999,
+    "humidity": 80.25,
+    "wind": 3.25,
+    "cloud": 72.0,
     "rain": 0.0,
     "weathercode": 2
   },
   {
     "date": "2025-12-04",
-    "temp": 0.825,
-    "humidity": 74.25,
-    "wind": 5.525,
-    "cloud": 62.25,
-    "rain": 0.05,
-    "weathercode": 1
+    "temp": 0.4,
+    "humidity": 84.5,
+    "wind": 8.425,
+    "cloud": 71.0,
+    "rain": 0.225,
+    "weathercode": 51
   },
   {
     "date": "2025-12-05",
-    "temp": 4.2,
-    "humidity": 74.5,
-    "wind": 11.75,
-    "cloud": 98.5,
-    "rain": 0.325,
-    "weathercode": 80
+    "temp": 1.025,
+    "humidity": 94.75,
+    "wind": 3.6999999999999997,
+    "cloud": 89.0,
+    "rain": 1.5250000000000001,
+    "weathercode": 53
   },
   {
     "date": "2025-12-06",
-    "temp": 0.9750000000000001,
-    "humidity": 76.5,
-    "wind": 5.7250000000000005,
-    "cloud": 0.0,
+    "temp": 0.675,
+    "humidity": 77.5,
+    "wind": 6.1000000000000005,
+    "cloud": 2.75,
     "rain": 0.0,
     "weathercode": 0
   },
   {
     "date": "2025-12-07",
-    "temp": 6.1,
-    "humidity": 56.75,
-    "wind": 8.175,
-    "cloud": 50.75,
+    "temp": 4.45,
+    "humidity": 64.0,
+    "wind": 7.175000000000001,
+    "cloud": 33.5,
     "rain": 0.0,
-    "weathercode": 0
+    "weathercode": 1
   },
   {
     "date": "2025-12-08",
-    "temp": 6.075,
-    "humidity": 87.5,
-    "wind": 6.225,
-    "cloud": 93.0,
+    "temp": 6.3,
+    "humidity": 78.0,
+    "wind": 7.3999999999999995,
+    "cloud": 26.75,
     "rain": 0.0,
-    "weathercode": 3
+    "weathercode": 1
   },
   {
     "date": "2025-12-09",
-    "temp": 7.949999999999999,
-    "humidity": 86.75,
-    "wind": 5.6499999999999995,
-    "cloud": 93.0,
-    "rain": 1.08,
+    "temp": 7.050000000000001,
+    "humidity": 87.25,
+    "wind": 5.175,
+    "cloud": 82.0,
+    "rain": 0.6000000000000001,
     "weathercode": 80
   },
   {
