@@ -1,19 +1,19 @@
 [
   {
     "date": "2025-12-02",
-    "temp": 8.175,
-    "humidity": 91.5,
-    "wind": 5.324999999999999,
-    "cloud": 28.25,
+    "temp": 8.0,
+    "humidity": 92.0,
+    "wind": 4.75,
+    "cloud": 30.0,
     "rain": 0.0,
     "weathercode": 1
   },
   {
     "date": "2025-12-03",
-    "temp": 7.4,
-    "humidity": 81.0,
+    "temp": 7.624999999999999,
+    "humidity": 79.75,
     "wind": 2.725,
-    "cloud": 75.0,
+    "cloud": 75.5,
     "rain": 0.0,
     "weathercode": 2
   },
