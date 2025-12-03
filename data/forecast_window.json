@@ -10,11 +10,11 @@
   },
   {
     "date": "2025-12-04",
-    "temp": 0.42500000000000004,
-    "humidity": 86.5,
-    "wind": 9.75,
+    "temp": 0.45000000000000007,
+    "humidity": 87.0,
+    "wind": 10.325,
     "cloud": 84.25,
-    "rain": 0.425,
+    "rain": 0.375,
     "weathercode": 51
   },
   {
@@ -73,56 +73,56 @@
   },
   {
     "date": "2025-12-11",
-    "temp": 2.025,
-    "humidity": 62.5,
-    "wind": 7.35,
-    "cloud": 2.0,
+    "temp": 4.425,
+    "humidity": 88.5,
+    "wind": 5.825,
+    "cloud": 100.0,
+    "rain": 0.0,
+    "weathercode": 3
+  },
+  {
+    "date": "2025-12-12",
+    "temp": 0.875,
+    "humidity": 63.25,
+    "wind": 4.8500000000000005,
+    "cloud": 1.0,
     "rain": 0.0,
     "weathercode": 0
   },
   {
-    "date": "2025-12-12",
-    "temp": 6.699999999999999,
-    "humidity": 86.25,
-    "wind": 9.299999999999999,
-    "cloud": 100.0,
-    "rain": 0.0,
-    "weathercode": 3
-  },
-  {
     "date": "2025-12-13",
-    "temp": 1.75,
-    "humidity": 89.25,
-    "wind": 15.049999999999999,
-    "cloud": 100.0,
-    "rain": 0.2,
-    "weathercode": 85
+    "temp": 4.1,
+    "humidity": 93.75,
+    "wind": 7.525000000000001,
+    "cloud": 99.0,
+    "rain": 0.1,
+    "weathercode": 3
   },
   {
     "date": "2025-12-14",
-    "temp": 1.9499999999999997,
-    "humidity": 81.75,
-    "wind": 19.675,
-    "cloud": 100.0,
-    "rain": 0.1,
-    "weathercode": 51
-  },
-  {
-    "date": "2025-12-15",
-    "temp": 0.42500000000000004,
-    "humidity": 85.5,
-    "wind": 5.625,
-    "cloud": 65.0,
+    "temp": 1.825,
+    "humidity": 73.0,
+    "wind": 3.975,
+    "cloud": 88.25,
     "rain": 0.0,
     "weathercode": 3
   },
   {
+    "date": "2025-12-15",
+    "temp": 4.9,
+    "humidity": 91.5,
+    "wind": 7.449999999999999,
+    "cloud": 100.0,
+    "rain": 0.05,
+    "weathercode": 51
+  },
+  {
     "date": "2025-12-16",
-    "temp": 1.575,
-    "humidity": 69.0,
-    "wind": 9.475,
-    "cloud": 81.0,
+    "temp": 0.675,
+    "humidity": 85.75,
+    "wind": 5.3,
+    "cloud": 70.0,
     "rain": 0.0,
-    "weathercode": 2
+    "weathercode": 3
   }
 ]
