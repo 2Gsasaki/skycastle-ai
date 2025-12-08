@@ -1,22 +1,36 @@
 {
+<<<<<<< Updated upstream
   "generated_at": "2025-12-09T08:33:22.523014+09:00",
+=======
+  "generated_at": "2025-12-09T08:33:24.706050+09:00",
+>>>>>>> Stashed changes
   "predictions": [
     {
       "date": "2025-12-09",
-      "temp": 3.53,
-      "humidity": 86.0,
-      "wind": 4.08,
-      "cloud": 48.0,
+      "temp": 3.92,
+      "humidity": 80.75,
+      "wind": 5.0,
+      "cloud": 56.25,
       "rain": 0.0,
       "weathercode": 2,
+<<<<<<< Updated upstream
       "fog_probability": 0.791,
       "castle_probability": 0.98,
       "castle_event_probability": 0.967,
+=======
+      "fog_probability": 0.768,
+      "castle_probability": 0.991,
+      "castle_event_probability": 0.886,
+>>>>>>> Stashed changes
       "event": "Castle"
     },
     {
       "date": "2025-12-10",
+<<<<<<< Updated upstream
       "temp": 3.82,
+=======
+      "temp": 3.83,
+>>>>>>> Stashed changes
       "humidity": 81.5,
       "wind": 4.75,
       "cloud": 47.5,
