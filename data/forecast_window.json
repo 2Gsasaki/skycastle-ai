@@ -10,64 +10,64 @@
   },
   {
     "date": "2025-12-13",
-    "temp": -2.575,
-    "humidity": 70.0,
-    "wind": 3.6999999999999997,
-    "cloud": 17.5,
+    "temp": -2.625,
+    "humidity": 69.75,
+    "wind": 3.5,
+    "cloud": 19.5,
     "rain": 0.0,
     "weathercode": 0
   },
   {
     "date": "2025-12-14",
-    "temp": 9.55,
-    "humidity": 90.25,
-    "wind": 7.574999999999999,
-    "cloud": 93.75,
-    "rain": 0.9500000000000001,
-    "weathercode": 53
+    "temp": 9.3,
+    "humidity": 92.25,
+    "wind": 5.725,
+    "cloud": 81.0,
+    "rain": 2.0250000000000004,
+    "weathercode": 63
   },
   {
     "date": "2025-12-15",
-    "temp": 6.075,
-    "humidity": 65.25,
-    "wind": 9.899999999999999,
-    "cloud": 88.0,
-    "rain": 0.025,
-    "weathercode": 3
+    "temp": 2.75,
+    "humidity": 91.5,
+    "wind": 6.425,
+    "cloud": 63.25,
+    "rain": 0.275,
+    "weathercode": 51
   },
   {
     "date": "2025-12-16",
-    "temp": 1.925,
-    "humidity": 78.5,
-    "wind": 5.75,
-    "cloud": 27.25,
+    "temp": 2.725,
+    "humidity": 75.5,
+    "wind": 5.050000000000001,
+    "cloud": 89.25,
     "rain": 0.0,
-    "weathercode": 1
+    "weathercode": 3
   },
   {
     "date": "2025-12-17",
-    "temp": 7.55,
-    "humidity": 91.0,
-    "wind": 5.525,
-    "cloud": 93.0,
-    "rain": 0.6499999999999999,
-    "weathercode": 61
-  },
-  {
-    "date": "2025-12-18",
-    "temp": 5.075,
-    "humidity": 93.75,
-    "wind": 2.725,
-    "cloud": 57.0,
+    "temp": 6.9,
+    "humidity": 90.0,
+    "wind": 1.7000000000000002,
+    "cloud": 87.5,
     "rain": 0.0,
     "weathercode": 2
   },
   {
+    "date": "2025-12-18",
+    "temp": 6.6,
+    "humidity": 89.25,
+    "wind": 2.55,
+    "cloud": 45.0,
+    "rain": 0.0,
+    "weathercode": 1
+  },
+  {
     "date": "2025-12-19",
-    "temp": 4.525,
-    "humidity": 81.75,
-    "wind": 6.824999999999999,
-    "cloud": 10.0,
+    "temp": 7.074999999999999,
+    "humidity": 72.75,
+    "wind": 7.1499999999999995,
+    "cloud": 0.0,
     "rain": 0.0,
     "weathercode": 0
   },
