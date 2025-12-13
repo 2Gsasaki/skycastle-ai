@@ -10,66 +10,66 @@
   },
   {
     "date": "2025-12-14",
-    "temp": 9.5,
-    "humidity": 90.5,
-    "wind": 6.475,
-    "cloud": 82.25,
-    "rain": 1.85,
-    "weathercode": 53
+    "temp": 9.225000000000001,
+    "humidity": 92.25,
+    "wind": 5.799999999999999,
+    "cloud": 79.5,
+    "rain": 1.875,
+    "weathercode": 55
   },
   {
     "date": "2025-12-15",
-    "temp": 3.875,
-    "humidity": 91.25,
-    "wind": 7.775,
-    "cloud": 47.0,
-    "rain": 0.65,
+    "temp": 4.175,
+    "humidity": 93.25,
+    "wind": 8.475,
+    "cloud": 41.75,
+    "rain": 0.8999999999999999,
     "weathercode": 53
   },
   {
     "date": "2025-12-16",
-    "temp": 3.15,
-    "humidity": 77.25,
-    "wind": 4.199999999999999,
-    "cloud": 93.75,
+    "temp": 3.425,
+    "humidity": 75.75,
+    "wind": 6.1499999999999995,
+    "cloud": 42.25,
     "rain": 0.0,
-    "weathercode": 3
+    "weathercode": 1
   },
   {
     "date": "2025-12-17",
-    "temp": 6.199999999999999,
-    "humidity": 90.25,
-    "wind": 3.2249999999999996,
-    "cloud": 82.75,
+    "temp": 7.925,
+    "humidity": 92.25,
+    "wind": 4.375,
+    "cloud": 96.75,
     "rain": 0.0,
-    "weathercode": 2
-  },
-  {
-    "date": "2025-12-18",
-    "temp": 8.3,
-    "humidity": 91.0,
-    "wind": 2.775,
-    "cloud": 93.0,
-    "rain": 0.25,
     "weathercode": 3
   },
   {
+    "date": "2025-12-18",
+    "temp": 7.949999999999999,
+    "humidity": 92.25,
+    "wind": 3.55,
+    "cloud": 87.75,
+    "rain": 0.39999999999999997,
+    "weathercode": 61
+  },
+  {
     "date": "2025-12-19",
-    "temp": 3.0250000000000004,
-    "humidity": 69.25,
-    "wind": 4.65,
+    "temp": 2.2,
+    "humidity": 83.75,
+    "wind": 4.5,
     "cloud": 0.0,
     "rain": 0.0,
     "weathercode": 0
   },
   {
     "date": "2025-12-20",
-    "temp": 10.375,
-    "humidity": 64.75,
-    "wind": 8.875,
-    "cloud": 30.0,
+    "temp": 12.7,
+    "humidity": 56.5,
+    "wind": 10.05,
+    "cloud": 90.0,
     "rain": 0.0,
-    "weathercode": 1
+    "weathercode": 3
   },
   {
     "date": "2025-12-21",
