@@ -10,66 +10,66 @@
   },
   {
     "date": "2025-12-15",
-    "temp": 3.7249999999999996,
-    "humidity": 92.25,
-    "wind": 9.35,
-    "cloud": 49.75,
-    "rain": 0.85,
-    "weathercode": 53
+    "temp": 3.75,
+    "humidity": 93.0,
+    "wind": 10.025,
+    "cloud": 57.0,
+    "rain": 1.0999999999999999,
+    "weathercode": 61
   },
   {
     "date": "2025-12-16",
-    "temp": 3.075,
-    "humidity": 88.75,
-    "wind": 5.699999999999999,
-    "cloud": 56.5,
-    "rain": 0.1,
+    "temp": 3.2,
+    "humidity": 91.0,
+    "wind": 5.2,
+    "cloud": 66.0,
+    "rain": 0.22499999999999998,
     "weathercode": 1
   },
   {
     "date": "2025-12-17",
-    "temp": 7.225,
-    "humidity": 94.0,
-    "wind": 4.449999999999999,
-    "cloud": 98.5,
-    "rain": 0.15,
-    "weathercode": 3
+    "temp": 6.800000000000001,
+    "humidity": 89.75,
+    "wind": 6.925000000000001,
+    "cloud": 79.0,
+    "rain": 0.025,
+    "weathercode": 2
   },
   {
     "date": "2025-12-18",
-    "temp": 5.05,
-    "humidity": 93.25,
-    "wind": 2.9499999999999997,
-    "cloud": 68.25,
+    "temp": 4.75,
+    "humidity": 92.25,
+    "wind": 2.475,
+    "cloud": 37.75,
     "rain": 0.0,
-    "weathercode": 1
+    "weathercode": 0
   },
   {
     "date": "2025-12-19",
-    "temp": 2.85,
-    "humidity": 79.0,
-    "wind": 6.225,
+    "temp": 3.6250000000000004,
+    "humidity": 83.0,
+    "wind": 5.25,
     "cloud": 0.0,
     "rain": 0.0,
     "weathercode": 0
   },
   {
     "date": "2025-12-20",
-    "temp": 11.925,
-    "humidity": 83.25,
-    "wind": 6.2,
-    "cloud": 60.0,
+    "temp": 15.15,
+    "humidity": 66.5,
+    "wind": 10.0,
+    "cloud": 94.0,
     "rain": 0.0,
     "weathercode": 2
   },
   {
     "date": "2025-12-21",
-    "temp": 12.350000000000001,
-    "humidity": 91.25,
-    "wind": 2.5999999999999996,
-    "cloud": 85.0,
-    "rain": 0.0325,
-    "weathercode": 2
+    "temp": 14.3,
+    "humidity": 83.75,
+    "wind": 6.575,
+    "cloud": 13.75,
+    "rain": 0.0,
+    "weathercode": 0
   },
   {
     "date": "2025-12-22",
