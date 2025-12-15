@@ -1,128 +1,128 @@
 [
   {
     "date": "2025-12-15",
-    "temp": 3.475,
-    "humidity": 93.5,
-    "wind": 6.775,
-    "cloud": 33.75,
-    "rain": 0.47500000000000003,
-    "weathercode": 51
+    "temp": 3.4749999999999996,
+    "humidity": 94.0,
+    "wind": 6.949999999999999,
+    "cloud": 38.75,
+    "rain": 0.6749999999999999,
+    "weathercode": 53
   },
   {
     "date": "2025-12-16",
-    "temp": 3.2249999999999996,
-    "humidity": 85.75,
-    "wind": 4.875,
-    "cloud": 75.5,
-    "rain": 0.0,
-    "weathercode": 2
+    "temp": 2.625,
+    "humidity": 83.5,
+    "wind": 3.45,
+    "cloud": 70.0,
+    "rain": 0.05,
+    "weathercode": 1
   },
   {
     "date": "2025-12-17",
-    "temp": 6.800000000000001,
-    "humidity": 89.75,
-    "wind": 6.925000000000001,
-    "cloud": 79.0,
-    "rain": 0.025,
-    "weathercode": 2
+    "temp": 5.225,
+    "humidity": 77.5,
+    "wind": 7.125,
+    "cloud": 40.25,
+    "rain": 0.0,
+    "weathercode": 1
   },
   {
     "date": "2025-12-18",
-    "temp": 4.625,
-    "humidity": 91.5,
-    "wind": 3.5749999999999997,
-    "cloud": 53.5,
+    "temp": 4.15,
+    "humidity": 84.75,
+    "wind": 2.7750000000000004,
+    "cloud": 14.5,
     "rain": 0.0,
     "weathercode": 0
   },
   {
     "date": "2025-12-19",
-    "temp": 3.65,
-    "humidity": 82.25,
-    "wind": 5.75,
+    "temp": 4.275,
+    "humidity": 67.75,
+    "wind": 4.9750000000000005,
     "cloud": 0.0,
     "rain": 0.0,
     "weathercode": 0
   },
   {
     "date": "2025-12-20",
-    "temp": 15.15,
-    "humidity": 66.5,
-    "wind": 10.0,
-    "cloud": 94.0,
-    "rain": 0.0,
+    "temp": 15.325,
+    "humidity": 69.25,
+    "wind": 9.525,
+    "cloud": 84.25,
+    "rain": 0.05,
     "weathercode": 2
   },
   {
     "date": "2025-12-21",
-    "temp": 14.3,
-    "humidity": 83.75,
-    "wind": 6.575,
-    "cloud": 13.75,
-    "rain": 0.0,
-    "weathercode": 0
+    "temp": 15.3,
+    "humidity": 80.75,
+    "wind": 5.2250000000000005,
+    "cloud": 95.75,
+    "rain": 0.1,
+    "weathercode": 3
   },
   {
     "date": "2025-12-22",
-    "temp": 11.025,
-    "humidity": 96.75,
-    "wind": 5.699999999999999,
-    "cloud": 100.0,
-    "rain": 0.05,
+    "temp": 9.825,
+    "humidity": 86.5,
+    "wind": 8.15,
+    "cloud": 96.5,
+    "rain": 0.0,
     "weathercode": 3
   },
   {
     "date": "2025-12-23",
-    "temp": 4.924999999999999,
-    "humidity": 95.25,
-    "wind": 9.75,
-    "cloud": 100.0,
-    "rain": 0.1,
-    "weathercode": 51
-  },
-  {
-    "date": "2025-12-24",
-    "temp": 1.6,
-    "humidity": 71.0,
-    "wind": 2.35,
-    "cloud": 3.75,
+    "temp": 2.475,
+    "humidity": 86.5,
+    "wind": 6.25,
+    "cloud": 19.0,
     "rain": 0.0,
     "weathercode": 0
   },
   {
-    "date": "2025-12-25",
-    "temp": 3.3,
-    "humidity": 60.25,
-    "wind": 12.45,
-    "cloud": 66.5,
+    "date": "2025-12-24",
+    "temp": 4.4,
+    "humidity": 71.25,
+    "wind": 9.6,
+    "cloud": 91.75,
     "rain": 0.0,
-    "weathercode": 2
+    "weathercode": 3
+  },
+  {
+    "date": "2025-12-25",
+    "temp": 7.35,
+    "humidity": 91.25,
+    "wind": 12.275000000000002,
+    "cloud": 100.0,
+    "rain": 0.65,
+    "weathercode": 53
   },
   {
     "date": "2025-12-26",
-    "temp": 6.800000000000001,
-    "humidity": 97.75,
-    "wind": 5.125,
-    "cloud": 100.0,
-    "rain": 0.55,
+    "temp": 1.75,
+    "humidity": 87.75,
+    "wind": 10.05,
+    "cloud": 69.25,
+    "rain": 0.05,
     "weathercode": 51
   },
   {
     "date": "2025-12-27",
-    "temp": 0.85,
-    "humidity": 96.5,
-    "wind": 12.15,
-    "cloud": 100.0,
-    "rain": 0.7,
-    "weathercode": 73
+    "temp": 1.525,
+    "humidity": 62.5,
+    "wind": 4.3500000000000005,
+    "cloud": 2.75,
+    "rain": 0.0,
+    "weathercode": 0
   },
   {
     "date": "2025-12-28",
-    "temp": -4.975,
-    "humidity": 86.5,
-    "wind": 7.1000000000000005,
-    "cloud": 24.5,
-    "rain": 0.0,
-    "weathercode": 1
+    "temp": 2.3500000000000005,
+    "humidity": 98.5,
+    "wind": 2.45,
+    "cloud": 100.0,
+    "rain": 0.44999999999999996,
+    "weathercode": 73
   }
 ]
