@@ -10,11 +10,11 @@
   },
   {
     "date": "2025-12-16",
-    "temp": 2.625,
-    "humidity": 83.5,
-    "wind": 3.875,
-    "cloud": 69.0,
-    "rain": 0.025,
+    "temp": 3.1,
+    "humidity": 80.25,
+    "wind": 4.175000000000001,
+    "cloud": 72.0,
+    "rain": 0.0,
     "weathercode": 2
   },
   {
@@ -73,56 +73,56 @@
   },
   {
     "date": "2025-12-23",
-    "temp": 2.475,
-    "humidity": 86.5,
-    "wind": 6.25,
-    "cloud": 19.0,
-    "rain": 0.0,
-    "weathercode": 0
-  },
-  {
-    "date": "2025-12-24",
-    "temp": 4.4,
-    "humidity": 71.25,
-    "wind": 9.6,
-    "cloud": 91.75,
+    "temp": 1.8,
+    "humidity": 86.25,
+    "wind": 8.325,
+    "cloud": 87.0,
     "rain": 0.0,
     "weathercode": 3
   },
   {
+    "date": "2025-12-24",
+    "temp": 1.25,
+    "humidity": 81.0,
+    "wind": 2.5500000000000003,
+    "cloud": 75.25,
+    "rain": 0.0,
+    "weathercode": 2
+  },
+  {
     "date": "2025-12-25",
-    "temp": 7.35,
-    "humidity": 91.25,
-    "wind": 12.275000000000002,
-    "cloud": 100.0,
-    "rain": 0.65,
-    "weathercode": 53
+    "temp": 3.0500000000000003,
+    "humidity": 51.5,
+    "wind": 3.275,
+    "cloud": 99.5,
+    "rain": 0.0,
+    "weathercode": 3
   },
   {
     "date": "2025-12-26",
-    "temp": 1.75,
-    "humidity": 87.75,
-    "wind": 10.05,
-    "cloud": 69.25,
-    "rain": 0.05,
-    "weathercode": 51
+    "temp": 0.4,
+    "humidity": 94.5,
+    "wind": 6.999999999999999,
+    "cloud": 95.5,
+    "rain": 0.0,
+    "weathercode": 3
   },
   {
     "date": "2025-12-27",
-    "temp": 1.525,
-    "humidity": 62.5,
-    "wind": 4.3500000000000005,
-    "cloud": 2.75,
-    "rain": 0.0,
-    "weathercode": 0
+    "temp": 2.675,
+    "humidity": 97.0,
+    "wind": 7.75,
+    "cloud": 100.0,
+    "rain": 0.3,
+    "weathercode": 51
   },
   {
     "date": "2025-12-28",
-    "temp": 2.3500000000000005,
-    "humidity": 98.5,
-    "wind": 2.45,
+    "temp": 1.225,
+    "humidity": 88.75,
+    "wind": 10.974999999999998,
     "cloud": 100.0,
-    "rain": 0.44999999999999996,
-    "weathercode": 73
+    "rain": 0.0,
+    "weathercode": 3
   }
 ]
