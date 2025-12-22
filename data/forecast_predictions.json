@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-22T17:43:23.766734+09:00",
+  "generated_at": "2025-12-22T20:27:33.664480+09:00",
   "predictions": [
     {
       "date": "2025-12-22",
@@ -55,28 +55,28 @@
     },
     {
       "date": "2025-12-26",
-      "temp": 4.8,
-      "humidity": 86.5,
-      "wind": 29.15,
-      "cloud": 97.75,
-      "rain": 1.2,
-      "weathercode": 61,
-      "fog_probability": 0.019,
-      "castle_probability": 0.913,
-      "castle_event_probability": 0.022,
+      "temp": 4.83,
+      "humidity": 82.0,
+      "wind": 13.57,
+      "cloud": 97.0,
+      "rain": 1.1,
+      "weathercode": 80,
+      "fog_probability": 0.018,
+      "castle_probability": 0.945,
+      "castle_event_probability": 0.024,
       "event": "None"
     },
     {
       "date": "2025-12-27",
-      "temp": 1.38,
-      "humidity": 78.25,
-      "wind": 4.65,
-      "cloud": 75.75,
-      "rain": 0.05,
+      "temp": 1.12,
+      "humidity": 84.5,
+      "wind": 1.52,
+      "cloud": 73.25,
+      "rain": 0.0,
       "weathercode": 2,
-      "fog_probability": 0.859,
-      "castle_probability": 0.969,
-      "castle_event_probability": 0.93,
+      "fog_probability": 0.981,
+      "castle_probability": 0.708,
+      "castle_event_probability": 0.833,
       "event": "Castle"
     },
     {
@@ -87,9 +87,9 @@
       "cloud": 25.0,
       "rain": 0.0,
       "weathercode": 0,
-      "fog_probability": 0.923,
-      "castle_probability": 0.94,
-      "castle_event_probability": 0.946,
+      "fog_probability": 0.779,
+      "castle_probability": 0.954,
+      "castle_event_probability": 0.87,
       "event": "Castle"
     },
     {
