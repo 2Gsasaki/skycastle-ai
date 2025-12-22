@@ -37,20 +37,20 @@
   },
   {
     "date": "2025-12-26",
-    "temp": 4.8,
-    "humidity": 86.5,
-    "wind": 29.15,
-    "cloud": 97.75,
-    "rain": 1.2,
-    "weathercode": 61
+    "temp": 4.825,
+    "humidity": 82.0,
+    "wind": 13.575,
+    "cloud": 97.0,
+    "rain": 1.1,
+    "weathercode": 80
   },
   {
     "date": "2025-12-27",
-    "temp": 1.375,
-    "humidity": 78.25,
-    "wind": 4.65,
-    "cloud": 75.75,
-    "rain": 0.05,
+    "temp": 1.125,
+    "humidity": 84.5,
+    "wind": 1.525,
+    "cloud": 73.25,
+    "rain": 0.0,
     "weathercode": 2
   },
   {
