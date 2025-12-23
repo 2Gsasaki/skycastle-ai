@@ -1,9 +1,6 @@
 {
-<<<<<<< Updated upstream
-  "generated_at": "2025-12-23T11:06:04.857920+09:00",
-=======
+
   "generated_at": "2025-12-23T11:06:08.814995+09:00",
->>>>>>> Stashed changes
   "predictions": [
     {
       "date": "2025-12-23",
@@ -26,97 +23,14 @@
       "cloud": 81.5,
       "rain": 0.73,
       "weathercode": 51,
-<<<<<<< Updated upstream
-      "fog_probability": 0.019,
-      "castle_probability": 0.737,
-      "castle_event_probability": 0.014,
-      "event": "None"
-    },
-    {
-      "date": "2025-12-25",
-      "temp": 9.85,
-      "humidity": 95.25,
-      "wind": 7.82,
-      "cloud": 95.25,
-      "rain": 0.3,
-      "weathercode": 51,
-      "fog_probability": 0.139,
-      "castle_probability": 0.673,
-      "castle_event_probability": 0.024,
-      "event": "None"
-    },
-    {
-      "date": "2025-12-26",
-      "temp": 4.67,
-      "humidity": 83.0,
-      "wind": 19.62,
-      "cloud": 98.75,
-      "rain": 0.75,
-      "weathercode": 80,
-      "fog_probability": 0.003,
-      "castle_probability": 0.811,
-      "castle_event_probability": 0.015,
-      "event": "None"
-    },
-    {
-      "date": "2025-12-27",
-      "temp": 0.93,
-      "humidity": 91.0,
-      "wind": 2.45,
-      "cloud": 80.0,
-      "rain": 0.05,
-      "weathercode": 2,
-      "fog_probability": 0.896,
-      "castle_probability": 0.548,
-      "castle_event_probability": 0.497,
-      "event": "FogOnly"
-    },
-    {
-      "date": "2025-12-28",
-      "temp": 2.7,
-      "humidity": 92.25,
-      "wind": 5.45,
-      "cloud": 93.75,
-      "rain": 0.1,
-      "weathercode": 3,
-      "fog_probability": 0.85,
-      "castle_probability": 0.826,
-      "castle_event_probability": 0.828,
-      "event": "Castle"
-    },
-    {
-      "date": "2025-12-29",
-      "temp": 0.88,
-      "humidity": 82.0,
-      "wind": 5.22,
-      "cloud": 0.0,
-      "rain": 0.0,
-      "weathercode": 0,
-      "fog_probability": 0.944,
-      "castle_probability": 0.764,
-      "castle_event_probability": 0.855,
-      "event": "Castle"
-    },
-    {
-      "date": "2025-12-30",
-      "temp": 6.45,
-      "humidity": 78.75,
-      "wind": 8.3,
-      "cloud": 57.25,
-      "rain": 0.02,
-      "weathercode": 1,
-      "fog_probability": 0.229,
-      "castle_probability": 0.089,
-=======
+
       "fog_probability": 0.006,
       "castle_probability": 0.391,
->>>>>>> Stashed changes
       "castle_event_probability": 0.005,
       "event": "None"
     },
     {
-<<<<<<< Updated upstream
-=======
+
       "date": "2025-12-25",
       "temp": 9.85,
       "humidity": 95.25,
@@ -195,7 +109,6 @@
       "event": "None"
     },
     {
->>>>>>> Stashed changes
       "date": "2025-12-31",
       "temp": 3.88,
       "humidity": 98.75,
