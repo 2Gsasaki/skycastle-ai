@@ -2,26 +2,101 @@ name: SkyCastle Daily Automation
 
 on:
   schedule:
-    # UTC 02:05 = JST 11:05（11時台開始）
+    # UTC 02:05 = JST 11:05（履歴更新＋予報）
     - cron: "5 2 * * *"
-    # UTC 05:05 = JST 14:05
-    - cron: "5 5 * * *"
-    # UTC 08:05 = JST 17:05
-    - cron: "5 8 * * *"
-    # UTC 11:05 = JST 20:05
-    - cron: "5 11 * * *"
+    # 予報のみ（履歴は触らない）
+    - cron: "5 5 * * *"   # UTC 05:05 = JST 14:05
+    - cron: "5 8 * * *"   # UTC 08:05 = JST 17:05
+    - cron: "5 11 * * *"  # UTC 11:05 = JST 20:05
+    - cron: "30 13 * * *" # UTC 13:30 = JST 22:30
+    - cron: "30 17 * * *" # UTC 17:30 = JST 02:30（翌日JST）
+    - cron: "30 19 * * *" # UTC 19:30 = JST 04:30（翌日JST）
     # UTC 15:00 = JST 00:00（14日予報のみ更新）
     - cron: "0 15 * * *"
   workflow_dispatch:
 
 jobs:
-  daily-run:
-    if: github.event_name == 'workflow_dispatch' || github.event.schedule != '0 15 * * *'
+  # 夜～明け方・昼の予報だけ（履歴は更新しない）
+  forecast-only:
+    if: github.event_name == 'schedule' && (github.event.schedule == '5 5 * * *' || github.event.schedule == '5 8 * * *' || github.event.schedule == '5 11 * * *' || github.event.schedule == '30 13 * * *' || github.event.schedule == '30 17 * * *' || github.event.schedule == '30 19 * * *')
     runs-on: ubuntu-latest
+    concurrency:
+      group: skycastle-forecast
+      cancel-in-progress: true
     permissions:
       contents: write
-    env:
-      NETLIFY_BUILD_HOOK_URL: ${{ secrets.NETLIFY_BUILD_HOOK_URL }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Determine JST timestamp
+        id: dates
+        run: echo "timestamp=$(TZ=Asia/Tokyo date -Iseconds)" >> "$GITHUB_OUTPUT"
+
+      - name: Run forecast-only pipeline (no history update)
+        run: |
+          python fetch_weather.py
+          python score_fog.py
+          python predict_model.py
+          python fetch_forecast_window.py --days 14
+          python predict_forecast_window.py
+
+      - name: Copy latest forecast JSON for public site
+        run: |
+          mkdir -p public/data
+          cp data/forecast_predictions.json public/data/forecast_predictions.json
+
+      - name: Rebase with remote before committing
+        env:
+          TARGET_BRANCH: ${{ github.ref_name }}
+        run: |
+          git pull --rebase --autostash origin "${TARGET_BRANCH}"
+
+      - name: Commit generated data
+        env:
+          TIMESTAMP: ${{ steps.dates.outputs.timestamp }}
+        run: |
+          git add data/feed.json data/weather.csv data/forecast_predictions.json data/forecast_window.json public/data/forecast_predictions.json || true
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: forecast-only refresh at ${TIMESTAMP:-$(date -Iseconds)}"
+          attempts=0
+          max_attempts=3
+          until git push; do
+            attempts=$((attempts + 1))
+            if [ "$attempts" -ge "$max_attempts" ]; then
+              echo "git push failed after ${attempts} attempts."
+              exit 1
+            fi
+            wait_seconds=$((attempts * 10))
+            echo "git push failed (attempt ${attempts}/${max_attempts}); retrying in ${wait_seconds}s..."
+            sleep "${wait_seconds}"
+          done
+
+
+  # 11:05 JST: 実測で履歴更新＋予報
+  daily-run:
+    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '5 2 * * *'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: skycastle-1105
+      cancel-in-progress: false
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -89,17 +164,15 @@ jobs:
             sleep "${wait_seconds}"
           done
 
-      - name: Trigger Netlify deploy
-        if: ${{ env.NETLIFY_BUILD_HOOK_URL != '' }}
-        run: curl -X POST "${{ env.NETLIFY_BUILD_HOOK_URL }}"
 
   midnight-forecast:
     if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 15 * * *'
     runs-on: ubuntu-latest
+    concurrency:
+      group: skycastle-0000
+      cancel-in-progress: false
     permissions:
       contents: write
-    env:
-      NETLIFY_BUILD_HOOK_URL: ${{ secrets.NETLIFY_BUILD_HOOK_URL }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -151,7 +224,3 @@ jobs:
             echo "git push failed (attempt ${attempts}/${max_attempts}); retrying in ${wait_seconds}s..."
             sleep "${wait_seconds}"
           done
-
-      - name: Trigger Netlify deploy
-        if: ${{ env.NETLIFY_BUILD_HOOK_URL != '' }}
-        run: curl -X POST "${{ env.NETLIFY_BUILD_HOOK_URL }}"
