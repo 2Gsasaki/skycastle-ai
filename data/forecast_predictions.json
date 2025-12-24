@@ -1,9 +1,5 @@
 {
-<<<<<<< Updated upstream
-  "generated_at": "2025-12-25T08:38:26.847439+09:00",
-=======
   "generated_at": "2025-12-25T08:38:28.394049+09:00",
->>>>>>> Stashed changes
   "predictions": [
     {
       "date": "2025-12-25",
@@ -13,17 +9,10 @@
       "cloud": 85.5,
       "rain": 0.85,
       "weathercode": 3,
-<<<<<<< Updated upstream
-      "fog_probability": 0.483,
-      "castle_probability": 0.926,
-      "castle_event_probability": 0.077,
-      "event": "None"
-=======
       "fog_probability": 0.745,
       "castle_probability": 0.273,
       "castle_event_probability": 0.074,
       "event": "FogOnly"
->>>>>>> Stashed changes
     },
     {
       "date": "2025-12-26",
