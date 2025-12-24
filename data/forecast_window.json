@@ -1,14 +1,5 @@
 [
   {
-    "date": "2025-12-24",
-    "temp": 9.399999999999999,
-    "humidity": 85.5,
-    "wind": 12.725,
-    "cloud": 84.0,
-    "rain": 2.2,
-    "weathercode": 61
-  },
-  {
     "date": "2025-12-25",
     "temp": 8.9,
     "humidity": 93.0,
@@ -124,5 +115,14 @@
     "cloud": 97.5,
     "rain": 0.45,
     "weathercode": 53
+  },
+  {
+    "date": "2026-01-07",
+    "temp": -1.85,
+    "humidity": 96.75,
+    "wind": 6.425,
+    "cloud": 100.0,
+    "rain": 0.15,
+    "weathercode": 51
   }
 ]
