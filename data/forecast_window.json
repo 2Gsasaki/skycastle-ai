@@ -1,75 +1,75 @@
 [
   {
     "date": "2025-12-28",
-    "temp": 1.125,
-    "humidity": 93.5,
-    "wind": 5.125,
-    "cloud": 45.25,
+    "temp": 0.825,
+    "humidity": 93.0,
+    "wind": 5.025,
+    "cloud": 41.0,
     "rain": 0.0,
     "weathercode": 1
   },
   {
     "date": "2025-12-29",
-    "temp": 3.425,
-    "humidity": 77.0,
-    "wind": 9.549999999999999,
-    "cloud": 12.0,
+    "temp": 2.825,
+    "humidity": 79.5,
+    "wind": 9.2,
+    "cloud": 10.5,
     "rain": 0.0,
     "weathercode": 0
   },
   {
     "date": "2025-12-30",
-    "temp": 6.4750000000000005,
-    "humidity": 82.0,
-    "wind": 7.300000000000001,
-    "cloud": 36.5,
+    "temp": 5.25,
+    "humidity": 85.0,
+    "wind": 6.3,
+    "cloud": 51.25,
     "rain": 0.0,
     "weathercode": 1
   },
   {
     "date": "2025-12-31",
-    "temp": 4.25,
-    "humidity": 85.5,
-    "wind": 4.5,
-    "cloud": 82.0,
+    "temp": 5.2250000000000005,
+    "humidity": 73.25,
+    "wind": 2.25,
+    "cloud": 71.5,
     "rain": 0.1,
-    "weathercode": 80
+    "weathercode": 2
   },
   {
     "date": "2026-01-01",
-    "temp": 2.6,
-    "humidity": 87.75,
-    "wind": 6.85,
-    "cloud": 93.5,
-    "rain": 0.35,
-    "weathercode": 85
+    "temp": 4.175,
+    "humidity": 79.5,
+    "wind": 1.65,
+    "cloud": 83.75,
+    "rain": 0.4,
+    "weathercode": 80
   },
   {
     "date": "2026-01-02",
-    "temp": 1.375,
-    "humidity": 96.25,
-    "wind": 2.575,
+    "temp": 1.9,
+    "humidity": 90.0,
+    "wind": 12.85,
     "cloud": 100.0,
-    "rain": 0.44999999999999996,
+    "rain": 0.4,
     "weathercode": 85
   },
   {
     "date": "2026-01-03",
-    "temp": 2.2750000000000004,
-    "humidity": 89.0,
-    "wind": 4.0,
-    "cloud": 95.25,
-    "rain": 0.8,
+    "temp": 0.525,
+    "humidity": 84.75,
+    "wind": 7.375,
+    "cloud": 97.25,
+    "rain": 0.4,
     "weathercode": 85
   },
   {
     "date": "2026-01-04",
-    "temp": -3.275,
-    "humidity": 86.25,
-    "wind": 10.9,
-    "cloud": 51.5,
+    "temp": 0.15000000000000002,
+    "humidity": 85.0,
+    "wind": 6.125,
+    "cloud": 67.25,
     "rain": 0.0,
-    "weathercode": 1
+    "weathercode": 2
   },
   {
     "date": "2026-01-05",
