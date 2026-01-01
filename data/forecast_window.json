@@ -10,66 +10,66 @@
   },
   {
     "date": "2026-01-02",
-    "temp": -2.7,
-    "humidity": 92.25,
-    "wind": 1.3750000000000002,
-    "cloud": 56.0,
-    "rain": 0.0,
+    "temp": -2.95,
+    "humidity": 94.25,
+    "wind": 0.8500000000000001,
+    "cloud": 70.0,
+    "rain": 0.025,
     "weathercode": 1
   },
   {
     "date": "2026-01-03",
-    "temp": -1.4,
-    "humidity": 93.5,
-    "wind": 3.5,
-    "cloud": 44.75,
-    "rain": 0.125,
+    "temp": -1.4500000000000002,
+    "humidity": 89.25,
+    "wind": 4.075,
+    "cloud": 36.75,
+    "rain": 0.025,
     "weathercode": 1
   },
   {
     "date": "2026-01-04",
-    "temp": 2.475,
-    "humidity": 84.5,
-    "wind": 6.475,
-    "cloud": 94.0,
-    "rain": 0.15000000000000002,
-    "weathercode": 61
+    "temp": 0.875,
+    "humidity": 87.75,
+    "wind": 2.7,
+    "cloud": 71.0,
+    "rain": 0.05,
+    "weathercode": 2
   },
   {
     "date": "2026-01-05",
-    "temp": 4.8,
-    "humidity": 94.25,
-    "wind": 5.6499999999999995,
-    "cloud": 100.0,
-    "rain": 1.25,
-    "weathercode": 61
+    "temp": 4.35,
+    "humidity": 87.0,
+    "wind": 6.125,
+    "cloud": 88.75,
+    "rain": 0.0,
+    "weathercode": 3
   },
   {
     "date": "2026-01-06",
-    "temp": 2.05,
-    "humidity": 79.75,
-    "wind": 2.5,
-    "cloud": 70.75,
-    "rain": 0.0,
-    "weathercode": 2
+    "temp": 1.9249999999999998,
+    "humidity": 81.0,
+    "wind": 5.449999999999999,
+    "cloud": 64.0,
+    "rain": 0.1,
+    "weathercode": 3
   },
   {
     "date": "2026-01-07",
-    "temp": 4.5,
-    "humidity": 69.75,
-    "wind": 8.775,
-    "cloud": 87.25,
+    "temp": 1.375,
+    "humidity": 70.0,
+    "wind": 5.15,
+    "cloud": 75.0,
     "rain": 0.0,
-    "weathercode": 2
+    "weathercode": 0
   },
   {
     "date": "2026-01-08",
-    "temp": 1.125,
-    "humidity": 86.25,
-    "wind": 3.25,
-    "cloud": 94.25,
-    "rain": 0.22500000000000003,
-    "weathercode": 61
+    "temp": 2.9000000000000004,
+    "humidity": 91.0,
+    "wind": 7.124999999999999,
+    "cloud": 81.5,
+    "rain": 0.15,
+    "weathercode": 2
   },
   {
     "date": "2026-01-09",
