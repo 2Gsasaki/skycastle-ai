@@ -10,66 +10,66 @@
   },
   {
     "date": "2026-01-03",
-    "temp": -1.1,
-    "humidity": 93.0,
-    "wind": 4.5,
-    "cloud": 91.75,
-    "rain": 0.275,
+    "temp": -0.95,
+    "humidity": 89.75,
+    "wind": 5.1,
+    "cloud": 79.5,
+    "rain": 0.32499999999999996,
     "weathercode": 73
   },
   {
     "date": "2026-01-04",
-    "temp": 0.275,
-    "humidity": 87.75,
-    "wind": 2.7249999999999996,
-    "cloud": 75.5,
+    "temp": 0.2,
+    "humidity": 89.25,
+    "wind": 3.1500000000000004,
+    "cloud": 69.75,
     "rain": 0.0,
-    "weathercode": 2
+    "weathercode": 3
   },
   {
     "date": "2026-01-05",
-    "temp": 4.3,
-    "humidity": 89.5,
-    "wind": 6.475,
-    "cloud": 99.75,
-    "rain": 0.7250000000000001,
-    "weathercode": 61
+    "temp": 2.925,
+    "humidity": 90.0,
+    "wind": 6.4,
+    "cloud": 70.75,
+    "rain": 0.35,
+    "weathercode": 51
   },
   {
     "date": "2026-01-06",
-    "temp": 2.05,
-    "humidity": 85.0,
-    "wind": 7.475,
-    "cloud": 67.75,
-    "rain": 0.25,
-    "weathercode": 85
+    "temp": 1.9,
+    "humidity": 85.75,
+    "wind": 7.425,
+    "cloud": 73.0,
+    "rain": 0.15,
+    "weathercode": 2
   },
   {
     "date": "2026-01-07",
-    "temp": 1.175,
-    "humidity": 68.5,
-    "wind": 7.225,
-    "cloud": 25.0,
+    "temp": 0.75,
+    "humidity": 67.75,
+    "wind": 5.075,
+    "cloud": 100.0,
     "rain": 0.0,
-    "weathercode": 0
+    "weathercode": 3
   },
   {
     "date": "2026-01-08",
-    "temp": 3.3,
-    "humidity": 92.5,
-    "wind": 5.75,
-    "cloud": 97.75,
-    "rain": 1.6500000000000001,
+    "temp": 3.85,
+    "humidity": 85.0,
+    "wind": 12.174999999999999,
+    "cloud": 99.0,
+    "rain": 0.5,
     "weathercode": 85
   },
   {
     "date": "2026-01-09",
-    "temp": -0.075,
-    "humidity": 90.75,
-    "wind": 6.9750000000000005,
-    "cloud": 88.25,
-    "rain": 0.1,
-    "weathercode": 85
+    "temp": 0.275,
+    "humidity": 75.75,
+    "wind": 1.7000000000000002,
+    "cloud": 56.5,
+    "rain": 0.0,
+    "weathercode": 0
   },
   {
     "date": "2026-01-10",
