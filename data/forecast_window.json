@@ -10,12 +10,12 @@
   },
   {
     "date": "2026-01-05",
-    "temp": 3.125,
-    "humidity": 91.25,
-    "wind": 5.425,
-    "cloud": 70.5,
-    "rain": 0.525,
-    "weathercode": 51
+    "temp": 2.7250000000000005,
+    "humidity": 93.75,
+    "wind": 5.35,
+    "cloud": 85.5,
+    "rain": 1.2249999999999999,
+    "weathercode": 61
   },
   {
     "date": "2026-01-06",
@@ -73,56 +73,56 @@
   },
   {
     "date": "2026-01-12",
-    "temp": 0.22499999999999998,
-    "humidity": 96.75,
-    "wind": 14.475,
+    "temp": -1.625,
+    "humidity": 94.0,
+    "wind": 6.324999999999999,
     "cloud": 100.0,
-    "rain": 0.65,
-    "weathercode": 73
+    "rain": 0.75,
+    "weathercode": 85
   },
   {
     "date": "2026-01-13",
-    "temp": -2.475,
-    "humidity": 92.25,
-    "wind": 13.175,
+    "temp": -2.4499999999999997,
+    "humidity": 95.0,
+    "wind": 3.05,
     "cloud": 100.0,
-    "rain": 0.25,
-    "weathercode": 71
+    "rain": 0.05,
+    "weathercode": 3
   },
   {
     "date": "2026-01-14",
-    "temp": -0.45,
-    "humidity": 95.5,
-    "wind": 10.825,
-    "cloud": 100.0,
-    "rain": 0.4,
-    "weathercode": 73
-  },
-  {
-    "date": "2026-01-15",
-    "temp": -5.2,
-    "humidity": 87.5,
-    "wind": 8.025,
-    "cloud": 46.0,
-    "rain": 0.0,
-    "weathercode": 1
-  },
-  {
-    "date": "2026-01-16",
-    "temp": -3.2,
-    "humidity": 80.0,
-    "wind": 9.5,
-    "cloud": 81.5,
+    "temp": 1.025,
+    "humidity": 92.5,
+    "wind": 9.75,
+    "cloud": 98.25,
     "rain": 0.0,
     "weathercode": 3
   },
   {
-    "date": "2026-01-17",
-    "temp": -0.5499999999999999,
-    "humidity": 91.5,
-    "wind": 9.025,
-    "cloud": 9.0,
+    "date": "2026-01-15",
+    "temp": 3.45,
+    "humidity": 90.75,
+    "wind": 11.249999999999998,
+    "cloud": 21.5,
     "rain": 0.0,
     "weathercode": 0
+  },
+  {
+    "date": "2026-01-16",
+    "temp": 4.375,
+    "humidity": 100.0,
+    "wind": 5.699999999999999,
+    "cloud": 100.0,
+    "rain": 0.0,
+    "weathercode": 45
+  },
+  {
+    "date": "2026-01-17",
+    "temp": -2.425,
+    "humidity": 78.25,
+    "wind": 8.2,
+    "cloud": 63.75,
+    "rain": 0.0,
+    "weathercode": 2
   }
 ]
