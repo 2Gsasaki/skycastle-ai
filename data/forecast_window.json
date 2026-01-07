@@ -1,14 +1,5 @@
 [
   {
-    "date": "2026-01-07",
-    "temp": 0.125,
-    "humidity": 78.75,
-    "wind": 7.1,
-    "cloud": 67.25,
-    "rain": 0.0,
-    "weathercode": 2
-  },
-  {
     "date": "2026-01-08",
     "temp": 1.975,
     "humidity": 93.25,
@@ -124,5 +115,14 @@
     "cloud": 5.25,
     "rain": 0.0,
     "weathercode": 0
+  },
+  {
+    "date": "2026-01-21",
+    "temp": -1.2000000000000002,
+    "humidity": 78.5,
+    "wind": 8.375,
+    "cloud": 50.25,
+    "rain": 0.0,
+    "weathercode": 1
   }
 ]
