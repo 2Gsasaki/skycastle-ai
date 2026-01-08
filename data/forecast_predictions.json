@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-09T02:51:10.721509+09:00",
+  "generated_at": "2026-01-09T04:42:09.662200+09:00",
   "predictions": [
     {
       "date": "2026-01-09",
@@ -16,15 +16,15 @@
     },
     {
       "date": "2026-01-10",
-      "temp": 1.25,
-      "humidity": 69.0,
-      "wind": 12.12,
-      "cloud": 3.0,
+      "temp": 1.1,
+      "humidity": 70.5,
+      "wind": 11.88,
+      "cloud": 2.0,
       "rain": 0.0,
       "weathercode": 0,
-      "fog_probability": 0.35,
+      "fog_probability": 0.366,
       "castle_probability": 0.922,
-      "castle_event_probability": 0.198,
+      "castle_event_probability": 0.217,
       "event": "None"
     },
     {
