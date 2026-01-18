@@ -10,12 +10,12 @@
   },
   {
     "date": "2026-01-19",
-    "temp": 2.45,
-    "humidity": 71.5,
-    "wind": 7.225,
-    "cloud": 64.75,
+    "temp": 1.95,
+    "humidity": 70.75,
+    "wind": 7.0,
+    "cloud": 50.0,
     "rain": 0.0,
-    "weathercode": 2
+    "weathercode": 1
   },
   {
     "date": "2026-01-20",
