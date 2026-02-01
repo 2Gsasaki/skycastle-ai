@@ -10,11 +10,11 @@
   },
   {
     "date": "2026-02-02",
-    "temp": -1.05,
-    "humidity": 91.5,
-    "wind": 3.625,
-    "cloud": 77.75,
-    "rain": 0.07500000000000001,
+    "temp": -0.625,
+    "humidity": 96.5,
+    "wind": 2.95,
+    "cloud": 97.0,
+    "rain": 0.2,
     "weathercode": 71
   },
   {
@@ -87,7 +87,7 @@
     "wind": 7.55,
     "cloud": 33.75,
     "rain": 0.0,
-    "weathercode": 45
+    "weathercode": 1
   },
   {
     "date": "2026-02-11",
