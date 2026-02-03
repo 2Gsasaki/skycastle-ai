@@ -1,11 +1,11 @@
 {
-  "date": "2026-02-04",
-  "fog_score": 39.3,
-  "castle_score": 20.7,
-  "dew_point": -7.15,
-  "dew_spread": 2.98,
-  "fog_probability": 0.324,
-  "castle_probability": 0.962,
-  "castle_event_probability": 0.188,
-  "event": "None"
+  "date": "2026-02-05",
+  "fog_score": 49.7,
+  "castle_score": 34.8,
+  "dew_point": -1.51,
+  "dew_spread": 2.11,
+  "fog_probability": 0.845,
+  "castle_probability": 0.988,
+  "castle_event_probability": 0.934,
+  "event": "Castle"
 }
