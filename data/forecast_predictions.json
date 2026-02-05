@@ -1,17 +1,27 @@
 {
+<<<<<<< Updated upstream
   "generated_at": "2026-02-05T09:04:09.352776+09:00",
+=======
+  "generated_at": "2026-02-05T09:04:11.376002+09:00",
+>>>>>>> Stashed changes
   "predictions": [
     {
       "date": "2026-02-05",
-      "temp": 0.8,
-      "humidity": 85.5,
-      "wind": 6.4,
-      "cloud": 22.25,
+      "temp": 1.4,
+      "humidity": 93.0,
+      "wind": 7.55,
+      "cloud": 72.0,
       "rain": 0.0,
       "weathercode": 0,
+<<<<<<< Updated upstream
       "fog_probability": 0.315,
       "castle_probability": 0.992,
       "castle_event_probability": 0.968,
+=======
+      "fog_probability": 0.91,
+      "castle_probability": 0.994,
+      "castle_event_probability": 0.962,
+>>>>>>> Stashed changes
       "event": "Castle"
     },
     {
@@ -22,9 +32,15 @@
       "cloud": 59.0,
       "rain": 0.03,
       "weathercode": 2,
+<<<<<<< Updated upstream
       "fog_probability": 0.345,
       "castle_probability": 0.996,
       "castle_event_probability": 0.234,
+=======
+      "fog_probability": 0.315,
+      "castle_probability": 0.994,
+      "castle_event_probability": 0.194,
+>>>>>>> Stashed changes
       "event": "None"
     },
     {
