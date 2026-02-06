@@ -10,12 +10,12 @@
   },
   {
     "date": "2026-02-07",
-    "temp": -0.9,
-    "humidity": 76.0,
-    "wind": 9.0,
-    "cloud": 86.0,
+    "temp": -0.9500000000000001,
+    "humidity": 73.0,
+    "wind": 9.05,
+    "cloud": 79.5,
     "rain": 0.0,
-    "weathercode": 3
+    "weathercode": 2
   },
   {
     "date": "2026-02-08",
