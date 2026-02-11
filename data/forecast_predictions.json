@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-11T15:10:42.063605+09:00",
+  "generated_at": "2026-02-11T18:02:01.115818+09:00",
   "predictions": [
     {
       "date": "2026-02-11",
@@ -35,9 +35,9 @@
       "cloud": 46.0,
       "rain": 0.0,
       "weathercode": 1,
-      "fog_probability": 0.258,
-      "castle_probability": 0.979,
-      "castle_event_probability": 0.126,
+      "fog_probability": 0.445,
+      "castle_probability": 0.99,
+      "castle_event_probability": 0.393,
       "event": "None"
     },
     {
