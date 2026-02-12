@@ -1,9 +1,5 @@
 {
-<<<<<<< Updated upstream
-  "generated_at": "2026-02-12T10:38:06.416171+09:00",
-=======
   "generated_at": "2026-02-12T10:38:12.793701+09:00",
->>>>>>> Stashed changes
   "predictions": [
     {
       "date": "2026-02-12",
@@ -13,15 +9,9 @@
       "cloud": 81.5,
       "rain": 0.0,
       "weathercode": 1,
-<<<<<<< Updated upstream
-      "fog_probability": 0.655,
-      "castle_probability": 0.562,
-      "castle_event_probability": 0.073,
-=======
       "fog_probability": 0.575,
       "castle_probability": 0.233,
       "castle_event_probability": 0.03,
->>>>>>> Stashed changes
       "event": "FogOnly"
     },
     {
@@ -32,17 +22,10 @@
       "cloud": 33.5,
       "rain": 0.0,
       "weathercode": 1,
-<<<<<<< Updated upstream
-      "fog_probability": 0.07,
-      "castle_probability": 0.98,
-      "castle_event_probability": 0.032,
-      "event": "None"
-=======
       "fog_probability": 0.569,
       "castle_probability": 0.943,
       "castle_event_probability": 0.569,
       "event": "Castle"
->>>>>>> Stashed changes
     },
     {
       "date": "2026-02-14",
