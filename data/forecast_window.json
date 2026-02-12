@@ -1,128 +1,128 @@
 [
   {
     "date": "2026-02-13",
-    "temp": -0.125,
-    "humidity": 83.25,
-    "wind": 5.075,
-    "cloud": 29.5,
+    "temp": 0.22500000000000003,
+    "humidity": 83.75,
+    "wind": 4.0249999999999995,
+    "cloud": 26.25,
     "rain": 0.0,
     "weathercode": 1
   },
   {
     "date": "2026-02-14",
-    "temp": -1.05,
-    "humidity": 81.5,
-    "wind": 8.35,
-    "cloud": 7.75,
+    "temp": -0.47500000000000003,
+    "humidity": 83.5,
+    "wind": 7.574999999999999,
+    "cloud": 6.75,
     "rain": 0.0,
     "weathercode": 0
   },
   {
     "date": "2026-02-15",
-    "temp": 5.7,
-    "humidity": 79.0,
-    "wind": 7.575,
-    "cloud": 35.75,
-    "rain": 0.0,
-    "weathercode": 1
-  },
-  {
-    "date": "2026-02-16",
-    "temp": 6.050000000000001,
-    "humidity": 94.75,
-    "wind": 4.1,
-    "cloud": 96.75,
-    "rain": 0.0,
-    "weathercode": 3
-  },
-  {
-    "date": "2026-02-17",
-    "temp": 1.375,
-    "humidity": 83.25,
-    "wind": 4.475,
+    "temp": 5.2,
+    "humidity": 80.5,
+    "wind": 9.350000000000001,
     "cloud": 36.75,
     "rain": 0.0,
     "weathercode": 1
   },
   {
+    "date": "2026-02-16",
+    "temp": 5.9750000000000005,
+    "humidity": 89.75,
+    "wind": 5.625,
+    "cloud": 77.25,
+    "rain": 0.0,
+    "weathercode": 2
+  },
+  {
+    "date": "2026-02-17",
+    "temp": 1.025,
+    "humidity": 87.0,
+    "wind": 3.4,
+    "cloud": 99.5,
+    "rain": 0.0,
+    "weathercode": 3
+  },
+  {
     "date": "2026-02-18",
-    "temp": 2.85,
-    "humidity": 83.75,
-    "wind": 6.025,
-    "cloud": 97.5,
-    "rain": 0.39999999999999997,
-    "weathercode": 80
+    "temp": 2.375,
+    "humidity": 94.25,
+    "wind": 5.325,
+    "cloud": 88.25,
+    "rain": 0.0,
+    "weathercode": 2
   },
   {
     "date": "2026-02-19",
-    "temp": 0.35,
-    "humidity": 71.0,
-    "wind": 1.6,
-    "cloud": 42.5,
-    "rain": 0.0,
-    "weathercode": 0
+    "temp": 1.4249999999999998,
+    "humidity": 65.75,
+    "wind": 19.349999999999998,
+    "cloud": 53.75,
+    "rain": 0.1,
+    "weathercode": 1
   },
   {
     "date": "2026-02-20",
-    "temp": 3.05,
-    "humidity": 56.25,
-    "wind": 11.85,
-    "cloud": 52.25,
+    "temp": 1.5,
+    "humidity": 73.0,
+    "wind": 4.6000000000000005,
+    "cloud": 88.75,
     "rain": 0.0,
-    "weathercode": 1
+    "weathercode": 2
   },
   {
     "date": "2026-02-21",
-    "temp": 4.425,
-    "humidity": 79.0,
-    "wind": 3.925,
-    "cloud": 13.75,
+    "temp": 4.300000000000001,
+    "humidity": 55.0,
+    "wind": 5.825,
+    "cloud": 99.75,
     "rain": 0.0,
-    "weathercode": 0
+    "weathercode": 3
   },
   {
     "date": "2026-02-22",
-    "temp": 7.050000000000001,
-    "humidity": 70.0,
-    "wind": 10.375,
-    "cloud": 14.5,
+    "temp": 6.6000000000000005,
+    "humidity": 64.75,
+    "wind": 8.15,
+    "cloud": 91.5,
     "rain": 0.0,
-    "weathercode": 0
+    "weathercode": 3
   },
   {
     "date": "2026-02-23",
-    "temp": 4.574999999999999,
-    "humidity": 95.75,
-    "wind": 4.475,
-    "cloud": 100.0,
-    "rain": 0.05,
-    "weathercode": 51
+    "temp": 7.225,
+    "humidity": 68.5,
+    "wind": 7.0249999999999995,
+    "cloud": 36.25,
+    "rain": 0.0,
+    "weathercode": 45
   },
   {
     "date": "2026-02-24",
-    "temp": 3.025,
-    "humidity": 76.0,
-    "wind": 4.275,
-    "cloud": 40.5,
+    "temp": 8.55,
+    "humidity": 76.5,
+    "wind": 13.975,
+    "cloud": 98.5,
     "rain": 0.0,
-    "weathercode": 1
+    "weathercode": 3
   },
   {
     "date": "2026-02-25",
-    "temp": 2.3499999999999996,
-    "humidity": 68.25,
-    "wind": 9.05,
-    "cloud": 18.5,
-    "rain": 0.0,
-    "weathercode": 0
+    "temp": 4.0249999999999995,
+    "humidity": 100.0,
+    "wind": 5.549999999999999,
+    "cloud": 100.0,
+    "rain": 0.05,
+    "weathercode": 3
   },
   {
     "date": "2026-02-26",
-    "temp": 0.525,
-    "humidity": 96.25,
-    "wind": 2.675,
+    "temp": 2.5250000000000004,
+    "humidity": 94.25,
+    "wind": 2.725,
     "cloud": 100.0,
-    "rain": 0.05,
-    "weathercode": 71
+    "rain": 0.0,
+    "weathercode": 45
   }
 ]
