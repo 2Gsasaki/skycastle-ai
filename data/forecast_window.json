@@ -1,21 +1,21 @@
 [
   {
     "date": "2026-02-22",
-    "temp": 8.5,
-    "humidity": 79.5,
-    "wind": 11.350000000000001,
-    "cloud": 0.0,
+    "temp": 8.525,
+    "humidity": 78.0,
+    "wind": 11.725000000000001,
+    "cloud": 0.75,
     "rain": 0.0,
     "weathercode": 0
   },
   {
     "date": "2026-02-23",
-    "temp": 7.575,
-    "humidity": 78.5,
-    "wind": 4.875,
-    "cloud": 66.25,
+    "temp": 6.625,
+    "humidity": 77.25,
+    "wind": 4.2,
+    "cloud": 44.25,
     "rain": 0.0,
-    "weathercode": 2
+    "weathercode": 1
   },
   {
     "date": "2026-02-24",
@@ -114,7 +114,7 @@
     "wind": 4.25,
     "cloud": 30.0,
     "rain": 0.0,
-    "weathercode": 45
+    "weathercode": 1
   },
   {
     "date": "2026-03-07",
@@ -123,6 +123,6 @@
     "wind": 2.425,
     "cloud": 87.5,
     "rain": 0.0,
-    "weathercode": 45
+    "weathercode": 3
   }
 ]
