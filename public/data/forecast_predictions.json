@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-22T20:32:32.336171+09:00",
+  "generated_at": "2026-02-22T22:56:42.883516+09:00",
   "predictions": [
     {
       "date": "2026-02-22",
@@ -29,15 +29,15 @@
     },
     {
       "date": "2026-02-24",
-      "temp": 1.48,
-      "humidity": 59.0,
-      "wind": 2.83,
-      "cloud": 50.0,
+      "temp": 1.83,
+      "humidity": 58.0,
+      "wind": 1.43,
+      "cloud": 54.5,
       "rain": 0.0,
-      "weathercode": 2,
-      "fog_probability": 0.087,
-      "castle_probability": 0.832,
-      "castle_event_probability": 0.024,
+      "weathercode": 1,
+      "fog_probability": 0.086,
+      "castle_probability": 0.818,
+      "castle_event_probability": 0.023,
       "event": "None"
     },
     {
@@ -48,8 +48,8 @@
       "cloud": 94.5,
       "rain": 3.38,
       "weathercode": 63,
-      "fog_probability": 0.15,
-      "castle_probability": 0.493,
+      "fog_probability": 0.137,
+      "castle_probability": 0.506,
       "castle_event_probability": 0.012,
       "event": "None"
     },
@@ -151,7 +151,7 @@
       "wind": 11.03,
       "cloud": 90.75,
       "rain": 0.0,
-      "weathercode": 45,
+      "weathercode": 3,
       "fog_probability": 0.147,
       "castle_probability": 0.771,
       "castle_event_probability": 0.03,
