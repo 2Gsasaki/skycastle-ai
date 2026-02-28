@@ -10,21 +10,21 @@
   },
   {
     "date": "2026-03-01",
-    "temp": 1.125,
-    "humidity": 92.0,
-    "wind": 3.5250000000000004,
-    "cloud": 12.0,
+    "temp": 0.95,
+    "humidity": 92.75,
+    "wind": 3.9000000000000004,
+    "cloud": 8.0,
     "rain": 0.0,
     "weathercode": 0
   },
   {
     "date": "2026-03-02",
-    "temp": 1.0,
-    "humidity": 80.25,
-    "wind": 2.15,
-    "cloud": 21.75,
+    "temp": 1.2000000000000002,
+    "humidity": 83.25,
+    "wind": 3.1250000000000004,
+    "cloud": 25.0,
     "rain": 0.0,
-    "weathercode": 0
+    "weathercode": 1
   },
   {
     "date": "2026-03-03",
