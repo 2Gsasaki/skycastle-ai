@@ -2,18 +2,18 @@
   {
     "date": "2026-03-07",
     "temp": 4.35,
-    "humidity": 92.0,
-    "wind": 5.550000000000001,
-    "cloud": 39.5,
-    "rain": 0.30000000000000004,
+    "humidity": 89.75,
+    "wind": 5.6,
+    "cloud": 43.5,
+    "rain": 0.07500000000000001,
     "weathercode": 51
   },
   {
     "date": "2026-03-08",
-    "temp": 0.625,
-    "humidity": 72.0,
-    "wind": 8.2,
-    "cloud": 72.75,
+    "temp": 0.575,
+    "humidity": 73.25,
+    "wind": 9.0,
+    "cloud": 73.5,
     "rain": 0.0,
     "weathercode": 2
   },
