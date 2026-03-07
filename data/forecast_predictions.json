@@ -1,19 +1,6 @@
 {
-  "generated_at": "2026-03-07T22:52:55.791304+09:00",
+  "generated_at": "2026-03-08T00:10:53.460509+09:00",
   "predictions": [
-    {
-      "date": "2026-03-07",
-      "temp": 4.1,
-      "humidity": 95.75,
-      "wind": 10.35,
-      "cloud": 82.5,
-      "rain": 0.55,
-      "weathercode": 51,
-      "fog_probability": 0.002,
-      "castle_probability": 0.893,
-      "castle_event_probability": 0.015,
-      "event": "None"
-    },
     {
       "date": "2026-03-08",
       "temp": 0.7,
@@ -182,6 +169,19 @@
       "castle_probability": 0.784,
       "castle_event_probability": 0.318,
       "event": "FogOnly"
+    },
+    {
+      "date": "2026-03-21",
+      "temp": 7.67,
+      "humidity": 72.5,
+      "wind": 8.28,
+      "cloud": 100.0,
+      "rain": 0.0,
+      "weathercode": 3,
+      "fog_probability": 0.837,
+      "castle_probability": 0.709,
+      "castle_event_probability": 0.681,
+      "event": "Castle"
     }
   ]
 }
