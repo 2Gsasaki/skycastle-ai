@@ -1,19 +1,19 @@
 [
   {
     "date": "2026-03-19",
-    "temp": 8.7,
-    "humidity": 95.0,
-    "wind": 8.575000000000001,
-    "cloud": 78.25,
-    "rain": 2.05,
-    "weathercode": 3
+    "temp": 8.825,
+    "humidity": 96.0,
+    "wind": 7.300000000000001,
+    "cloud": 86.25,
+    "rain": 2.0500000000000003,
+    "weathercode": 63
   },
   {
     "date": "2026-03-20",
-    "temp": 0.9,
-    "humidity": 59.75,
-    "wind": 3.9499999999999997,
-    "cloud": 8.5,
+    "temp": 0.625,
+    "humidity": 59.0,
+    "wind": 3.7,
+    "cloud": 8.75,
     "rain": 0.0,
     "weathercode": 0
   },
