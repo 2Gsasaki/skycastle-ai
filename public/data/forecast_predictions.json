@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27T15:14:12.670234+09:00",
+  "generated_at": "2026-03-27T18:05:19.782772+09:00",
   "predictions": [
     {
       "date": "2026-03-27",
@@ -35,9 +35,9 @@
       "cloud": 27.75,
       "rain": 0.0,
       "weathercode": 1,
-      "fog_probability": 0.446,
-      "castle_probability": 0.508,
-      "castle_event_probability": 0.062,
+      "fog_probability": 0.311,
+      "castle_probability": 0.944,
+      "castle_event_probability": 0.157,
       "event": "None"
     },
     {
