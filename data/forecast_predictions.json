@@ -1,19 +1,6 @@
 {
-  "generated_at": "2026-03-31T23:44:59.260226+09:00",
+  "generated_at": "2026-04-01T00:55:35.510574+09:00",
   "predictions": [
-    {
-      "date": "2026-03-31",
-      "temp": 14.25,
-      "humidity": 90.0,
-      "wind": 27.65,
-      "cloud": 100.0,
-      "rain": 2.85,
-      "weathercode": 61,
-      "fog_probability": 0.034,
-      "castle_probability": 0.271,
-      "castle_event_probability": 0.004,
-      "event": "None"
-    },
     {
       "date": "2026-04-01",
       "temp": 9.8,
@@ -84,12 +71,12 @@
       "temp": 10.9,
       "humidity": 76.5,
       "wind": 5.02,
-      "cloud": 98.0,
+      "cloud": 88.25,
       "rain": 0.0,
       "weathercode": 3,
-      "fog_probability": 0.588,
-      "castle_probability": 0.349,
-      "castle_event_probability": 0.057,
+      "fog_probability": 0.693,
+      "castle_probability": 0.367,
+      "castle_event_probability": 0.099,
       "event": "FogOnly"
     },
     {
@@ -97,12 +84,12 @@
       "temp": 11.57,
       "humidity": 73.25,
       "wind": 7.8,
-      "cloud": 20.25,
+      "cloud": 80.5,
       "rain": 0.0,
       "weathercode": 0,
-      "fog_probability": 0.808,
-      "castle_probability": 0.284,
-      "castle_event_probability": 0.099,
+      "fog_probability": 0.833,
+      "castle_probability": 0.225,
+      "castle_event_probability": 0.077,
       "event": "FogOnly"
     },
     {
@@ -110,13 +97,13 @@
       "temp": 7.28,
       "humidity": 47.0,
       "wind": 4.17,
-      "cloud": 26.75,
+      "cloud": 42.0,
       "rain": 0.0,
       "weathercode": 1,
-      "fog_probability": 0.254,
-      "castle_probability": 0.835,
-      "castle_event_probability": 0.074,
-      "event": "None"
+      "fog_probability": 0.834,
+      "castle_probability": 0.914,
+      "castle_event_probability": 0.891,
+      "event": "Castle"
     },
     {
       "date": "2026-04-09",
@@ -126,9 +113,9 @@
       "cloud": 17.75,
       "rain": 0.0,
       "weathercode": 0,
-      "fog_probability": 0.393,
+      "fog_probability": 0.297,
       "castle_probability": 0.748,
-      "castle_event_probability": 0.127,
+      "castle_event_probability": 0.071,
       "event": "None"
     },
     {
@@ -182,6 +169,19 @@
       "castle_probability": 0.86,
       "castle_event_probability": 0.019,
       "event": "None"
+    },
+    {
+      "date": "2026-04-14",
+      "temp": 10.02,
+      "humidity": 69.75,
+      "wind": 3.4,
+      "cloud": 88.5,
+      "rain": 0.0,
+      "weathercode": 3,
+      "fog_probability": 0.977,
+      "castle_probability": 0.734,
+      "castle_event_probability": 0.862,
+      "event": "Castle"
     }
   ]
 }
