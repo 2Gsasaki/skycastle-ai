@@ -1,14 +1,5 @@
 [
   {
-    "date": "2026-04-05",
-    "temp": 12.625000000000002,
-    "humidity": 94.25,
-    "wind": 4.45,
-    "cloud": 82.5,
-    "rain": 0.0,
-    "weathercode": 3
-  },
-  {
     "date": "2026-04-06",
     "temp": 11.825,
     "humidity": 78.5,
@@ -124,5 +115,14 @@
     "cloud": 23.25,
     "rain": 0.0,
     "weathercode": 1
+  },
+  {
+    "date": "2026-04-19",
+    "temp": 13.274999999999999,
+    "humidity": 70.25,
+    "wind": 9.05,
+    "cloud": 71.75,
+    "rain": 0.0,
+    "weathercode": 2
   }
 ]
