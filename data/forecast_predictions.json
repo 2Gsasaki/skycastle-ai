@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-12T20:46:09.801840+09:00",
+  "generated_at": "2026-04-12T23:07:07.061730+09:00",
   "predictions": [
     {
       "date": "2026-04-12",
@@ -29,15 +29,15 @@
     },
     {
       "date": "2026-04-14",
-      "temp": 11.78,
-      "humidity": 58.0,
-      "wind": 2.4,
-      "cloud": 17.75,
+      "temp": 11.38,
+      "humidity": 64.25,
+      "wind": 1.88,
+      "cloud": 9.5,
       "rain": 0.0,
       "weathercode": 0,
-      "fog_probability": 0.736,
-      "castle_probability": 0.44,
-      "castle_event_probability": 0.174,
+      "fog_probability": 0.625,
+      "castle_probability": 0.391,
+      "castle_event_probability": 0.083,
       "event": "FogOnly"
     },
     {
@@ -48,10 +48,10 @@
       "cloud": 43.5,
       "rain": 0.0,
       "weathercode": 1,
-      "fog_probability": 0.804,
+      "fog_probability": 0.664,
       "castle_probability": 0.636,
-      "castle_event_probability": 0.516,
-      "event": "Castle"
+      "castle_event_probability": 0.312,
+      "event": "FogOnly"
     },
     {
       "date": "2026-04-16",
