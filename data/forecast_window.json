@@ -37,21 +37,21 @@
   },
   {
     "date": "2026-04-17",
-    "temp": 14.174999999999999,
-    "humidity": 84.25,
-    "wind": 5.925000000000001,
-    "cloud": 99.0,
+    "temp": 13.8,
+    "humidity": 83.0,
+    "wind": 5.975,
+    "cloud": 97.75,
     "rain": 0.0,
     "weathercode": 3
   },
   {
     "date": "2026-04-18",
-    "temp": 13.275,
-    "humidity": 62.5,
-    "wind": 5.625,
-    "cloud": 28.75,
+    "temp": 14.175,
+    "humidity": 77.25,
+    "wind": 4.175,
+    "cloud": 88.5,
     "rain": 0.0,
-    "weathercode": 1
+    "weathercode": 3
   },
   {
     "date": "2026-04-19",
