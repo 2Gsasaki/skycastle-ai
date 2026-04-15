@@ -1,14 +1,5 @@
 [
   {
-    "date": "2026-04-15",
-    "temp": 15.125,
-    "humidity": 82.25,
-    "wind": 6.025,
-    "cloud": 66.25,
-    "rain": 0.025,
-    "weathercode": 2
-  },
-  {
     "date": "2026-04-16",
     "temp": 10.350000000000001,
     "humidity": 86.5,
@@ -49,7 +40,7 @@
     "temp": 15.975000000000001,
     "humidity": 66.5,
     "wind": 7.450000000000001,
-    "cloud": 0.0,
+    "cloud": 8.25,
     "rain": 0.0,
     "weathercode": 0
   },
@@ -67,7 +58,7 @@
     "temp": 10.475,
     "humidity": 73.75,
     "wind": 2.975,
-    "cloud": 2.75,
+    "cloud": 6.5,
     "rain": 0.0,
     "weathercode": 0
   },
@@ -122,6 +113,15 @@
     "humidity": 82.0,
     "wind": 7.625000000000001,
     "cloud": 98.25,
+    "rain": 0.0,
+    "weathercode": 3
+  },
+  {
+    "date": "2026-04-29",
+    "temp": 14.375,
+    "humidity": 91.5,
+    "wind": 2.25,
+    "cloud": 95.75,
     "rain": 0.0,
     "weathercode": 3
   }
