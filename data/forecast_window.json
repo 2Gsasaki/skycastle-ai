@@ -31,7 +31,7 @@
     "temp": 14.624999999999998,
     "humidity": 77.75,
     "wind": 5.449999999999999,
-    "cloud": 2.75,
+    "cloud": 6.5,
     "rain": 0.0,
     "weathercode": 0
   },
@@ -40,7 +40,7 @@
     "temp": 16.475,
     "humidity": 59.5,
     "wind": 11.25,
-    "cloud": 98.75,
+    "cloud": 91.75,
     "rain": 1.5,
     "weathercode": 3
   },
@@ -49,7 +49,7 @@
     "temp": 9.0,
     "humidity": 82.75,
     "wind": 4.575,
-    "cloud": 78.0,
+    "cloud": 93.0,
     "rain": 0.0,
     "weathercode": 2
   },
