@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T15:48:16.091016+09:00",
+  "generated_at": "2026-04-19T18:04:08.743234+09:00",
   "predictions": [
     {
       "date": "2026-04-19",
@@ -35,8 +35,8 @@
       "cloud": 70.75,
       "rain": 3.08,
       "weathercode": 63,
-      "fog_probability": 0.001,
-      "castle_probability": 0.133,
+      "fog_probability": 0.002,
+      "castle_probability": 0.122,
       "castle_event_probability": 0.002,
       "event": "None"
     },
