@@ -38,18 +38,18 @@
   {
     "date": "2026-04-28",
     "temp": 14.350000000000001,
-    "humidity": 75.25,
+    "humidity": 63.25,
     "wind": 7.85,
-    "cloud": 98.0,
+    "cloud": 96.0,
     "rain": 0.0,
     "weathercode": 3
   },
   {
     "date": "2026-04-29",
     "temp": 13.85,
-    "humidity": 83.75,
+    "humidity": 80.5,
     "wind": 2.375,
-    "cloud": 79.25,
+    "cloud": 93.0,
     "rain": 0.0,
     "weathercode": 2
   },
