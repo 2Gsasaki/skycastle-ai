@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T13:42:57.450724+09:00",
+  "generated_at": "2026-04-25T15:21:31.469246+09:00",
   "predictions": [
     {
       "date": "2026-04-25",
@@ -29,29 +29,29 @@
     },
     {
       "date": "2026-04-27",
-      "temp": 12.32,
-      "humidity": 96.75,
-      "wind": 1.75,
-      "cloud": 91.0,
-      "rain": 3.35,
-      "weathercode": 63,
-      "fog_probability": 0.047,
-      "castle_probability": 0.058,
+      "temp": 11.85,
+      "humidity": 96.0,
+      "wind": 4.55,
+      "cloud": 91.25,
+      "rain": 2.02,
+      "weathercode": 61,
+      "fog_probability": 0.011,
+      "castle_probability": 0.133,
       "castle_event_probability": 0.002,
       "event": "None"
     },
     {
       "date": "2026-04-28",
-      "temp": 14.78,
-      "humidity": 68.0,
-      "wind": 11.57,
-      "cloud": 95.5,
+      "temp": 13.72,
+      "humidity": 57.0,
+      "wind": 7.3,
+      "cloud": 58.0,
       "rain": 0.0,
-      "weathercode": 3,
-      "fog_probability": 0.406,
-      "castle_probability": 0.782,
-      "castle_event_probability": 0.156,
-      "event": "None"
+      "weathercode": 1,
+      "fog_probability": 0.944,
+      "castle_probability": 0.822,
+      "castle_event_probability": 0.905,
+      "event": "Castle"
     },
     {
       "date": "2026-04-29",
@@ -61,10 +61,10 @@
       "cloud": 100.0,
       "rain": 0.0,
       "weathercode": 3,
-      "fog_probability": 0.651,
-      "castle_probability": 0.073,
-      "castle_event_probability": 0.016,
-      "event": "FogOnly"
+      "fog_probability": 0.194,
+      "castle_probability": 0.23,
+      "castle_event_probability": 0.006,
+      "event": "None"
     },
     {
       "date": "2026-04-30",
@@ -175,12 +175,12 @@
       "temp": 18.93,
       "humidity": 70.5,
       "wind": 7.8,
-      "cloud": 66.5,
+      "cloud": 0.0,
       "rain": 0.0,
-      "weathercode": 2,
-      "fog_probability": 0.968,
-      "castle_probability": 0.13,
-      "castle_event_probability": 0.067,
+      "weathercode": 0,
+      "fog_probability": 0.96,
+      "castle_probability": 0.094,
+      "castle_event_probability": 0.051,
       "event": "FogOnly"
     }
   ]
