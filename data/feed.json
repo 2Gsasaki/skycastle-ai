@@ -2,10 +2,10 @@
   "date": "2026-05-03",
   "fog_score": 15.0,
   "castle_score": 0,
-  "dew_point": 8.6,
-  "dew_spread": 7.85,
-  "fog_probability": 0.661,
+  "dew_point": 9.07,
+  "dew_spread": 7.43,
+  "fog_probability": 0.642,
   "castle_probability": 0.971,
-  "castle_event_probability": 0.757,
+  "castle_event_probability": 0.73,
   "event": "Castle"
 }
