@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T18:38:52.593540+09:00",
+  "generated_at": "2026-05-03T20:54:42.558364+09:00",
   "predictions": [
     {
       "date": "2026-05-03",
@@ -29,15 +29,15 @@
     },
     {
       "date": "2026-05-05",
-      "temp": 8.82,
-      "humidity": 79.75,
-      "wind": 3.15,
+      "temp": 8.48,
+      "humidity": 76.75,
+      "wind": 3.8,
       "cloud": 0.0,
       "rain": 0.0,
       "weathercode": 0,
-      "fog_probability": 0.867,
-      "castle_probability": 0.725,
-      "castle_event_probability": 0.742,
+      "fog_probability": 0.925,
+      "castle_probability": 0.882,
+      "castle_event_probability": 0.928,
       "event": "Castle"
     },
     {
@@ -48,9 +48,9 @@
       "cloud": 8.0,
       "rain": 0.0,
       "weathercode": 0,
-      "fog_probability": 0.32,
-      "castle_probability": 0.711,
-      "castle_event_probability": 0.071,
+      "fog_probability": 0.205,
+      "castle_probability": 0.624,
+      "castle_event_probability": 0.026,
       "event": "None"
     },
     {
@@ -58,12 +58,12 @@
       "temp": 16.38,
       "humidity": 82.25,
       "wind": 6.43,
-      "cloud": 4.75,
+      "cloud": 21.75,
       "rain": 0.0,
       "weathercode": 0,
-      "fog_probability": 0.886,
-      "castle_probability": 0.097,
-      "castle_event_probability": 0.041,
+      "fog_probability": 0.875,
+      "castle_probability": 0.128,
+      "castle_event_probability": 0.048,
       "event": "FogOnly"
     },
     {
@@ -71,10 +71,10 @@
       "temp": 15.07,
       "humidity": 96.75,
       "wind": 5.92,
-      "cloud": 100.0,
+      "cloud": 96.0,
       "rain": 0.4,
       "weathercode": 51,
-      "fog_probability": 0.004,
+      "fog_probability": 0.005,
       "castle_probability": 0.118,
       "castle_event_probability": 0.002,
       "event": "None"
@@ -84,12 +84,12 @@
       "temp": 10.95,
       "humidity": 71.25,
       "wind": 3.55,
-      "cloud": 26.0,
+      "cloud": 99.75,
       "rain": 0.0,
-      "weathercode": 0,
-      "fog_probability": 0.921,
-      "castle_probability": 0.737,
-      "castle_event_probability": 0.817,
+      "weathercode": 3,
+      "fog_probability": 0.83,
+      "castle_probability": 0.73,
+      "castle_event_probability": 0.7,
       "event": "Castle"
     },
     {
@@ -100,9 +100,9 @@
       "cloud": 0.0,
       "rain": 0.0,
       "weathercode": 0,
-      "fog_probability": 0.787,
-      "castle_probability": 0.461,
-      "castle_event_probability": 0.239,
+      "fog_probability": 0.713,
+      "castle_probability": 0.429,
+      "castle_event_probability": 0.149,
       "event": "FogOnly"
     },
     {
