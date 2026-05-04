@@ -1,19 +1,6 @@
 {
-  "generated_at": "2026-05-04T21:23:56.638795+09:00",
+  "generated_at": "2026-05-05T00:27:07.848779+09:00",
   "predictions": [
-    {
-      "date": "2026-05-04",
-      "temp": 15.18,
-      "humidity": 99.25,
-      "wind": 4.67,
-      "cloud": 100.0,
-      "rain": 0.53,
-      "weathercode": 3,
-      "fog_probability": 0.066,
-      "castle_probability": 0.068,
-      "castle_event_probability": 0.002,
-      "event": "None"
-    },
     {
       "date": "2026-05-05",
       "temp": 8.27,
@@ -29,15 +16,15 @@
     },
     {
       "date": "2026-05-06",
-      "temp": 15.25,
-      "humidity": 67.75,
-      "wind": 9.5,
-      "cloud": 35.25,
+      "temp": 15.2,
+      "humidity": 68.5,
+      "wind": 11.03,
+      "cloud": 40.25,
       "rain": 0.0,
       "weathercode": 0,
-      "fog_probability": 0.189,
+      "fog_probability": 0.265,
       "castle_probability": 0.702,
-      "castle_event_probability": 0.031,
+      "castle_event_probability": 0.049,
       "event": "None"
     },
     {
@@ -55,42 +42,42 @@
     },
     {
       "date": "2026-05-08",
-      "temp": 15.75,
-      "humidity": 84.75,
-      "wind": 8.78,
+      "temp": 16.43,
+      "humidity": 85.0,
+      "wind": 8.5,
       "cloud": 100.0,
       "rain": 0.1,
-      "weathercode": 51,
-      "fog_probability": 0.061,
-      "castle_probability": 0.224,
-      "castle_event_probability": 0.004,
+      "weathercode": 3,
+      "fog_probability": 0.164,
+      "castle_probability": 0.221,
+      "castle_event_probability": 0.005,
       "event": "None"
     },
     {
       "date": "2026-05-09",
-      "temp": 11.1,
-      "humidity": 78.25,
-      "wind": 5.03,
+      "temp": 10.42,
+      "humidity": 89.0,
+      "wind": 2.78,
       "cloud": 81.0,
       "rain": 0.0,
       "weathercode": 3,
-      "fog_probability": 0.906,
-      "castle_probability": 0.204,
-      "castle_event_probability": 0.088,
+      "fog_probability": 0.623,
+      "castle_probability": 0.136,
+      "castle_event_probability": 0.021,
       "event": "FogOnly"
     },
     {
       "date": "2026-05-10",
-      "temp": 11.6,
-      "humidity": 60.0,
-      "wind": 4.97,
+      "temp": 10.03,
+      "humidity": 58.75,
+      "wind": 3.95,
       "cloud": 0.0,
       "rain": 0.0,
       "weathercode": 0,
-      "fog_probability": 0.835,
-      "castle_probability": 0.403,
-      "castle_event_probability": 0.216,
-      "event": "FogOnly"
+      "fog_probability": 0.98,
+      "castle_probability": 0.828,
+      "castle_event_probability": 0.927,
+      "event": "Castle"
     },
     {
       "date": "2026-05-11",
@@ -100,9 +87,9 @@
       "cloud": 100.0,
       "rain": 0.0,
       "weathercode": 3,
-      "fog_probability": 0.202,
-      "castle_probability": 0.134,
-      "castle_event_probability": 0.005,
+      "fog_probability": 0.152,
+      "castle_probability": 0.31,
+      "castle_event_probability": 0.007,
       "event": "None"
     },
     {
@@ -181,6 +168,19 @@
       "fog_probability": 0.7,
       "castle_probability": 0.13,
       "castle_event_probability": 0.027,
+      "event": "FogOnly"
+    },
+    {
+      "date": "2026-05-18",
+      "temp": 20.93,
+      "humidity": 73.75,
+      "wind": 12.18,
+      "cloud": 100.0,
+      "rain": 0.0,
+      "weathercode": 3,
+      "fog_probability": 0.55,
+      "castle_probability": 0.092,
+      "castle_event_probability": 0.013,
       "event": "FogOnly"
     }
   ]
