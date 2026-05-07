@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T14:38:43.726169+09:00",
+  "generated_at": "2026-05-07T16:44:26.453647+09:00",
   "predictions": [
     {
       "date": "2026-05-07",
@@ -35,9 +35,9 @@
       "cloud": 20.25,
       "rain": 0.0,
       "weathercode": 0,
-      "fog_probability": 0.922,
-      "castle_probability": 0.493,
-      "castle_event_probability": 0.442,
+      "fog_probability": 0.638,
+      "castle_probability": 0.409,
+      "castle_event_probability": 0.097,
       "event": "FogOnly"
     },
     {
