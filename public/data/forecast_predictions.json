@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T02:00:27.769590+09:00",
+  "generated_at": "2026-05-13T04:16:19.904893+09:00",
   "predictions": [
     {
       "date": "2026-05-13",
@@ -16,28 +16,28 @@
     },
     {
       "date": "2026-05-14",
-      "temp": 15.28,
-      "humidity": 79.25,
-      "wind": 2.32,
-      "cloud": 55.5,
+      "temp": 15.38,
+      "humidity": 78.0,
+      "wind": 2.38,
+      "cloud": 35.0,
       "rain": 0.0,
-      "weathercode": 3,
-      "fog_probability": 0.925,
-      "castle_probability": 0.134,
-      "castle_event_probability": 0.06,
+      "weathercode": 1,
+      "fog_probability": 0.876,
+      "castle_probability": 0.146,
+      "castle_event_probability": 0.055,
       "event": "FogOnly"
     },
     {
       "date": "2026-05-15",
-      "temp": 12.78,
-      "humidity": 87.25,
-      "wind": 1.8,
-      "cloud": 24.75,
+      "temp": 12.7,
+      "humidity": 78.5,
+      "wind": 1.65,
+      "cloud": 12.0,
       "rain": 0.0,
       "weathercode": 0,
-      "fog_probability": 0.864,
-      "castle_probability": 0.248,
-      "castle_event_probability": 0.099,
+      "fog_probability": 0.885,
+      "castle_probability": 0.36,
+      "castle_event_probability": 0.207,
       "event": "FogOnly"
     },
     {
@@ -48,10 +48,10 @@
       "cloud": 9.5,
       "rain": 0.0,
       "weathercode": 0,
-      "fog_probability": 0.766,
-      "castle_probability": 0.697,
-      "castle_event_probability": 0.554,
-      "event": "Castle"
+      "fog_probability": 0.732,
+      "castle_probability": 0.692,
+      "castle_event_probability": 0.494,
+      "event": "FogOnly"
     },
     {
       "date": "2026-05-17",
