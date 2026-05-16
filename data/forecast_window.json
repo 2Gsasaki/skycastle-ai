@@ -1,18 +1,18 @@
 [
   {
     "date": "2026-05-17",
-    "temp": 14.75,
-    "humidity": 71.75,
-    "wind": 2.75,
-    "cloud": 0.0,
+    "temp": 14.05,
+    "humidity": 83.0,
+    "wind": 2.275,
+    "cloud": 0.5,
     "rain": 0.0,
     "weathercode": 0
   },
   {
     "date": "2026-05-18",
-    "temp": 18.425,
-    "humidity": 53.25,
-    "wind": 4.5,
+    "temp": 18.15,
+    "humidity": 52.75,
+    "wind": 4.1000000000000005,
     "cloud": 0.0,
     "rain": 0.0,
     "weathercode": 0
@@ -112,7 +112,7 @@
     "temp": 19.8,
     "humidity": 82.75,
     "wind": 3.025,
-    "cloud": 83.5,
+    "cloud": 99.25,
     "rain": 0.0,
     "weathercode": 3
   },
@@ -121,7 +121,7 @@
     "temp": 16.224999999999998,
     "humidity": 81.0,
     "wind": 3.1750000000000003,
-    "cloud": 50.75,
+    "cloud": 52.5,
     "rain": 0.0,
     "weathercode": 1
   }
