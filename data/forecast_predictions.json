@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16T14:33:41.214552+09:00",
+  "generated_at": "2026-05-16T16:19:35.197069+09:00",
   "predictions": [
     {
       "date": "2026-05-16",
@@ -35,9 +35,9 @@
       "cloud": 0.0,
       "rain": 0.0,
       "weathercode": 0,
-      "fog_probability": 0.857,
-      "castle_probability": 0.42,
-      "castle_event_probability": 0.255,
+      "fog_probability": 0.559,
+      "castle_probability": 0.274,
+      "castle_event_probability": 0.034,
       "event": "FogOnly"
     },
     {
