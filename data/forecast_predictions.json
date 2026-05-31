@@ -1,19 +1,6 @@
 {
-  "generated_at": "2026-05-31T23:58:43.489138+09:00",
+  "generated_at": "2026-06-01T00:57:42.369350+09:00",
   "predictions": [
-    {
-      "date": "2026-05-31",
-      "temp": 19.68,
-      "humidity": 62.75,
-      "wind": 4.15,
-      "cloud": 98.75,
-      "rain": 0.0,
-      "weathercode": 2,
-      "fog_probability": 0.495,
-      "castle_probability": 0.183,
-      "castle_event_probability": 0.017,
-      "event": "None"
-    },
     {
       "date": "2026-06-01",
       "temp": 20.5,
@@ -182,6 +169,19 @@
       "castle_probability": 0.272,
       "castle_event_probability": 0.013,
       "event": "None"
+    },
+    {
+      "date": "2026-06-14",
+      "temp": 20.75,
+      "humidity": 75.0,
+      "wind": 2.4,
+      "cloud": 69.25,
+      "rain": 0.0,
+      "weathercode": 2,
+      "fog_probability": 0.968,
+      "castle_probability": 0.126,
+      "castle_event_probability": 0.065,
+      "event": "FogOnly"
     }
   ]
 }
