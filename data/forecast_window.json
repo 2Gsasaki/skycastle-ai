@@ -40,7 +40,7 @@
     "temp": 22.625,
     "humidity": 94.0,
     "wind": 10.325,
-    "cloud": 96.0,
+    "cloud": 95.5,
     "rain": 0.15000000000000002,
     "weathercode": 51
   },
@@ -49,7 +49,7 @@
     "temp": 19.424999999999997,
     "humidity": 96.5,
     "wind": 5.199999999999999,
-    "cloud": 94.5,
+    "cloud": 100.0,
     "rain": 0.05,
     "weathercode": 51
   },
@@ -67,7 +67,7 @@
     "temp": 20.150000000000002,
     "humidity": 87.0,
     "wind": 5.7,
-    "cloud": 70.25,
+    "cloud": 100.0,
     "rain": 0.1,
     "weathercode": 51
   },
@@ -76,7 +76,7 @@
     "temp": 20.0,
     "humidity": 85.0,
     "wind": 1.7750000000000001,
-    "cloud": 97.0,
+    "cloud": 100.0,
     "rain": 0.0,
     "weathercode": 3
   },
@@ -85,7 +85,7 @@
     "temp": 21.7,
     "humidity": 83.75,
     "wind": 2.375,
-    "cloud": 100.0,
+    "cloud": 99.25,
     "rain": 0.0,
     "weathercode": 3
   },
@@ -94,7 +94,7 @@
     "temp": 21.400000000000002,
     "humidity": 89.25,
     "wind": 4.775,
-    "cloud": 98.75,
+    "cloud": 100.0,
     "rain": 0.1,
     "weathercode": 51
   },
@@ -121,7 +121,7 @@
     "temp": 24.0,
     "humidity": 80.0,
     "wind": 6.375000000000001,
-    "cloud": 52.5,
+    "cloud": 65.25,
     "rain": 0.1,
     "weathercode": 51
   }
