@@ -10,19 +10,19 @@
   },
   {
     "date": "2026-06-19",
-    "temp": 21.075,
-    "humidity": 82.75,
-    "wind": 1.5,
-    "cloud": 72.5,
+    "temp": 21.15,
+    "humidity": 82.25,
+    "wind": 2.2250000000000005,
+    "cloud": 74.75,
     "rain": 0.0,
-    "weathercode": 2
+    "weathercode": 3
   },
   {
     "date": "2026-06-20",
-    "temp": 23.175,
-    "humidity": 80.25,
-    "wind": 9.5,
-    "cloud": 85.0,
+    "temp": 23.2,
+    "humidity": 77.75,
+    "wind": 8.45,
+    "cloud": 81.75,
     "rain": 0.0,
     "weathercode": 2
   },
