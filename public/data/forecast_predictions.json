@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T15:17:09.985669+09:00",
+  "generated_at": "2026-06-23T17:31:30.150776+09:00",
   "predictions": [
     {
       "date": "2026-06-23",
@@ -35,9 +35,9 @@
       "cloud": 77.25,
       "rain": 0.93,
       "weathercode": 53,
-      "fog_probability": 0.067,
-      "castle_probability": 0.137,
-      "castle_event_probability": 0.003,
+      "fog_probability": 0.125,
+      "castle_probability": 0.171,
+      "castle_event_probability": 0.004,
       "event": "None"
     },
     {
