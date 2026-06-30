@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T01:58:39.239045+09:00",
+  "generated_at": "2026-07-01T04:17:04.103134+09:00",
   "predictions": [
     {
       "date": "2026-07-01",
@@ -8,7 +8,7 @@
       "wind": 2.02,
       "cloud": 75.0,
       "rain": 0.0,
-      "weathercode": 2,
+      "weathercode": 3,
       "fog_probability": 0.68,
       "castle_probability": 0.075,
       "castle_event_probability": 0.018,
@@ -16,29 +16,29 @@
     },
     {
       "date": "2026-07-02",
-      "temp": 21.05,
-      "humidity": 91.75,
-      "wind": 5.2,
-      "cloud": 89.5,
-      "rain": 3.5,
-      "weathercode": 63,
-      "fog_probability": 0.031,
-      "castle_probability": 0.293,
-      "castle_event_probability": 0.004,
+      "temp": 21.33,
+      "humidity": 93.25,
+      "wind": 4.8,
+      "cloud": 92.0,
+      "rain": 7.38,
+      "weathercode": 65,
+      "fog_probability": 0.02,
+      "castle_probability": 0.408,
+      "castle_event_probability": 0.005,
       "event": "None"
     },
     {
       "date": "2026-07-03",
-      "temp": 21.35,
-      "humidity": 94.25,
-      "wind": 2.1,
-      "cloud": 82.25,
-      "rain": 0.8,
-      "weathercode": 53,
-      "fog_probability": 0.241,
-      "castle_probability": 0.096,
-      "castle_event_probability": 0.005,
-      "event": "None"
+      "temp": 20.43,
+      "humidity": 95.75,
+      "wind": 3.15,
+      "cloud": 74.5,
+      "rain": 0.0,
+      "weathercode": 3,
+      "fog_probability": 0.606,
+      "castle_probability": 0.046,
+      "castle_event_probability": 0.012,
+      "event": "FogOnly"
     },
     {
       "date": "2026-07-04",
@@ -48,9 +48,9 @@
       "cloud": 98.75,
       "rain": 0.0,
       "weathercode": 3,
-      "fog_probability": 0.164,
-      "castle_probability": 0.722,
-      "castle_event_probability": 0.028,
+      "fog_probability": 0.202,
+      "castle_probability": 0.689,
+      "castle_event_probability": 0.032,
       "event": "None"
     },
     {
