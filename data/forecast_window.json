@@ -10,21 +10,21 @@
   },
   {
     "date": "2026-07-01",
-    "temp": 21.925,
+    "temp": 22.125,
     "humidity": 79.75,
-    "wind": 2.4250000000000003,
-    "cloud": 63.0,
+    "wind": 2.0,
+    "cloud": 55.75,
     "rain": 0.0,
-    "weathercode": 2
+    "weathercode": 1
   },
   {
     "date": "2026-07-02",
-    "temp": 21.475,
-    "humidity": 87.0,
-    "wind": 8.3,
-    "cloud": 82.75,
-    "rain": 1.875,
-    "weathercode": 2
+    "temp": 20.725,
+    "humidity": 89.75,
+    "wind": 8.774999999999999,
+    "cloud": 78.0,
+    "rain": 2.2,
+    "weathercode": 53
   },
   {
     "date": "2026-07-03",
@@ -40,7 +40,7 @@
     "temp": 21.424999999999997,
     "humidity": 82.75,
     "wind": 9.6,
-    "cloud": 100.0,
+    "cloud": 99.5,
     "rain": 0.0,
     "weathercode": 3
   },
@@ -67,7 +67,7 @@
     "temp": 23.500000000000004,
     "humidity": 71.5,
     "wind": 20.45,
-    "cloud": 78.5,
+    "cloud": 72.0,
     "rain": 0.0,
     "weathercode": 2
   },
@@ -76,34 +76,34 @@
     "temp": 25.1,
     "humidity": 73.5,
     "wind": 14.7,
-    "cloud": 84.75,
+    "cloud": 45.0,
     "rain": 0.0,
-    "weathercode": 3
+    "weathercode": 1
   },
   {
     "date": "2026-07-09",
     "temp": 25.55,
     "humidity": 72.0,
     "wind": 13.475000000000001,
-    "cloud": 72.0,
+    "cloud": 91.25,
     "rain": 0.0,
-    "weathercode": 2
+    "weathercode": 3
   },
   {
     "date": "2026-07-10",
     "temp": 25.974999999999998,
     "humidity": 73.75,
     "wind": 8.350000000000001,
-    "cloud": 91.25,
+    "cloud": 25.0,
     "rain": 0.0,
-    "weathercode": 95
+    "weathercode": 1
   },
   {
     "date": "2026-07-11",
     "temp": 25.8,
     "humidity": 70.25,
     "wind": 4.0249999999999995,
-    "cloud": 81.75,
+    "cloud": 77.25,
     "rain": 0.0,
     "weathercode": 2
   },
@@ -112,7 +112,7 @@
     "temp": 25.95,
     "humidity": 74.25,
     "wind": 1.7999999999999998,
-    "cloud": 100.0,
+    "cloud": 99.5,
     "rain": 0.0,
     "weathercode": 3
   },
@@ -121,8 +121,8 @@
     "temp": 27.275,
     "humidity": 75.25,
     "wind": 1.7999999999999998,
-    "cloud": 100.0,
+    "cloud": 72.0,
     "rain": 0.0,
-    "weathercode": 3
+    "weathercode": 2
   }
 ]
