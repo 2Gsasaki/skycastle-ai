@@ -1,11 +1,11 @@
 {
-  "date": "2026-07-06",
-  "fog_score": 51.2,
-  "castle_score": 51.2,
-  "dew_point": 19.6,
-  "dew_spread": 1.75,
-  "fog_probability": 0.002,
-  "castle_probability": 0.432,
-  "castle_event_probability": 0.005,
-  "event": "None"
+  "date": "2026-07-07",
+  "fog_score": 33.8,
+  "castle_score": 21.2,
+  "dew_point": 19.37,
+  "dew_spread": 3.43,
+  "fog_probability": 0.898,
+  "castle_probability": 0.132,
+  "castle_event_probability": 0.054,
+  "event": "FogOnly"
 }
