@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T15:13:21.930373+09:00",
+  "generated_at": "2026-07-05T17:04:48.802485+09:00",
   "predictions": [
     {
       "date": "2026-07-05",
@@ -35,9 +35,9 @@
       "cloud": 40.0,
       "rain": 0.0,
       "weathercode": 1,
-      "fog_probability": 0.944,
-      "castle_probability": 0.121,
-      "castle_event_probability": 0.058,
+      "fog_probability": 0.933,
+      "castle_probability": 0.116,
+      "castle_event_probability": 0.054,
       "event": "FogOnly"
     },
     {
