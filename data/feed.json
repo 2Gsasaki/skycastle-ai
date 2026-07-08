@@ -2,10 +2,10 @@
   "date": "2026-07-09",
   "fog_score": 15.0,
   "castle_score": 0,
-  "dew_point": 18.39,
-  "dew_spread": 5.46,
-  "fog_probability": 0.945,
+  "dew_point": 18.31,
+  "dew_spread": 5.64,
+  "fog_probability": 0.692,
   "castle_probability": 0.152,
-  "castle_event_probability": 0.072,
+  "castle_event_probability": 0.029,
   "event": "FogOnly"
 }
