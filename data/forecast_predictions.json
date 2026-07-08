@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T01:23:15.161064+09:00",
+  "generated_at": "2026-07-09T03:53:34.085169+09:00",
   "predictions": [
     {
       "date": "2026-07-09",
@@ -16,28 +16,28 @@
     },
     {
       "date": "2026-07-10",
-      "temp": 24.53,
-      "humidity": 72.5,
-      "wind": 7.38,
-      "cloud": 1.5,
+      "temp": 24.55,
+      "humidity": 71.25,
+      "wind": 7.0,
+      "cloud": 0.75,
       "rain": 0.0,
       "weathercode": 0,
-      "fog_probability": 0.961,
-      "castle_probability": 0.103,
-      "castle_event_probability": 0.055,
+      "fog_probability": 0.966,
+      "castle_probability": 0.099,
+      "castle_event_probability": 0.054,
       "event": "FogOnly"
     },
     {
       "date": "2026-07-11",
-      "temp": 24.27,
-      "humidity": 77.5,
-      "wind": 6.92,
-      "cloud": 64.25,
+      "temp": 24.32,
+      "humidity": 77.0,
+      "wind": 7.58,
+      "cloud": 61.75,
       "rain": 0.0,
       "weathercode": 2,
-      "fog_probability": 0.636,
+      "fog_probability": 0.672,
       "castle_probability": 0.352,
-      "castle_event_probability": 0.071,
+      "castle_event_probability": 0.083,
       "event": "FogOnly"
     },
     {
@@ -48,9 +48,9 @@
       "cloud": 99.5,
       "rain": 0.0,
       "weathercode": 3,
-      "fog_probability": 0.746,
-      "castle_probability": 0.351,
-      "castle_event_probability": 0.113,
+      "fog_probability": 0.758,
+      "castle_probability": 0.328,
+      "castle_event_probability": 0.105,
       "event": "FogOnly"
     },
     {
@@ -71,12 +71,12 @@
       "temp": 24.83,
       "humidity": 97.75,
       "wind": 3.8,
-      "cloud": 91.75,
+      "cloud": 96.0,
       "rain": 0.15,
       "weathercode": 51,
-      "fog_probability": 0.721,
-      "castle_probability": 0.197,
-      "castle_event_probability": 0.043,
+      "fog_probability": 0.715,
+      "castle_probability": 0.181,
+      "castle_event_probability": 0.038,
       "event": "FogOnly"
     },
     {
@@ -84,12 +84,12 @@
       "temp": 25.72,
       "humidity": 76.0,
       "wind": 3.55,
-      "cloud": 70.5,
+      "cloud": 80.75,
       "rain": 0.0,
       "weathercode": 2,
-      "fog_probability": 0.95,
+      "fog_probability": 0.956,
       "castle_probability": 0.472,
-      "castle_event_probability": 0.442,
+      "castle_event_probability": 0.45,
       "event": "FogOnly"
     },
     {
@@ -97,12 +97,12 @@
       "temp": 25.68,
       "humidity": 77.5,
       "wind": 2.55,
-      "cloud": 53.0,
+      "cloud": 63.75,
       "rain": 0.0,
-      "weathercode": 1,
-      "fog_probability": 0.753,
-      "castle_probability": 0.156,
-      "castle_event_probability": 0.038,
+      "weathercode": 2,
+      "fog_probability": 0.825,
+      "castle_probability": 0.163,
+      "castle_event_probability": 0.051,
       "event": "FogOnly"
     },
     {
@@ -110,12 +110,12 @@
       "temp": 25.7,
       "humidity": 84.5,
       "wind": 2.65,
-      "cloud": 87.75,
+      "cloud": 97.5,
       "rain": 0.0,
       "weathercode": 3,
-      "fog_probability": 0.895,
-      "castle_probability": 0.162,
-      "castle_event_probability": 0.065,
+      "fog_probability": 0.874,
+      "castle_probability": 0.154,
+      "castle_event_probability": 0.057,
       "event": "FogOnly"
     },
     {
@@ -123,12 +123,12 @@
       "temp": 28.5,
       "humidity": 76.25,
       "wind": 7.65,
-      "cloud": 42.5,
+      "cloud": 84.0,
       "rain": 0.0,
-      "weathercode": 1,
+      "weathercode": 3,
       "fog_probability": 0.962,
-      "castle_probability": 0.356,
-      "castle_event_probability": 0.267,
+      "castle_probability": 0.292,
+      "castle_event_probability": 0.186,
       "event": "FogOnly"
     },
     {
@@ -136,12 +136,12 @@
       "temp": 28.42,
       "humidity": 73.0,
       "wind": 7.58,
-      "cloud": 70.0,
+      "cloud": 57.0,
       "rain": 0.0,
       "weathercode": 2,
-      "fog_probability": 0.851,
-      "castle_probability": 0.276,
-      "castle_event_probability": 0.112,
+      "fog_probability": 0.936,
+      "castle_probability": 0.42,
+      "castle_event_probability": 0.338,
       "event": "FogOnly"
     },
     {
@@ -149,12 +149,12 @@
       "temp": 27.7,
       "humidity": 80.5,
       "wind": 1.9,
-      "cloud": 73.75,
+      "cloud": 47.0,
       "rain": 0.0,
-      "weathercode": 2,
-      "fog_probability": 0.831,
-      "castle_probability": 0.199,
-      "castle_event_probability": 0.065,
+      "weathercode": 1,
+      "fog_probability": 0.716,
+      "castle_probability": 0.205,
+      "castle_event_probability": 0.044,
       "event": "FogOnly"
     },
     {
@@ -162,12 +162,12 @@
       "temp": 26.77,
       "humidity": 90.25,
       "wind": 2.98,
-      "cloud": 66.75,
+      "cloud": 100.0,
       "rain": 0.1,
       "weathercode": 51,
-      "fog_probability": 0.287,
-      "castle_probability": 0.186,
-      "castle_event_probability": 0.008,
+      "fog_probability": 0.277,
+      "castle_probability": 0.08,
+      "castle_event_probability": 0.005,
       "event": "None"
     },
     {
@@ -175,13 +175,13 @@
       "temp": 24.58,
       "humidity": 81.25,
       "wind": 2.15,
-      "cloud": 19.25,
+      "cloud": 43.5,
       "rain": 0.0,
-      "weathercode": 0,
-      "fog_probability": 0.99,
-      "castle_probability": 0.52,
-      "castle_event_probability": 0.585,
-      "event": "Castle"
+      "weathercode": 1,
+      "fog_probability": 0.954,
+      "castle_probability": 0.481,
+      "castle_event_probability": 0.465,
+      "event": "FogOnly"
     }
   ]
 }
