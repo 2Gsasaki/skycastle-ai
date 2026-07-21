@@ -30,7 +30,7 @@
     "date": "2026-07-25",
     "temp": 25.25,
     "humidity": 91.5,
-    "wind": 3.4749999999999996,
+    "wind": 3.225,
     "cloud": 93.75,
     "rain": 0.025,
     "weathercode": 3
@@ -39,7 +39,7 @@
     "date": "2026-07-26",
     "temp": 25.55,
     "humidity": 85.5,
-    "wind": 7.925,
+    "wind": 3.875,
     "cloud": 10.75,
     "rain": 0.0,
     "weathercode": 0
@@ -48,7 +48,7 @@
     "date": "2026-07-27",
     "temp": 24.1,
     "humidity": 93.25,
-    "wind": 11.575000000000001,
+    "wind": 8.5,
     "cloud": 91.25,
     "rain": 0.5,
     "weathercode": 51
@@ -57,7 +57,7 @@
     "date": "2026-07-28",
     "temp": 27.075,
     "humidity": 85.25,
-    "wind": 7.750000000000001,
+    "wind": 4.4,
     "cloud": 34.5,
     "rain": 0.3,
     "weathercode": 51
@@ -66,7 +66,7 @@
     "date": "2026-07-29",
     "temp": 23.824999999999996,
     "humidity": 99.0,
-    "wind": 2.2,
+    "wind": 2.925,
     "cloud": 100.0,
     "rain": 0.8,
     "weathercode": 53
@@ -75,7 +75,7 @@
     "date": "2026-07-30",
     "temp": 25.3,
     "humidity": 94.75,
-    "wind": 3.525,
+    "wind": 1.225,
     "cloud": 100.0,
     "rain": 0.3,
     "weathercode": 51
@@ -84,7 +84,7 @@
     "date": "2026-07-31",
     "temp": 26.775,
     "humidity": 73.75,
-    "wind": 2.4000000000000004,
+    "wind": 2.2249999999999996,
     "cloud": 95.5,
     "rain": 0.0,
     "weathercode": 3
@@ -93,7 +93,7 @@
     "date": "2026-08-01",
     "temp": 26.525,
     "humidity": 82.25,
-    "wind": 3.5,
+    "wind": 1.55,
     "cloud": 99.25,
     "rain": 0.0,
     "weathercode": 3
@@ -102,7 +102,7 @@
     "date": "2026-08-02",
     "temp": 27.475,
     "humidity": 76.75,
-    "wind": 5.1,
+    "wind": 3.6500000000000004,
     "cloud": 21.25,
     "rain": 0.0,
     "weathercode": 0
@@ -111,7 +111,7 @@
     "date": "2026-08-03",
     "temp": 26.825,
     "humidity": 71.75,
-    "wind": 3.1999999999999997,
+    "wind": 2.6,
     "cloud": 13.75,
     "rain": 0.0,
     "weathercode": 0
@@ -120,7 +120,7 @@
     "date": "2026-08-04",
     "temp": 28.175,
     "humidity": 71.25,
-    "wind": 2.25,
+    "wind": 3.175,
     "cloud": 58.5,
     "rain": 0.0,
     "weathercode": 2
