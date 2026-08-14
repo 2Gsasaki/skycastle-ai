@@ -1,19 +1,6 @@
 {
-  "generated_at": "2026-08-14T23:28:55.253589+09:00",
+  "generated_at": "2026-08-15T00:38:25.079236+09:00",
   "predictions": [
-    {
-      "date": "2026-08-14",
-      "temp": 24.0,
-      "humidity": 85.5,
-      "wind": 7.35,
-      "cloud": 13.0,
-      "rain": 0.0,
-      "weathercode": 2,
-      "fog_probability": 0.978,
-      "castle_probability": 0.163,
-      "castle_event_probability": 0.087,
-      "event": "FogOnly"
-    },
     {
       "date": "2026-08-15",
       "temp": 23.93,
@@ -181,6 +168,19 @@
       "fog_probability": 0.523,
       "castle_probability": 0.179,
       "castle_event_probability": 0.018,
+      "event": "FogOnly"
+    },
+    {
+      "date": "2026-08-28",
+      "temp": 26.52,
+      "humidity": 82.75,
+      "wind": 2.4,
+      "cloud": 28.0,
+      "rain": 0.0,
+      "weathercode": 1,
+      "fog_probability": 0.871,
+      "castle_probability": 0.385,
+      "castle_event_probability": 0.224,
       "event": "FogOnly"
     }
   ]
