@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-17T20:35:14.028903+09:00",
+  "generated_at": "2026-08-17T22:58:13.006794+09:00",
   "predictions": [
     {
       "date": "2026-08-17",
@@ -55,41 +55,41 @@
     },
     {
       "date": "2026-08-21",
-      "temp": 25.18,
+      "temp": 25.12,
       "humidity": 84.25,
-      "wind": 5.42,
-      "cloud": 38.75,
+      "wind": 4.75,
+      "cloud": 60.75,
       "rain": 0.1,
       "weathercode": 51,
-      "fog_probability": 0.338,
-      "castle_probability": 0.146,
+      "fog_probability": 0.344,
+      "castle_probability": 0.135,
       "castle_event_probability": 0.008,
       "event": "None"
     },
     {
       "date": "2026-08-22",
-      "temp": 23.73,
-      "humidity": 94.75,
-      "wind": 2.67,
-      "cloud": 83.75,
+      "temp": 22.25,
+      "humidity": 96.5,
+      "wind": 3.1,
+      "cloud": 38.5,
       "rain": 0.0,
-      "weathercode": 3,
-      "fog_probability": 0.308,
-      "castle_probability": 0.074,
-      "castle_event_probability": 0.005,
-      "event": "None"
+      "weathercode": 1,
+      "fog_probability": 0.622,
+      "castle_probability": 0.184,
+      "castle_event_probability": 0.027,
+      "event": "FogOnly"
     },
     {
       "date": "2026-08-23",
-      "temp": 24.9,
-      "humidity": 92.0,
-      "wind": 7.03,
-      "cloud": 100.0,
+      "temp": 25.88,
+      "humidity": 86.75,
+      "wind": 6.85,
+      "cloud": 64.5,
       "rain": 0.2,
-      "weathercode": 3,
-      "fog_probability": 0.341,
-      "castle_probability": 0.512,
-      "castle_event_probability": 0.036,
+      "weathercode": 51,
+      "fog_probability": 0.356,
+      "castle_probability": 0.784,
+      "castle_event_probability": 0.117,
       "event": "None"
     },
     {
@@ -100,9 +100,9 @@
       "cloud": 100.0,
       "rain": 1.9,
       "weathercode": 80,
-      "fog_probability": 0.126,
-      "castle_probability": 0.472,
-      "castle_event_probability": 0.01,
+      "fog_probability": 0.017,
+      "castle_probability": 0.265,
+      "castle_event_probability": 0.003,
       "event": "None"
     },
     {
