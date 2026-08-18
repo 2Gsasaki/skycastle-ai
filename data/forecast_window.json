@@ -1,14 +1,5 @@
 [
   {
-    "date": "2026-08-18",
-    "temp": 25.45,
-    "humidity": 73.0,
-    "wind": 9.625,
-    "cloud": 60.5,
-    "rain": 0.0,
-    "weathercode": 2
-  },
-  {
     "date": "2026-08-19",
     "temp": 25.75,
     "humidity": 75.5,
@@ -122,6 +113,15 @@
     "humidity": 77.5,
     "wind": 17.200000000000003,
     "cloud": 100.0,
+    "rain": 0.0,
+    "weathercode": 3
+  },
+  {
+    "date": "2026-09-01",
+    "temp": 27.125,
+    "humidity": 74.75,
+    "wind": 19.075000000000003,
+    "cloud": 99.0,
     "rain": 0.0,
     "weathercode": 3
   }
