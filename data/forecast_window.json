@@ -10,16 +10,16 @@
   },
   {
     "date": "2026-08-27",
-    "temp": 25.0,
+    "temp": 25.25,
     "humidity": 92.5,
     "wind": 4.575,
-    "cloud": 84.5,
+    "cloud": 57.75,
     "rain": 0.45,
     "weathercode": 53
   },
   {
     "date": "2026-08-28",
-    "temp": 23.85,
+    "temp": 24.1,
     "humidity": 96.5,
     "wind": 2.225,
     "cloud": 100.0,
@@ -37,29 +37,29 @@
   },
   {
     "date": "2026-08-30",
-    "temp": 24.424999999999997,
-    "humidity": 96.5,
-    "wind": 2.8500000000000005,
-    "cloud": 100.0,
-    "rain": 1.2,
+    "temp": 24.05,
+    "humidity": 97.0,
+    "wind": 4.925,
+    "cloud": 98.75,
+    "rain": 0.675,
     "weathercode": 53
   },
   {
     "date": "2026-08-31",
-    "temp": 24.675,
-    "humidity": 92.25,
-    "wind": 10.975000000000001,
-    "cloud": 46.0,
-    "rain": 0.0,
-    "weathercode": 1
+    "temp": 23.900000000000002,
+    "humidity": 97.0,
+    "wind": 2.525,
+    "cloud": 79.0,
+    "rain": 0.9,
+    "weathercode": 53
   },
   {
     "date": "2026-09-01",
-    "temp": 25.6,
+    "temp": 25.075,
     "humidity": 86.75,
-    "wind": 10.525,
-    "cloud": 60.0,
-    "rain": 0.0,
+    "wind": 9.075,
+    "cloud": 51.25,
+    "rain": 0.15,
     "weathercode": 1
   },
   {
