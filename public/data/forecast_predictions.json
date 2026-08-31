@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T01:06:58.835019+09:00",
+  "generated_at": "2026-09-01T02:58:39.781938+09:00",
   "predictions": [
     {
       "date": "2026-09-01",
@@ -16,29 +16,29 @@
     },
     {
       "date": "2026-09-02",
-      "temp": 26.05,
-      "humidity": 77.0,
-      "wind": 6.65,
-      "cloud": 20.75,
+      "temp": 26.12,
+      "humidity": 76.0,
+      "wind": 6.97,
+      "cloud": 26.75,
       "rain": 0.0,
-      "weathercode": 0,
-      "fog_probability": 0.943,
-      "castle_probability": 0.14,
-      "castle_event_probability": 0.066,
+      "weathercode": 1,
+      "fog_probability": 0.969,
+      "castle_probability": 0.129,
+      "castle_event_probability": 0.067,
       "event": "FogOnly"
     },
     {
       "date": "2026-09-03",
-      "temp": 24.2,
-      "humidity": 92.25,
-      "wind": 4.67,
-      "cloud": 72.5,
-      "rain": 0.35,
-      "weathercode": 51,
-      "fog_probability": 0.012,
-      "castle_probability": 0.367,
-      "castle_event_probability": 0.004,
-      "event": "None"
+      "temp": 25.67,
+      "humidity": 81.75,
+      "wind": 5.28,
+      "cloud": 78.0,
+      "rain": 0.0,
+      "weathercode": 2,
+      "fog_probability": 0.68,
+      "castle_probability": 0.241,
+      "castle_event_probability": 0.047,
+      "event": "FogOnly"
     },
     {
       "date": "2026-09-04",
@@ -48,9 +48,9 @@
       "cloud": 100.0,
       "rain": 4.03,
       "weathercode": 95,
-      "fog_probability": 0.027,
-      "castle_probability": 0.547,
-      "castle_event_probability": 0.007,
+      "fog_probability": 0.003,
+      "castle_probability": 0.118,
+      "castle_event_probability": 0.002,
       "event": "None"
     },
     {
