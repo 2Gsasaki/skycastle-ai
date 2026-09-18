@@ -4,8 +4,8 @@
   "castle_score": 82.0,
   "dew_point": 19.9,
   "dew_spread": 1.4,
-  "fog_probability": 0.474,
-  "castle_probability": 0.135,
-  "castle_event_probability": 0.012,
+  "fog_probability": 0.459,
+  "castle_probability": 0.248,
+  "castle_event_probability": 0.02,
   "event": "None"
 }
