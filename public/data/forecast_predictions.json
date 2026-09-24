@@ -1,122 +1,122 @@
 {
-  "generated_at": "2026-09-24T10:52:40.723853+09:00",
+  "generated_at": "2026-09-24T14:39:08.595404+09:00",
   "predictions": [
     {
       "date": "2026-09-25",
-      "temp": 17.2,
-      "humidity": 79.75,
-      "wind": 2.5,
-      "cloud": 23.0,
+      "temp": 16.93,
+      "humidity": 78.75,
+      "wind": 2.62,
+      "cloud": 29.25,
       "rain": 0.0,
-      "weathercode": 0,
-      "castle_event_probability": 0.0024,
+      "weathercode": 1,
+      "castle_event_probability": 0.0025,
       "event": "None",
-      "legacy_fog_probability": 0.655,
+      "legacy_fog_probability": 0.517,
       "legacy_castle_probability": 0.356,
-      "legacy_castle_event_probability": 0.079,
+      "legacy_castle_event_probability": 0.043,
       "probability_source": "scientific_castle_lightgbm",
       "probability_source_label": "夜間気象・季節・過去実績AI",
       "expectation_score": 0,
       "expectation_upper_percent": null,
       "expectation_reference_season": "秋冬",
+      "expectation_month_score_cap": 10,
       "recent_baseline_probability": 0.033,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
-        "min_temp_02_04": 16.5,
-        "temp_drop_to_04": 3.35,
-        "humidity_05_06_mean": 85.5,
-        "wind_05_06_mean": 3.5,
-        "cloud_05_06_mean": 34.5,
+        "min_temp_02_04": 16.4,
+        "temp_drop_to_04": 3.267,
+        "humidity_05_06_mean": 83.0,
+        "wind_05_06_mean": 4.2,
+        "cloud_05_06_mean": 36.5,
         "rain_05_06_sum": 0.0,
-        "dew_spread_05_06": 2.434,
-        "cloud_06_08_mean": 18.333,
+        "dew_spread_05_06": 2.885,
+        "cloud_06_08_mean": 25.0,
         "rain_06_08_sum": 0.0,
-        "wind_06_08_mean": 2.733,
+        "wind_06_08_mean": 2.633,
         "hours_since_rain_at_06": 24.0,
         "month": 9.0,
         "day_of_year_sin": -0.995,
         "day_of_year_cos": -0.102
-      },
-      "expectation_month_score_cap": 10
+      }
     },
     {
       "date": "2026-09-26",
-      "temp": 19.85,
-      "humidity": 90.25,
-      "wind": 2.05,
-      "cloud": 59.25,
-      "rain": 0.03,
-      "weathercode": 2,
-      "castle_event_probability": 0.0025,
+      "temp": 18.52,
+      "humidity": 91.25,
+      "wind": 2.73,
+      "cloud": 58.5,
+      "rain": 0.35,
+      "weathercode": 51,
+      "castle_event_probability": 0.0018,
       "event": "None",
-      "legacy_fog_probability": 0.856,
-      "legacy_castle_probability": 0.186,
-      "legacy_castle_event_probability": 0.065,
+      "legacy_fog_probability": 0.363,
+      "legacy_castle_probability": 0.185,
+      "legacy_castle_event_probability": 0.01,
       "probability_source": "scientific_castle_lightgbm",
       "probability_source_label": "夜間気象・季節・過去実績AI",
       "expectation_score": 0,
       "expectation_upper_percent": null,
       "expectation_reference_season": "秋冬",
-      "recent_baseline_probability": 0.033,
-      "scientific_features": {
-        "prev_18_23_rain_sum": 0.0,
-        "rain_00_01_sum": 0.0,
-        "min_temp_02_04": 19.6,
-        "temp_drop_to_04": 0.9,
-        "humidity_05_06_mean": 89.5,
-        "wind_05_06_mean": 2.4,
-        "cloud_05_06_mean": 60.0,
-        "rain_05_06_sum": 0.0,
-        "dew_spread_05_06": 1.774,
-        "cloud_06_08_mean": 58.333,
-        "rain_06_08_sum": 0.1,
-        "wind_06_08_mean": 2.133,
-        "hours_since_rain_at_06": 24.0,
-        "month": 9.0,
-        "day_of_year_sin": -0.996,
-        "day_of_year_cos": -0.085
-      },
-      "expectation_month_score_cap": 10
-    },
-    {
-      "date": "2026-09-27",
-      "temp": 20.82,
-      "humidity": 79.5,
-      "wind": 9.25,
-      "cloud": 99.75,
-      "rain": 0.0,
-      "weathercode": 3,
-      "castle_event_probability": 0.002,
-      "event": "None",
-      "legacy_fog_probability": 0.175,
-      "legacy_castle_probability": 0.79,
-      "legacy_castle_event_probability": 0.038,
-      "probability_source": "scientific_castle_lightgbm",
-      "probability_source_label": "夜間気象・季節・過去実績AI",
-      "expectation_score": 0,
-      "expectation_upper_percent": null,
-      "expectation_reference_season": "秋冬",
+      "expectation_month_score_cap": 10,
       "recent_baseline_probability": 0.033,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
         "min_temp_02_04": 18.9,
-        "temp_drop_to_04": 0.767,
-        "humidity_05_06_mean": 81.0,
-        "wind_05_06_mean": 9.4,
-        "cloud_05_06_mean": 99.5,
-        "rain_05_06_sum": 0.0,
-        "dew_spread_05_06": 3.359,
-        "cloud_06_08_mean": 99.667,
-        "rain_06_08_sum": 0.0,
-        "wind_06_08_mean": 9.1,
-        "hours_since_rain_at_06": 20.0,
+        "temp_drop_to_04": 1.417,
+        "humidity_05_06_mean": 89.5,
+        "wind_05_06_mean": 3.45,
+        "cloud_05_06_mean": 58.5,
+        "rain_05_06_sum": 0.6,
+        "dew_spread_05_06": 1.756,
+        "cloud_06_08_mean": 60.333,
+        "rain_06_08_sum": 1.0,
+        "wind_06_08_mean": 2.233,
+        "hours_since_rain_at_06": 0.0,
+        "month": 9.0,
+        "day_of_year_sin": -0.996,
+        "day_of_year_cos": -0.085
+      }
+    },
+    {
+      "date": "2026-09-27",
+      "temp": 18.7,
+      "humidity": 87.75,
+      "wind": 6.77,
+      "cloud": 75.0,
+      "rain": 0.23,
+      "weathercode": 51,
+      "castle_event_probability": 0.0018,
+      "event": "None",
+      "legacy_fog_probability": 0.15,
+      "legacy_castle_probability": 0.779,
+      "legacy_castle_event_probability": 0.031,
+      "probability_source": "scientific_castle_lightgbm",
+      "probability_source_label": "夜間気象・季節・過去実績AI",
+      "expectation_score": 0,
+      "expectation_upper_percent": null,
+      "expectation_reference_season": "秋冬",
+      "expectation_month_score_cap": 10,
+      "recent_baseline_probability": 0.033,
+      "scientific_features": {
+        "prev_18_23_rain_sum": 0.0,
+        "rain_00_01_sum": 0.0,
+        "min_temp_02_04": 18.9,
+        "temp_drop_to_04": 0.183,
+        "humidity_05_06_mean": 85.5,
+        "wind_05_06_mean": 6.85,
+        "cloud_05_06_mean": 67.0,
+        "rain_05_06_sum": 0.4,
+        "dew_spread_05_06": 2.48,
+        "cloud_06_08_mean": 75.333,
+        "rain_06_08_sum": 0.8,
+        "wind_06_08_mean": 6.567,
+        "hours_since_rain_at_06": 0.0,
         "month": 9.0,
         "day_of_year_sin": -0.998,
         "day_of_year_cos": -0.068
-      },
-      "expectation_month_score_cap": 10
+      }
     },
     {
       "date": "2026-09-28",
@@ -128,14 +128,15 @@
       "weathercode": 80,
       "castle_event_probability": 0.0018,
       "event": "None",
-      "legacy_fog_probability": 0.014,
-      "legacy_castle_probability": 0.119,
-      "legacy_castle_event_probability": 0.002,
+      "legacy_fog_probability": 0.096,
+      "legacy_castle_probability": 0.285,
+      "legacy_castle_event_probability": 0.005,
       "probability_source": "scientific_castle_lightgbm",
       "probability_source_label": "夜間気象・季節・過去実績AI",
       "expectation_score": 0,
       "expectation_upper_percent": null,
       "expectation_reference_season": "秋冬",
+      "expectation_month_score_cap": 10,
       "recent_baseline_probability": 0.033,
       "scientific_features": {
         "prev_18_23_rain_sum": 3.5,
@@ -154,8 +155,7 @@
         "month": 9.0,
         "day_of_year_sin": -0.999,
         "day_of_year_cos": -0.051
-      },
-      "expectation_month_score_cap": 10
+      }
     },
     {
       "date": "2026-09-29",
@@ -175,6 +175,7 @@
       "expectation_score": 5,
       "expectation_upper_percent": null,
       "expectation_reference_season": "秋冬",
+      "expectation_month_score_cap": 10,
       "recent_baseline_probability": 0.033,
       "scientific_features": {
         "prev_18_23_rain_sum": 6.1,
@@ -193,8 +194,7 @@
         "month": 9.0,
         "day_of_year_sin": -0.999,
         "day_of_year_cos": -0.033
-      },
-      "expectation_month_score_cap": 10
+      }
     },
     {
       "date": "2026-09-30",
@@ -214,6 +214,7 @@
       "expectation_score": 5,
       "expectation_upper_percent": null,
       "expectation_reference_season": "秋冬",
+      "expectation_month_score_cap": 10,
       "recent_baseline_probability": 0.033,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
@@ -232,8 +233,7 @@
         "month": 9.0,
         "day_of_year_sin": -1.0,
         "day_of_year_cos": -0.016
-      },
-      "expectation_month_score_cap": 10
+      }
     },
     {
       "date": "2026-10-01",
@@ -253,6 +253,7 @@
       "expectation_score": 5,
       "expectation_upper_percent": null,
       "expectation_reference_season": "秋冬",
+      "expectation_month_score_cap": 60,
       "recent_baseline_probability": 0.033,
       "scientific_features": {
         "prev_18_23_rain_sum": 13.2,
@@ -271,8 +272,7 @@
         "month": 10.0,
         "day_of_year_sin": -1.0,
         "day_of_year_cos": 0.001
-      },
-      "expectation_month_score_cap": 60
+      }
     },
     {
       "date": "2026-10-02",
@@ -292,6 +292,7 @@
       "expectation_score": 50,
       "expectation_upper_percent": 15,
       "expectation_reference_season": "秋冬",
+      "expectation_month_score_cap": 60,
       "recent_baseline_probability": 0.033,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
@@ -310,8 +311,7 @@
         "month": 10.0,
         "day_of_year_sin": -1.0,
         "day_of_year_cos": 0.018
-      },
-      "expectation_month_score_cap": 60
+      }
     },
     {
       "date": "2026-10-03",
@@ -331,6 +331,7 @@
       "expectation_score": 10,
       "expectation_upper_percent": null,
       "expectation_reference_season": "秋冬",
+      "expectation_month_score_cap": 60,
       "recent_baseline_probability": 0.033,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
@@ -349,8 +350,7 @@
         "month": 10.0,
         "day_of_year_sin": -0.999,
         "day_of_year_cos": 0.035
-      },
-      "expectation_month_score_cap": 60
+      }
     },
     {
       "date": "2026-10-04",
@@ -370,6 +370,7 @@
       "expectation_score": 5,
       "expectation_upper_percent": null,
       "expectation_reference_season": "秋冬",
+      "expectation_month_score_cap": 60,
       "recent_baseline_probability": 0.033,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
@@ -388,8 +389,7 @@
         "month": 10.0,
         "day_of_year_sin": -0.999,
         "day_of_year_cos": 0.053
-      },
-      "expectation_month_score_cap": 60
+      }
     },
     {
       "date": "2026-10-05",
@@ -409,6 +409,7 @@
       "expectation_score": 25,
       "expectation_upper_percent": 28,
       "expectation_reference_season": "秋冬",
+      "expectation_month_score_cap": 60,
       "recent_baseline_probability": 0.033,
       "scientific_features": {
         "prev_18_23_rain_sum": 3.4,
@@ -427,8 +428,7 @@
         "month": 10.0,
         "day_of_year_sin": -0.998,
         "day_of_year_cos": 0.07
-      },
-      "expectation_month_score_cap": 60
+      }
     },
     {
       "date": "2026-10-06",
@@ -448,6 +448,7 @@
       "expectation_score": 10,
       "expectation_upper_percent": null,
       "expectation_reference_season": "秋冬",
+      "expectation_month_score_cap": 60,
       "recent_baseline_probability": 0.033,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
@@ -466,8 +467,7 @@
         "month": 10.0,
         "day_of_year_sin": -0.996,
         "day_of_year_cos": 0.087
-      },
-      "expectation_month_score_cap": 60
+      }
     },
     {
       "date": "2026-10-07",
@@ -487,6 +487,7 @@
       "expectation_score": 5,
       "expectation_upper_percent": null,
       "expectation_reference_season": "秋冬",
+      "expectation_month_score_cap": 60,
       "recent_baseline_probability": 0.033,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
@@ -505,8 +506,7 @@
         "month": 10.0,
         "day_of_year_sin": -0.995,
         "day_of_year_cos": 0.104
-      },
-      "expectation_month_score_cap": 60
+      }
     },
     {
       "date": "2026-10-08",
@@ -526,6 +526,7 @@
       "expectation_score": 5,
       "expectation_upper_percent": null,
       "expectation_reference_season": "秋冬",
+      "expectation_month_score_cap": 60,
       "recent_baseline_probability": 0.033,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
@@ -544,8 +545,7 @@
         "month": 10.0,
         "day_of_year_sin": -0.993,
         "day_of_year_cos": 0.121
-      },
-      "expectation_month_score_cap": 60
+      }
     }
   ]
 }
