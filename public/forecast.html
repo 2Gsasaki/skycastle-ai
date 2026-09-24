@@ -542,7 +542,7 @@
         </span>
       </div>
       <div class="forecast-note">
-        天空の城期待指数は、同じ季節の過去のAI予測と比べて、その日の気象条件がどのくらい良いかを0～100で表した目安です。期待指数は出現確率ではありません。AI予測値は、夜間の気温差・湿度・露点差・風・雲・雨・季節と過去の出現記録から、天空の城が見える可能性をAIが計算した推定値です。学習に使用した2017年9月以降の記録では、天空の城を確認できた日は全3,304日のうち98日、約3%です。もともと珍しい現象のため、AI予測値は多くの日で低くなります。現在も精度を検証中であり、実際の出現を保証するものではありません。
+        天空の城期待指数は、AI予測値をもとに、月ごとの出現しやすさも反映して0～100で表した目安です。期待指数は出現確率ではありません。AI予測値は、夜間の気温差・湿度・露点差・風・雲・雨・季節と過去の出現記録から、天空の城が見える可能性をAIが計算した推定値です。学習に使用した2017年9月以降の記録では、天空の城を確認できた日は全3,304日のうち98日、約3%です。もともと珍しい現象のため、AI予測値は多くの日で低くなります。現在も精度を検証中であり、実際の出現を保証するものではありません。
       </div>
       <div class="expectation-legend" aria-label="天空の城期待指数の目安">
         <span class="expectation-legend-title">天空の城期待指数</span>
@@ -645,7 +645,7 @@
         const month = Number(item.date.slice(5, 7));
 
         if (expectationScore >= 80) {
-          reasons.push(`天空の城期待指数は${expectationScore}で、過去の同じ季節の予測と比べて条件が良い「天空の城チャンス」です。`);
+          reasons.push(`天空の城期待指数は${expectationScore}で、AI予測値と月ごとの出現実績から「天空の城チャンス」と判定しています。`);
           if (Number.isFinite(probability) && Number.isFinite(baseline) && baseline > 0) {
             reasons.push(`AI予測値は${formatPercent(probability)}で、直近1年の出現率${formatPercent(baseline)}の約${(probability / baseline).toFixed(1)}倍です。`);
           }
@@ -661,7 +661,7 @@
         }
 
         if (expectationScore >= 50) {
-          reasons.push(`天空の城期待指数は${expectationScore}で、過去の同じ季節と比べて「期待あり」の条件です。`);
+          reasons.push(`天空の城期待指数は${expectationScore}で、AI予測値と月ごとの出現実績から「期待あり」と判定しています。`);
           reasons.push(`AI予測値は${formatPercent(probability)}です。夜間の最低気温は${formatValue(minTemp, "℃")}、夜間の気温差は${formatTemperatureChange(cooling)}です。`);
           if (rain <= 0.05) reasons.push(`朝6～8時の雨は${formatValue(rain, "mm")}で、雨の心配は少ない予報です。`);
           if (cloud < 60) reasons.push(`朝6～8時の雲量は${formatValue(cloud, "%")}で、城を見通せる可能性があります。`);
@@ -705,7 +705,6 @@
           <p class="dialog-probability">AI予測値<strong>${formatPercent(item.castle_event_probability)}</strong></p>
           ${Number.isFinite(upperPercent) ? `<p>過去の${expectationSeason}の予測と比べ、上位約${upperPercent}%に入る条件です。</p>` : ""}
           ${baselineComparisonText(Number(item.castle_event_probability), baseline)}
-          <p><strong>計算方法：</strong>期待指数は過去の同じ季節のAI予測値に対する順位です。AI予測値は、夜間の気象条件・季節・過去の出現記録からAIが計算した推定値です。</p>
           <section class="explanation-section">
             <h3>この数字になった主な理由</h3>
             <ul>${reasons.map((reason) => `<li>${reason}</li>`).join("")}</ul>

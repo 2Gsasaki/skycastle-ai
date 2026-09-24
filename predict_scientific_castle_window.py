@@ -62,20 +62,44 @@ def expectation_reference(history: pd.DataFrame, model) -> tuple[dict[str, pd.Se
     return references, recent_baseline
 
 
+def monthly_score_caps(history: pd.DataFrame) -> dict[int, int]:
+    """最も出現率が高い月を100として、月ごとの指数上限を作る。"""
+    rates = history.groupby(history["date"].dt.month)["castle_visible"].mean()
+    peak_rate = float(rates.max()) if not rates.empty else 0.0
+    if peak_rate <= 0:
+        return {month: 0 for month in range(1, 13)}
+    return {
+        month: int(min(100, max(0, round((float(rates.get(month, 0)) / peak_rate * 100) / 5) * 5)))
+        for month in range(1, 13)
+    }
+
+
+def ai_probability_score(probability: float) -> int:
+    """AI推定値を、過去実績で決めた基準点に沿って0～100へ変換する。"""
+    points = [(0.0, 0), (0.03, 20), (0.08, 50), (0.20, 80), (0.50, 100)]
+    if probability >= points[-1][0]:
+        return 100
+    for (lower_probability, lower_score), (upper_probability, upper_score) in zip(points, points[1:]):
+        if probability <= upper_probability:
+            ratio = (probability - lower_probability) / (upper_probability - lower_probability)
+            score = lower_score + ratio * (upper_score - lower_score)
+            return int(min(100, max(0, round(score / 5) * 5)))
+    return 100
+
+
 def expectation_for_date(
     probability: float,
     month: int,
     references: dict[str, pd.Series],
     recent_baseline: float,
+    month_cap: int,
 ) -> tuple[int, int | None, str]:
     label = "秋冬" if month in [9, 10, 11, 12, 1, 2] else "春夏"
     reference = references[label]
     rank = float((reference <= probability).mean() * 100)
+    score = min(ai_probability_score(probability), month_cap)
     if probability < recent_baseline:
-        # 平均出現率を下回る日は、季節内順位だけで中程度以上に見せない。
-        score = int(min(20, max(0, round((20 * probability / recent_baseline) / 5) * 5)))
         return score, None, label
-    score = int(min(100, max(0, round(rank / 5) * 5)))
     upper_percent = int(max(1, round(100 - rank)))
     return score, upper_percent, label
 
@@ -96,10 +120,15 @@ def main() -> None:
     model.fit(train[candidate.SCIENTIFIC_FEATURES], train["castle_visible"])
     probabilities = model.predict_proba(frame[candidate.SCIENTIFIC_FEATURES])[:, 1]
     references, recent_baseline = expectation_reference(history, model)
+    month_caps = monthly_score_caps(history)
 
     for item, features, probability in zip(predictions, frame.to_dict("records"), probabilities):
         expectation_score, expectation_upper_percent, expectation_season = expectation_for_date(
-            float(probability), int(features["month"]), references, recent_baseline
+            float(probability),
+            int(features["month"]),
+            references,
+            recent_baseline,
+            month_caps[int(features["month"])],
         )
         item["legacy_fog_probability"] = item.get("fog_probability")
         item["legacy_castle_probability"] = item.get("castle_probability")
@@ -110,6 +139,7 @@ def main() -> None:
         item["expectation_score"] = expectation_score
         item["expectation_upper_percent"] = expectation_upper_percent
         item["expectation_reference_season"] = expectation_season
+        item["expectation_month_score_cap"] = month_caps[int(features["month"])]
         item["recent_baseline_probability"] = round(recent_baseline, 4)
         item["scientific_features"] = {
             key: round(float(features[key]), 3)
