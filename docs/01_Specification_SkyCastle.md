@@ -5,6 +5,8 @@
 
 ## 1. プロジェクト概要
 
+> **2026年9月24日現在：** 本番公開はGitHub Pages上の静的ページ`public/forecast.html`と`public/history.html`を使用する。以下に残るStreamlit・Docker・画像解析の記述は、初期設計または管理・将来拡張用である。
+
 **プロジェクト名：**  
 SkyCastle AI（スカイキャッスルAI）
 
@@ -36,8 +38,8 @@ SkyCastle AI（スカイキャッスルAI）
 |------|------|
 | 対象エリア | 福井県大野市（越前大野城周辺） |
 | 緯度経度 | 緯度 35.98 ／ 経度 136.49 |
-| 予測対象時間帯 | 翌朝 5:00〜8:00 |
-| データ期間 | 過去1〜3年の気象データ（学習用）＋最新予報（推論用） |
+| 予測対象時間帯 | 朝6:00〜8:00頃（特徴量は前夜18時〜朝8時を使用） |
+| データ期間 | 2017年9月以降の時間別気象・出現記録＋最新14日予報 |
 
 ---
 
@@ -46,12 +48,13 @@ SkyCastle AI（スカイキャッスルAI）
 ### 4.1 データ取得機能
 - Open-Meteo API より気象データ（気温・湿度・風速・雲量・降水量）を自動取得  
 - 対象時間帯：翌朝5〜8時の4時間分を取得し平均値・派生指標を算出  
-- 更新頻度：営業日の16:00に1回（Dockerコンテナ内スケジューラで実行）
+- 更新頻度：GitHub Actionsで1日複数回。11:05 JSTに観測履歴と予報、その他の時刻に14日予報を更新
 
 ### 4.2 AI推論機能
-- LightGBM モデルによる「霧発生確率」と「天空の城成立確率」の二段推論  
-- 入力：気温・湿度・風速・雲量・降水量、過去実績  
-- 出力：`fog_probability`（0.0〜1.0）、`castle_probability`（0.0〜1.0）およびイベント判定（`FogOnly` / `Castle` / `None`）
+- 公開14日予報はLightGBMによる天空の城の直接予測を使用
+- 入力：前夜の雨、深夜の雨、最低気温、夜間の冷え込み、朝の湿度・露点差・風・雲・雨、季節、過去実績
+- 出力：`castle_event_probability`（AI推定値）、`expectation_score`（期待指数）および説明用特徴量
+- 旧来の霧発生確率・天空率は互換用または管理用とし、公開判断の主値にはしない
 
 ### 4.3 スコア算出機能（ルールベース）
 - 露点温度（Td）を算出  
@@ -61,15 +64,14 @@ SkyCastle AI（スカイキャッスルAI）
 - `data/feed.json` に最新の霧発生確率・天空の城成立確率・イベント判定を保存  
 - `data/history.csv` に日次履歴（霧観測・城成立の実績を含む）を蓄積（再学習用）
 
-### 4.5 Webダッシュボード表示
-- Streamlit による簡易UI  
+### 4.5 公開Web表示
+- GitHub Pagesによる静的HTML
 - 表示内容：
-  - 霧発生確率・天空の城成立確率（メーター表示）
-  - 霧検出結果（画像）※画像解析導入時に表示
-  - 過去7日間の霧／城確率推移グラフ
-  - 最新の観測ログ一覧・未入力日の簡易アラート
-- 「天気データを再取得」ボタンで即時に気象データ取得〜推論を手動実行
-- 公開用URL例：`http://localhost:8501` または cloud上（Render/AWS EC2）にデプロイ
+  - 明日から14日間の期待指数、AI推定値、気象条件、詳細説明
+  - 天空の城・霧のみ・全件を切り替えられる過去ログ
+  - 実際の気象を使って振り返った期待指数
+- ローカル確認URL：`http://localhost:8000/public/forecast.html`、`http://localhost:8000/public/history.html`
+- 本番URL：`https://2gsasaki.github.io/skycastle-ai/forecast.html`、`history.html`
 
 ### 4.6 観測ログ入力機能
 - ダッシュボード内に管理者向け簡易フォームを配置（ページ遷移なし）
@@ -88,10 +90,10 @@ SkyCastle AI（スカイキャッスルAI）
 | AIモデル | LightGBM／Scikit-learn（無料・BSDライセンス） |
 | 画像処理 | OpenCV＋CNN（Keras or PyTorch） |
 | 通知 | なし（ダッシュボード閲覧で確認） |
-| 表示 | Streamlit（無料・MITライセンス） |
+| 表示 | 静的HTML／CSS／JavaScript（GitHub Pages）。Streamlitは管理・開発用 |
 | データ保存 | CSV／SQLite（ローカルDB） |
 | 動作環境 | ローカルPC／Docker／クラウド（Render, AWS, GCP） |
-| 自動実行 | Dockerコンテナ内スケジューラ（営業日16:00実行）／ローカル手動実行 |
+| 自動実行 | GitHub Actionsの定期実行／手動実行 |
 
 ---
 
@@ -142,10 +144,10 @@ SkyCastle AI（スカイキャッスルAI）
 
 | 項目 | 内容 |
 |------|------|
-| 実行頻度 | 営業日16:00に自動予報実行（翌朝向け） |
-| 自動化手段 | Dockerコンテナ起動時の常駐スケジューラ／手動実行（`docker compose run --rm dashboard python main.py`） |
-| 通知方法 | ダッシュボード確認（メール通知は将来拡張） |
-| 保守運用 | モデル更新（月1回）／ログ監視／バックアップ（`data/`・`model/`） |
+| 実行頻度 | 0:00と11:05 JST、および複数の予報更新時刻 |
+| 自動化手段 | GitHub Actionsの定期実行。必要時はActionsから手動実行 |
+| 通知方法 | 公開ページ確認（メール通知は将来拡張） |
+| 保守運用 | 予報・観測履歴・時間別AIデータを自動更新。モデル変更は検証後に手動採用 |
 | 共有 | JSONフィードを外部サイトに埋め込み可（iframe対応） |
 
 ---
@@ -159,6 +161,9 @@ SkyCastle AI（スカイキャッスルAI）
 | 付随スクリプト | `scheduler.py` | 自動実行スケジューラ |
 | 設定ファイル | `.env` | 将来の通知設定（現状未使用） |
 | 出力データ | `data/feed.json`／`data/history.csv` | 予測結果と履歴 |
+| 14日予報 | `data/forecast_predictions.json` | AI推定値・期待指数・説明用特徴量 |
+| 過去ログ | `public/data/history_expectations.json` | 実績と振り返り期待指数 |
+| 公開ページ | `public/forecast.html`／`public/history.html` | GitHub Pagesで配信する予報・履歴画面 |
 | 表示アプリ | `dashboard.py` | Streamlitダッシュボード（手動更新＋観測入力） |
 | 画像解析 | `vision_fogdetector.py` | 霧判定AI（将来拡張） |
 
@@ -205,9 +210,10 @@ SkyCastle AI（スカイキャッスルAI）
 | 項目 | 内容 |
 |------|------|
 | 文書名 | SkyCastle AI 要件定義書（仕様書） |
-| バージョン | v1.0 |
+| バージョン | v2.0 |
 | 作成者 | SkyCastle Dev Team |
 | 作成日 | 2025-10-29 |
+| 最終更新日 | 2026-09-24 |
 | 監修 | ChatGPT（GPT-5） |
 | 関連文書 | `docs/02_Technical_Design_SkyCastle.md`、`docs/03_Development_Guide_CodeX.md` |
 

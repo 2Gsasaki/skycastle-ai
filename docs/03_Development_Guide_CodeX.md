@@ -5,6 +5,30 @@
 
 ## 1. 文書概要
 
+> **2026年9月24日現在：** 本番はGitHub ActionsとGitHub Pagesで動作する。Docker・Streamlit・FastAPI・ローカルスケジューラの手順は初期開発または管理用である。公開予報は明日から14日間で、`public/forecast.html`と`public/history.html`を使用する。
+
+現在のローカル確認手順：
+
+```bash
+cd /Volumes/IODATA/skycastle-ai
+python3 -m http.server 8000
+```
+
+- 予報：`http://localhost:8000/public/forecast.html`
+- 過去ログ：`http://localhost:8000/public/history.html`
+
+現在の主な生成処理：
+
+```bash
+python fetch_forecast_window.py --days 14
+python predict_forecast_window.py
+python predict_scientific_castle_window.py
+python build_daily_history_dataset.py --end-date YYYY-MM-DD
+python build_history_expectations.py
+```
+
+Macで`libomp.dylib`がない場合、LightGBMを使う後半2処理はGitHub Actions上で実行する。
+
 **目的：**  
 本書は「SkyCastle AI（越前大野・天空の城出現予測AI）」を  
 CodeX や ChatGPT＋VSCode 環境で開発・運用するための実装ガイドである。  
@@ -15,6 +39,7 @@ AI開発支援ツールを活用して、仕様書・設計書に基づいたス
 - `docs/02_Technical_Design_SkyCastle.md`（技術設計書）
 
 **作成日：** 2025-10-29  
+**最終更新日：** 2026-09-24
 **作成者：** SkyCastle Dev Team  
 **監修：** ChatGPT（GPT-5）
 
@@ -117,13 +142,13 @@ date,temp,humidity,wind,cloud,rain
 docker compose run --rm dashboard python fetch_weather.py
 ```
 
-🗓️ 拡張：16日間早朝予報バッチ（fetch_forecast_window.py）
+🗓️ 拡張：14日間早朝予報バッチ（fetch_forecast_window.py）
 目的：
-Open-Meteo の同APIから今日を含む最大16日分の 5〜8時平均値をまとめて取得し、観光向けコンテンツなどで扱いやすい JSON (`data/forecast_window.json`) に保存する。
+Open-Meteoの時間別APIから明日を起点とする14日分の早朝気象と夜間特徴量を取得し、`data/forecast_window.json`に保存する。
 
 CodeXへの指示：
 
-「Open-Meteo の hourly 予報を使って今日から最大16日分の 5〜8時平均を計算し、日付ごとの気温・湿度・風速・雲量・降水量を JSON リストで保存する fetch_forecast_window.py を作って。既存パイプラインに影響を与えない独立スクリプトにして、取得日数は引数で調整できるように。」
+「Open-Meteoのhourly予報を使って明日から14日分の早朝気象と夜間特徴量を計算し、日付ごとの値をJSONリストで保存する`fetch_forecast_window.py`を作って。取得日数は引数で調整できるように。」
 
 出力ファイル：
 fetch_forecast_window.py
@@ -152,13 +177,13 @@ fetch_forecast_window.py
 ```
 実行コマンド例：
 ```bash
-docker compose run --rm dashboard python fetch_forecast_window.py --days 16
+python fetch_forecast_window.py --days 14
 ```
 補足：生成される JSON は dashboard/main.py の既存フローには触れず、静的ページや観光客向け公開サイトの素材として利用する。
 
-🧠 拡張：16日分バッチ推論（predict_forecast_window.py）
+🧠 拡張：14日分バッチ推論（predict_forecast_window.py）
 目的：
-`forecast_window.json` の気象値を既存 LightGBM モデル＋キャリブレーターで一括推論し、観光向けに使いやすい 16 日分の確率一覧 (`data/forecast_predictions.json`) を生成する。
+`forecast_window.json`の気象値を一括処理し、`predict_scientific_castle_window.py`で天空の城直接予測AIの推定値・期待指数・説明用特徴量を14日分の`data/forecast_predictions.json`へ保存する。
 
 CodeXへの指示：
 
@@ -195,9 +220,9 @@ docker compose run --rm dashboard python predict_forecast_window.py
 補足：出力は観光客向けサイトやサマリーメールなどで直接利用できる JSON とし、history.csv や feed.json には書き戻さない。
 備考：history.csv に実測済みの行が存在する日付は、その値（気温・湿度・確率など）で上書きしてから保存するため、ダッシュボードの最新結果と観光向け JSON が一致する。`generated_at` には推論完了時刻（JST）が入り、フロントエンドで「最終更新（推論生成）」として利用される。
 
-🌄 公開用 16日予報ページ（public/forecast.html）
+🌄 公開用14日予報ページ（public/forecast.html）
 目的：
-`forecast_predictions.json` を読み込み、観光客向けに天空の城出現確率をカード形式で表示する静的HTMLを提供する。ランキング化されたカードで Castle チャンスを視覚化し、気温・湿度などの指標も併記する。
+`forecast_predictions.json`を読み込み、観光客向けに期待指数とAI推定値をカード形式で表示する静的HTMLを提供する。期待指数は確率ではなく、AI推定値と月別出現実績から作る案内値である。
 
 CodeXへの指示：
 
@@ -441,9 +466,10 @@ StreamlitやFastAPIのポート競合に注意（8501と8000を併用）。
 11. 管理情報
 項目	内容
 文書名	SkyCastle AI 開発手順書（CodeX対応）
-バージョン	v1.0
+バージョン	v2.0
 作成者	SkyCastle Dev Team
 作成日	2025-10-29
+最終更新日	2026-09-24
 監修	ChatGPT（GPT-5）
 関連文書	docs/01_Specification_SkyCastle.md／docs/02_Technical_Design_SkyCastle.md
 
