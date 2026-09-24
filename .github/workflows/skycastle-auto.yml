@@ -137,7 +137,9 @@ jobs:
           python predict_scientific_castle_window.py
 
       - name: Refresh public observation history
-        run: python build_history_expectations.py
+        run: |
+          python build_daily_history_dataset.py --end-date "${{ steps.dates.outputs.today_jst }}"
+          python build_history_expectations.py
 
       - name: Copy latest forecast JSON for public site
         run: |
@@ -154,7 +156,7 @@ jobs:
         env:
           TIMESTAMP: ${{ steps.dates.outputs.timestamp }}
         run: |
-          git add data/feed.json data/history.csv data/weather.csv data/forecast_predictions.json data/forecast_window.json public/data/forecast_predictions.json public/data/history_expectations.json || true
+          git add data/feed.json data/history.csv data/weather.csv data/forecast_predictions.json data/forecast_window.json data/analysis/daily_history_2017_2026.csv public/data/forecast_predictions.json public/data/history_expectations.json || true
           if git diff --cached --quiet; then
             echo "Nothing to commit."
             exit 0
