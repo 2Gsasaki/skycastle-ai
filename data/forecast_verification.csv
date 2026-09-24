@@ -1,1 +1,2 @@
 issued_at,target_date,temp,humidity,wind,cloud,rain,weathercode,fog_probability,castle_probability,castle_event_probability,event
+2026-09-25T02:53:40+09:00,2026-09-26,18.5,90.0,2.42,54.25,0.0,2,0.613,0.152,0.022,FogOnly
