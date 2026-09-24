@@ -31,6 +31,16 @@ LAG_FEATURE_COLUMNS: List[str] = [
 FEATURE_COLUMNS: List[str] = BASE_FEATURE_COLUMNS + LAG_FEATURE_COLUMNS
 
 
+def add_previous_day_features(df: pd.DataFrame) -> pd.DataFrame:
+    """日付がちょうど1日前の行だけから、前日特徴量を作る。"""
+    result = df.copy()
+    has_previous_day = result["date"].diff().dt.days.eq(1)
+    for col in BASE_FEATURE_COLUMNS:
+        result[f"prev_{col}"] = result[col].shift(1).where(has_previous_day)
+    result["temp_prev_diff"] = result["prev_temp"] - result["temp"]
+    return result
+
+
 def load_history() -> pd.DataFrame:
     if not HISTORY_CSV.exists():
         raise FileNotFoundError(f"{HISTORY_CSV} が存在しません。観測データを追加してください。")
@@ -43,16 +53,19 @@ def load_history() -> pd.DataFrame:
     if missing_cols:
         raise ValueError(f"{HISTORY_CSV} に必要な列が足りません: {missing_cols}")
 
+    df["date"] = pd.to_datetime(df["date"])
+    if "updated_at" in df.columns:
+        updated_at = pd.to_datetime(df["updated_at"], errors="coerce")
+        observed_mask = updated_at.isna() | (updated_at.dt.date >= df["date"].dt.date)
+        df = df[observed_mask]
+
     df = df.dropna(subset=BASE_FEATURE_COLUMNS + ["fog_observed", "castle_visible"])
     if df.empty:
         raise ValueError("必要な列に欠損値があり、学習可能な行がありません。")
 
-    df["date"] = pd.to_datetime(df["date"])
     df = df.sort_values("date")
 
-    for col in BASE_FEATURE_COLUMNS:
-        df[f"prev_{col}"] = df[col].shift(1)
-    df["temp_prev_diff"] = df["prev_temp"] - df["temp"]
+    df = add_previous_day_features(df)
 
     df = df.dropna(subset=LAG_FEATURE_COLUMNS)
     if df.empty:
@@ -145,9 +158,7 @@ def update_history_event_probability(
     sortable["date"] = pd.to_datetime(sortable["date"], errors="coerce")
     sortable = sortable.sort_values("date")
 
-    for col in BASE_FEATURE_COLUMNS:
-        sortable[f"prev_{col}"] = sortable[col].shift(1)
-    sortable["temp_prev_diff"] = sortable["prev_temp"] - sortable["temp"]
+    sortable = add_previous_day_features(sortable)
 
     feature_mask = sortable[FEATURE_COLUMNS].notna().all(axis=1)
     if not feature_mask.any():

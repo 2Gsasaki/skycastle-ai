@@ -422,7 +422,7 @@
         <br class="mobile-break" />
         過去ログ
       </h1>
-      <p>2025年10月27日以降の観測ログ。AI予想と実績が合っていたかを一覧できます。</p>
+      <p>2025年10月27日以降の実際の観測記録です。最新の日付から表示します。</p>
     </header>
     <main>
       <section class="summary" aria-live="polite">
@@ -431,9 +431,8 @@
           <strong id="summary-castle-days">-</strong>
         </div>
         <div class="summary-card">
-          <span id="summary-hit-title">天空の城チャンス的中率</span>
-          <strong id="summary-hit-rate">-</strong>
-          <small id="summary-hit-note"></small>
+          <span>不出現の日</span>
+          <strong id="summary-none-days">-</strong>
         </div>
         <div class="summary-card">
           <span>霧のみだった日</span>
@@ -446,8 +445,9 @@
     </section>
       <a class="back-link" href="forecast.html">← 雲海予報に戻る</a>
       <div class="legend">
-        <span class="badge badge--castle">ボーダー発光: 予報どおり天空が見えた日</span>
+        <span class="badge badge--castle">天空の城を確認</span>
         <span class="badge badge--fog">霧だけ出現</span>
+        <span>このページは実際の観測結果を表示します。予報の的中率は、前夜の正式予報が蓄積してから表示します。</span>
       </div>
       <div class="pagination" aria-live="polite">
         <button id="prev-page" type="button">前へ</button>
@@ -534,10 +534,6 @@
         return null;
       }
 
-      function determinePredictedEvent(row) {
-        return (row.event || "").toString().trim() || "None";
-      }
-
       function buildStatus(row) {
         if (Number(row.castle_visible) === 1) {
           return { label: "天空 出現", type: "castle" };
@@ -545,7 +541,7 @@
         if (Number(row.fog_observed) === 1) {
           return { label: "霧のみ", type: "fog" };
         }
-        return null;
+        return { label: "不出現", type: "none" };
       }
 
       function updateSummary(rows) {
@@ -554,32 +550,12 @@
           (row) => Number(row.fog_observed) === 1 && Number(row.castle_visible) !== 1
         ).length;
         const total = rows.length;
-
-        const predictedCastle = rows.filter(
-          (row) => determinePredictedEvent(row).toLowerCase() === "castle"
-        );
-        const castleHits = predictedCastle.filter((row) => Number(row.castle_visible) === 1).length;
-
-        const hitRatePercent =
-          predictedCastle.length > 0 ? `${((castleHits / predictedCastle.length) * 100).toFixed(1)}%` : "-";
+        const noneDays = total - castleDays - fogDays;
 
         document.getElementById("summary-castle-days").textContent = `${castleDays} 日`;
         document.getElementById("summary-fog-days").textContent = `${fogDays} 日`;
+        document.getElementById("summary-none-days").textContent = `${noneDays} 日`;
         document.getElementById("summary-total").textContent = `${total} 件`;
-        const hitTitleEl = document.getElementById("summary-hit-title");
-        const hitRateEl = document.getElementById("summary-hit-rate");
-        const hitNoteEl = document.getElementById("summary-hit-note");
-        if (predictedCastle.length > 0) {
-          hitTitleEl.textContent = `天空の城チャンス的中率 ${hitRatePercent}`;
-          hitRateEl.textContent = `${predictedCastle.length} 日予想 / ${castleHits} 日的中`;
-          hitNoteEl.hidden = true;
-          hitNoteEl.textContent = "";
-        } else {
-          hitTitleEl.textContent = "天空の城チャンス的中率";
-          hitRateEl.textContent = "-";
-          hitNoteEl.hidden = false;
-          hitNoteEl.textContent = "Castle予報なし";
-        }
       }
 
       function renderCards(rows) {
@@ -597,18 +573,14 @@
         rows.forEach((row) => {
           const card = document.createElement("article");
           const statusInfo = buildStatus(row);
-          const actualCastle = statusInfo && statusInfo.type === "castle";
-          const actualFog = statusInfo && statusInfo.type === "fog";
-          const predicted = determinePredictedEvent(row);
-          const predictedClass = predicted.toLowerCase();
+          const actualCastle = statusInfo.type === "castle";
+          const actualFog = statusInfo.type === "fog";
           const weatherInfo = resolveWeatherInfo(row.weathercode);
-          const hitCastle = actualCastle && predictedClass === "castle";
 
           const classes = ["card"];
           if (actualFog) classes.push("card--fog");
-          if (hitCastle) {
+          if (actualCastle) {
             classes.push("card--castle");
-            classes.push("hit-castle");
           }
           card.className = classes.join(" ");
 
@@ -623,34 +595,15 @@
               <span>${dateLabel}</span><span class="weekday">${weekday}</span>
             </div>
             <div class="badge-group center">
-              ${
-                statusInfo
-                  ? `<span class="badge-actual ${statusInfo.type === "fog" ? "fogonly" : ""}">
-                      ${statusInfo.label}
-                    </span>`
-                  : ""
-              }
-              ${
-                predictedClass === "none"
-                  ? ""
-                  : `<span class="badge-forecast ${predictedClass}">
-                      ${predictedClass === "castle" ? "天空の城チャンス" : "霧海の予感"}
-                    </span>`
-              }
+              <span class="badge-actual ${statusInfo.type === "fog" ? "fogonly" : ""}">
+                ${statusInfo.label}
+              </span>
             </div>
             ${
               weatherInfo
                 ? `<div class="weather-chip">${weatherInfo.icon} ${weatherInfo.label}</div>`
                 : ""
             }
-            <div class="probabilities">
-              <div class="chip">天空率<strong>${formatPercent(
-                row.castle_probability
-              )}</strong></div>
-              <div class="chip">霧率<strong>${formatPercent(
-                row.fog_probability
-              )}</strong></div>
-            </div>
             <div class="metrics">
               <div class="metric">
                 気温
@@ -662,7 +615,7 @@
               </div>
               <div class="metric">
                 風速
-                <strong>${formatValue(row.wind, "m/s")}</strong>
+                <strong>${formatValue(row.wind, "km/h")}</strong>
               </div>
               <div class="metric">
                 雲量

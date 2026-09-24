@@ -2,16 +2,13 @@
 """
 Streamlit ダッシュボード:
   - feed.json から予測確率をメトリクス表示
-  - history.csv から過去推移グラフを描画
   - 観測ログ入力フォーム（霧・城の実績更新）
-  - 手動で最新予報を再計算するボタン
 """
 
 from __future__ import annotations
 
 import json
 import datetime as dt
-import subprocess
 from pathlib import Path
 from typing import List
 from zoneinfo import ZoneInfo
@@ -90,119 +87,86 @@ def render_metrics(feed_data):
         cols[3].metric("判定", "N/A")
 
 
-def render_history_chart(history_df: pd.DataFrame):
-    st.subheader("過去推移グラフ")
-    if history_df.empty:
-        st.info("history.csv にデータがありません。観測ログを追加してください。")
-        return
-    chart_df = history_df[["date", "fog_observed", "castle_visible"]].set_index("date")
-    chart_df = chart_df.rename(columns={"fog_observed": "Fog Observed", "castle_visible": "Castle Visible"})
-    st.line_chart(chart_df)
-
-    if "castle_event_probability" in history_df.columns:
-        prob_df = history_df[["date", "castle_event_probability"]].dropna(subset=["castle_event_probability"])
-        if not prob_df.empty:
-            prob_series = (
-                pd.to_numeric(prob_df.set_index("date")["castle_event_probability"], errors="coerce") * 100.0
-            )
-            prob_series = prob_series.rename("Castle Event Probability (%)")
-            st.line_chart(prob_series)
-
-
 def render_observation_form(history_df: pd.DataFrame):
-    st.subheader("観測ログ入力／編集")
+    st.subheader("出現した日だけ記録")
 
     history_df = history_df.copy()
     if not history_df.empty:
         history_df["date"] = pd.to_datetime(history_df["date"])
-
     if "note" not in history_df.columns:
         history_df["note"] = ""
 
-    prev_selected_date = st.session_state.get("obs_selected_date")
     selected_date = st.date_input(
         "観測日",
-        value=prev_selected_date or dt.date.today(),
+        value=dt.datetime.now(ZoneInfo("Asia/Tokyo")).date(),
         key="obs_date_input",
     )
-
-    date_changed = prev_selected_date != selected_date
-    st.session_state["obs_selected_date"] = selected_date
-
-    if date_changed:
-        Path("logs").mkdir(parents=True, exist_ok=True)
-        with Path("logs/dashboard_events.log").open("a", encoding="utf-8") as f:
-            f.write(
-                f"{dt.datetime.now(ZoneInfo('Asia/Tokyo')).isoformat()} - observation_date changed "
-                f"from {prev_selected_date} to {selected_date}\n"
-            )
-        st.sidebar.info(f"観測日を {selected_date} に切り替えました（ログ出力済み）")
-
-        existing_row = (
-            history_df[history_df["date"] == pd.to_datetime(selected_date)]
-            if not history_df.empty
-            else pd.DataFrame()
-        )
-        if not existing_row.empty:
-            row = existing_row.iloc[0]
-            fog_val = bool(row["fog_observed"])
-            castle_val = bool(row["castle_visible"])
-            note_val = row.get("note", "")
-            if pd.isna(note_val):
-                note_val = ""
+    date_value = pd.to_datetime(selected_date)
+    existing_row = history_df[history_df["date"] == date_value] if not history_df.empty else pd.DataFrame()
+    note_value = ""
+    if not existing_row.empty:
+        row = existing_row.iloc[0]
+        castle_value = pd.to_numeric(row.get("castle_visible", 0), errors="coerce")
+        fog_value = pd.to_numeric(row.get("fog_observed", 0), errors="coerce")
+        note_value = row.get("note", "")
+        if pd.isna(note_value):
+            note_value = ""
+        if not pd.isna(castle_value) and int(castle_value) == 1:
+            current_status = "🏰 天空の城"
+        elif not pd.isna(fog_value) and int(fog_value) == 1:
+            current_status = "🌫️ 霧だけ"
         else:
-            fog_val = False
-            castle_val = False
-            note_val = ""
+            current_status = "不出現"
+        st.caption(f"現在の記録: {current_status}")
 
-        st.session_state["obs_fog_value"] = fog_val
-        st.session_state["obs_castle_value"] = castle_val
-        st.session_state["obs_note_value"] = note_val
-    else:
-        # 初期化されていない場合のみデフォルト値を入れる
-        st.session_state.setdefault("obs_fog_value", False)
-        st.session_state.setdefault("obs_castle_value", False)
-        st.session_state.setdefault("obs_note_value", "")
+    st.info("天空の城も霧も出なかった日は、何も入力しなくて大丈夫です。不出現として扱います。")
+    note = st.text_input("メモ（任意）", value=str(note_value), key=f"obs_note_{selected_date}")
+    castle_col, fog_col = st.columns(2)
+    castle_clicked = castle_col.button("🏰 天空の城が出た", type="primary", use_container_width=True)
+    fog_clicked = fog_col.button("🌫️ 霧だけ出た", use_container_width=True)
 
-    fog_flag = st.checkbox("霧が発生した", key="obs_fog_value")
-    castle_flag = st.checkbox("天空の城が見えた", key="obs_castle_value")
-    note = st.text_input("メモ（任意）", key="obs_note_value")
-    save_clicked = st.button("保存", key="obs_save_button")
-
-    if save_clicked:
+    if castle_clicked or fog_clicked:
         history_df = history_df.copy()
-        date_str = pd.to_datetime(st.session_state["obs_selected_date"])
+        fog_flag = 1
+        castle_flag = int(castle_clicked)
 
-        if (history_df["date"] == date_str).any():
-            history_df.loc[history_df["date"] == date_str, ["fog_observed", "castle_visible", "note"]] = [
-                int(fog_flag),
-                int(castle_flag),
+        if (history_df["date"] == date_value).any():
+            history_df.loc[history_df["date"] == date_value, ["fog_observed", "castle_visible", "note"]] = [
+                fog_flag,
+                castle_flag,
                 note,
             ]
         else:
             new_row = {
-                "date": date_str,
-                "temp": history_df["temp"].mean() if "temp" in history_df.columns and not history_df.empty else 0,
-                "humidity": history_df["humidity"].mean() if "humidity" in history_df.columns and not history_df.empty else 0,
-                "wind": history_df["wind"].mean() if "wind" in history_df.columns and not history_df.empty else 0,
-                "cloud": history_df["cloud"].mean() if "cloud" in history_df.columns and not history_df.empty else 0,
-                "rain": history_df["rain"].mean() if "rain" in history_df.columns and not history_df.empty else 0,
-                "fog_observed": int(fog_flag),
-                "castle_visible": int(castle_flag),
+                "date": date_value,
+                "temp": pd.NA,
+                "humidity": pd.NA,
+                "wind": pd.NA,
+                "cloud": pd.NA,
+                "rain": pd.NA,
+                "fog_observed": fog_flag,
+                "castle_visible": castle_flag,
                 "note": note,
             }
             history_df = pd.concat([history_df, pd.DataFrame([new_row])], ignore_index=True)
 
         save_history(history_df)
-        st.success("観測ログを保存しました")
-        st.session_state["obs_last_synced_date"] = None
+        saved_label = "天空の城" if castle_clicked else "霧だけ"
+        st.success(f"{selected_date} を「{saved_label}」として保存しました")
         st.rerun()
 
     st.caption("下の表で直接編集できます（編集後に「保存」ボタンを押してください）。")
+    storage_columns = list(history_df.columns)
     editable_df = history_df.copy()
     if "date" in editable_df.columns:
         editable_df["date"] = pd.to_datetime(editable_df["date"], errors="coerce")
+        editable_df = editable_df.sort_values("date", ascending=False).reset_index(drop=True)
         editable_df["date"] = editable_df["date"].dt.date
+    if "date" in editable_df.columns and "event" in editable_df.columns:
+        display_columns = ["date", "event"] + [
+            column for column in editable_df.columns if column not in {"date", "event"}
+        ]
+        editable_df = editable_df[display_columns]
     numeric_columns = [
         "temp",
         "humidity",
@@ -306,36 +270,13 @@ def render_observation_form(history_df: pd.DataFrame):
 
     if st.button("テーブルの変更を保存", type="primary"):
         edited["date"] = pd.to_datetime(edited["date"])
+        edited = edited.sort_values("date").reset_index(drop=True)
+        save_columns = [column for column in storage_columns if column in edited.columns]
+        save_columns += [column for column in edited.columns if column not in storage_columns]
+        edited = edited[save_columns]
         save_history(edited)
         st.success("history.csv を更新しました")
         st.rerun()
-
-
-def render_manual_run_buttons():
-    st.subheader("手動実行")
-    col1, col2 = st.columns(2)
-
-    if col1.button("最新予報を再計算", type="primary"):
-        try:
-            subprocess.run(["python", "main.py"], check=True)
-            st.success("予報を更新しました")
-            st.rerun()
-        except subprocess.CalledProcessError as exc:
-            st.error(f"更新に失敗しました: {exc}")
-
-    with col2.form("manual_fetch_form"):
-        manual_date = st.date_input("過去データを取得する日付", key="manual_date")
-        fetch_btn = st.form_submit_button("指定日の気象データを取得（Archive API）")
-
-    if fetch_btn:
-        try:
-            subprocess.run(["python", "main.py", "--date", manual_date.isoformat()], check=True)
-            st.success(
-                f"{manual_date.isoformat()} の気象データを取得し、予報と history.csv を更新しました。"
-            )
-            st.rerun()
-        except subprocess.CalledProcessError as exc:
-            st.error(f"過去データの取得に失敗しました: {exc}")
 
 
 def main():
@@ -349,9 +290,7 @@ def main():
     history_df = load_history(str(HISTORY_CSV), history_mtime)
 
     render_metrics(feed_data)
-    render_history_chart(history_df)
     render_observation_form(history_df)
-    render_manual_run_buttons()
 
 
 if __name__ == "__main__":

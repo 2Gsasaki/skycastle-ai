@@ -50,13 +50,14 @@ def clamp(value: float, low: float, high: float) -> float:
 
 
 def calc_scores(temp: float, dew_point: float, wind: float, cloud: float, rain: float) -> Dict[str, float]:
-    """霧スコアと天空の城スコアを計算する."""
+    """霧スコアと天空の城スコアを計算する。windの入力単位はkm/h。"""
     dew_spread = temp - dew_point  # 気温と露点の差（小さいほど霧が出やすい）
+    wind_ms = wind / 3.6
 
     # 霧スコア：露点差・風速・降水量などを減点方式で評価
     fog_score = 100.0
     fog_score -= clamp(dew_spread * 12.0, 0, 60)  # 露点差が5℃なら約60点減
-    fog_score -= clamp(max(wind - 1.5, 0) * 10.0, 0, 25)  # 風速1.5m/sを超えると減点
+    fog_score -= clamp(max(wind_ms - 1.5, 0) * 10.0, 0, 25)  # 風速1.5m/sを超えると減点
     fog_score -= clamp(rain * 5.0, 0, 10)  # 降水量は霧の発生を邪魔すると仮定
     fog_score = clamp(fog_score, 0, 100)
 
