@@ -93,19 +93,28 @@ def build_feature_frame(entries: Iterable[ForecastEntry]) -> pd.DataFrame:
     if df.empty:
         raise ValueError("推論対象となる日付がありません。")
 
-    # 既存historyを参照して前日値を推測するため、最新1行を取得
-    history_tail = None
+    # 最初の予報日の「本当の1日前」だけを履歴から取得する。
+    # 最新行を無条件に使うと、同じ日や未来の日を前日扱いするため、
+    # 日付が完全に一致する行がある場合だけ使用する。
+    previous_day_row = None
+    first_forecast_date = pd.to_datetime(df.iloc[0]["date"], errors="coerce")
+    if pd.isna(first_forecast_date):
+        raise ValueError(f"予報日の日付が不正です: {df.iloc[0]['date']}")
+
+    expected_previous_date = first_forecast_date.normalize() - pd.Timedelta(days=1)
     if HISTORY_CSV.exists():
         history_df = pd.read_csv(HISTORY_CSV)
         if not history_df.empty:
             history_df["date"] = pd.to_datetime(history_df["date"], errors="coerce")
             history_df = history_df.dropna(subset=["date"]).sort_values("date")
-            history_tail = history_df.iloc[-1]
+            matching_rows = history_df[history_df["date"].dt.normalize() == expected_previous_date]
+            if not matching_rows.empty:
+                previous_day_row = matching_rows.iloc[-1]
 
     lag_sources = []
-    prev_values = None
-    if history_tail is not None:
-        prev_values = {col: float(history_tail.get(col, np.nan)) for col in BASE_FEATURE_COLUMNS}
+    prev_values = {col: float("nan") for col in BASE_FEATURE_COLUMNS}
+    if previous_day_row is not None:
+        prev_values = {col: float(previous_day_row.get(col, np.nan)) for col in BASE_FEATURE_COLUMNS}
 
     for _, row in df.iterrows():
         lag_sources.append(prev_values)
@@ -167,10 +176,10 @@ def safe_float(value, default=None):
     return converted
 
 
-def run_prediction(entries: List[ForecastEntry]) -> List[dict]:
+def run_prediction(entries: List[ForecastEntry], use_history_override: bool = False) -> List[dict]:
     fog_model, castle_model, calibrator = load_models()
     feature_frame = build_feature_frame(entries)
-    history_lookup = build_history_lookup()
+    history_lookup = build_history_lookup() if use_history_override else {}
 
     fog_probs = fog_model.predict_proba(feature_frame)[:, 1]
     castle_probs = castle_model.predict_proba(feature_frame)[:, 1]
@@ -241,7 +250,7 @@ def save_results(results: List[dict], output_path: Path) -> None:
 
 def main() -> None:
     entries = load_forecast_entries(FORECAST_JSON)
-    results = run_prediction(entries)
+    results = run_prediction(entries, use_history_override=False)
     save_results(results, OUTPUT_JSON)
 
 

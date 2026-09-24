@@ -114,8 +114,8 @@
         align-items: center;
         justify-content: center;
         min-width: 8.2em;
-        background: #4caf50;
-        color: #fff;
+        background: rgba(234, 179, 8, 0.2);
+        color: #7a5200;
         padding: 0.2rem 0.6rem;
         border-radius: 999px;
         font-weight: 600;
@@ -143,6 +143,11 @@
         gap: 0.6rem;
         border: 1px solid rgba(20, 40, 80, 0.05);
         transition: transform 0.2s ease, box-shadow 0.2s ease;
+        cursor: pointer;
+      }
+      .card:focus-visible {
+        outline: 3px solid rgba(37, 99, 235, 0.65);
+        outline-offset: 3px;
       }
       .card.castle {
         border: 2px solid rgba(249, 200, 80, 0.55);
@@ -150,6 +155,29 @@
         background-image:
           linear-gradient(155deg, rgba(255, 248, 220, 0.92), rgba(255, 255, 255, 0.65)),
           linear-gradient(25deg, rgba(255, 227, 160, 0.45), rgba(255, 255, 255, 0));
+      }
+      .card.positive {
+        border: 2px solid rgba(34, 197, 94, 0.35);
+        box-shadow: 0 8px 18px rgba(34, 197, 94, 0.14);
+        background-image: linear-gradient(155deg, rgba(220, 252, 231, 0.72), rgba(255, 255, 255, 0.72));
+      }
+      .card.today {
+        border-width: 3px;
+      }
+      .day-marker {
+        display: inline-block;
+        margin-right: 0.35rem;
+        color: #1f3b6c;
+        font-size: 0.75rem;
+      }
+      .forecast-note {
+        margin: 0 0 1rem;
+        padding: 0.75rem 1rem;
+        border-radius: 12px;
+        background: rgba(37, 99, 235, 0.08);
+        color: rgba(33, 51, 92, 0.85);
+        font-size: 0.82rem;
+        line-height: 1.6;
       }
       .card.fogonly {
         border: 1px dashed rgba(96, 125, 139, 0.4);
@@ -174,6 +202,78 @@
       }
       .badge.castle {
         background: #4caf50;
+      }
+      .chance-label {
+        display: inline-flex;
+        align-items: center;
+        margin-left: auto;
+        padding: 0.2rem 0.6rem;
+        border-radius: 999px;
+        background: #d99a00;
+        color: #fff;
+        font-size: 0.72rem;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+      .positive-label {
+        display: inline-flex;
+        align-items: center;
+        margin-left: auto;
+        padding: 0.2rem 0.6rem;
+        border-radius: 999px;
+        background: #2f9e55;
+        color: #fff;
+        font-size: 0.72rem;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+      .expectation-legend {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.45rem 1rem;
+        margin: 0 0 1rem;
+        font-size: 0.78rem;
+        color: rgba(33, 51, 92, 0.78);
+      }
+      .expectation-legend span {
+        white-space: nowrap;
+        padding: 0.25rem 0.65rem;
+        border-radius: 999px;
+        font-weight: 600;
+      }
+      .expectation-legend .expectation-legend-title {
+        padding: 0.25rem 0;
+        color: #1f3b6c;
+        font-weight: 700;
+      }
+      .expectation-label {
+        display: inline-flex;
+        align-items: center;
+        margin-left: 0.55rem;
+        padding: 0.15rem 0.55rem;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        vertical-align: middle;
+        line-height: 1;
+        cursor: help;
+      }
+      .expectation-high {
+        background: rgba(234, 179, 8, 0.2);
+        color: #7a5200;
+      }
+      .expectation-positive {
+        background: rgba(34, 197, 94, 0.15);
+        color: #176534;
+      }
+      .expectation-watch {
+        background: rgba(37, 99, 235, 0.12);
+        color: #1f3b6c;
+      }
+      .expectation-low {
+        background: rgba(100, 116, 139, 0.14);
+        color: #475569;
       }
       .badge.fog {
         background: #607d8b;
@@ -200,6 +300,12 @@
         line-height: 1.05;
         letter-spacing: 0.02em;
         text-shadow: 0 4px 12px rgba(31, 59, 108, 0.15);
+      }
+      .probability-source {
+        min-height: 1.2em;
+        font-size: 0.72rem;
+        color: rgba(33, 51, 92, 0.68);
+        text-align: center;
       }
       .weather-chip {
         display: inline-flex;
@@ -234,6 +340,74 @@
       }
       .detail-value {
         font-size: 0.95rem;
+      }
+      .forecast-dialog {
+        width: min(640px, calc(100% - 2rem));
+        max-height: calc(100vh - 2rem);
+        overflow: auto;
+        border: 0;
+        border-radius: 18px;
+        padding: 0;
+        background: #fff;
+        color: #222;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+      }
+      .forecast-dialog::backdrop {
+        background: rgba(5, 10, 20, 0.68);
+      }
+      .dialog-inner {
+        padding: 1.25rem;
+      }
+      .dialog-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 0.8rem;
+      }
+      .dialog-header h2 {
+        margin: 0;
+        font-size: 1.3rem;
+      }
+      .dialog-close {
+        border: 0;
+        border-radius: 999px;
+        padding: 0.4rem 0.8rem;
+        cursor: pointer;
+        background: rgba(31, 59, 108, 0.1);
+        color: inherit;
+      }
+      .dialog-probability {
+        margin: 0.4rem 0 1rem;
+        font-size: 1.05rem;
+      }
+      .dialog-probability strong {
+        font-size: 1.8rem;
+        margin-left: 0.35rem;
+      }
+      .explanation-section {
+        margin-top: 0.85rem;
+        padding: 0.85rem 1rem;
+        border-radius: 12px;
+        background: rgba(31, 59, 108, 0.06);
+        line-height: 1.65;
+      }
+      .explanation-section h3 {
+        margin: 0 0 0.4rem;
+        font-size: 1rem;
+      }
+      .explanation-section p,
+      .explanation-section ul {
+        margin: 0.35rem 0;
+      }
+      .explanation-section ul {
+        padding-left: 1.25rem;
+      }
+      .dialog-caution {
+        margin: 1rem 0 0;
+        font-size: 0.78rem;
+        color: rgba(33, 51, 92, 0.72);
+        line-height: 1.6;
       }
       @media (max-width: 640px) {
       .detail-grid {
@@ -292,12 +466,25 @@
           border-color: rgba(249, 200, 80, 0.7);
           box-shadow: 0 10px 22px rgba(249, 200, 80, 0.22);
         }
+        .card.positive {
+          background-image: linear-gradient(155deg, rgba(34, 197, 94, 0.18), rgba(30, 31, 36, 0.68));
+          border-color: rgba(34, 197, 94, 0.55);
+          box-shadow: 0 9px 20px rgba(34, 197, 94, 0.18);
+        }
         .card.fogonly {
           background-image: linear-gradient(150deg, rgba(96, 125, 139, 0.2), rgba(30, 31, 36, 0.4));
           border-color: rgba(96, 125, 139, 0.6);
         }
+        .day-marker,
+        .icon-legend,
+        .forecast-note {
+          color: rgba(255, 255, 255, 0.82);
+        }
         .probability .prob-label {
           color: rgba(255, 255, 255, 0.7);
+        }
+        .probability-source {
+          color: rgba(255, 255, 255, 0.62);
         }
         .detail-item {
           background: rgba(255, 255, 255, 0.06);
@@ -308,6 +495,22 @@
         }
         .weather-chip {
           background: rgba(255, 255, 255, 0.12);
+          color: rgba(255, 255, 255, 0.88);
+        }
+        .forecast-dialog {
+          background: #1e1f24;
+          color: #f1f1f1;
+        }
+        .explanation-section {
+          background: rgba(255, 255, 255, 0.07);
+        }
+        .dialog-close {
+          background: rgba(255, 255, 255, 0.12);
+        }
+        .dialog-caution {
+          color: rgba(255, 255, 255, 0.68);
+        }
+        .expectation-legend .expectation-legend-title {
           color: rgba(255, 255, 255, 0.88);
         }
         header {
@@ -324,7 +527,7 @@
         ><span class="title-sub">雲海予報</span>
       </h1>
       <p>
-        AIが気象条件と過去の出現記録から雲海に浮かぶ越前大野城の出現確率を予測しています。<br />
+        AIが気象条件と過去の出現記録から、天空の城が見られる可能性を予想しています。<br />
         <span class="disclaimer">（※雲海予報は結果を保証するものではありません）</span>
       </p>
     </header>
@@ -332,18 +535,33 @@
       <div class="legend">
         <span class="legend-badge">天空の城チャンス</span><br class="legend-break" />
         <span class="legend-text">
-          朝5時から8時頃に
+          朝6時から8時頃に
           <a href="https://maps.app.goo.gl/5q2RKqJqBUggHkNe6" target="_blank" rel="noreferrer noopener">犬山城址(標高324m)</a>
           から雲海に浮かぶ姿を観賞できるチャンス！
           <a href="https://www.onocastle.net/skycastle/" target="_blank" rel="noreferrer noopener">詳しくは天空の城越前大野城サイトへ</a>
         </span>
       </div>
-      <div class="legend">
-        <span class="legend-badge fog">霧海の予感</span><br class="legend-break" />
-        <span class="legend-text">霧や雲が濃く立ちこめて雰囲気は抜群だけど、天空の城が見えるかは運次第。</span>
+      <div class="forecast-note">
+        天空の城期待指数は、AI予測値をもとに、月ごとの出現しやすさも反映して0～100で表した目安です。期待指数は出現確率ではありません。AI予測値は、夜間の気温差・湿度・露点差・風・雲・雨・季節と過去の出現記録から、天空の城が見える可能性をAIが計算した推定値です。学習に使用した2017年9月以降の記録では、天空の城を確認できた日は全3,304日のうち98日、約3%です。もともと珍しい現象のため、AI予測値は多くの日で低くなります。現在も精度を検証中であり、実際の出現を保証するものではありません。
+      </div>
+      <div class="expectation-legend" aria-label="天空の城期待指数の目安">
+        <span class="expectation-legend-title">天空の城期待指数</span>
+        <span class="expectation-high">80～100：天空の城チャンス</span>
+        <span class="expectation-positive">50～79：期待あり</span>
+        <span class="expectation-watch">21～49：条件を確認</span>
+        <span class="expectation-low">0～20：期待は低め</span>
       </div>
       <div class="updated" id="updated">最新データを取得中...</div>
       <div class="cards" id="cards"></div>
+	    <dialog class="forecast-dialog" id="forecast-dialog">
+        <div class="dialog-inner">
+          <div class="dialog-header">
+            <h2 id="dialog-title">予報の詳しい説明</h2>
+            <button class="dialog-close" id="dialog-close" type="button">閉じる</button>
+          </div>
+          <div id="dialog-content"></div>
+        </div>
+      </dialog>
 	      <div class="nav-links bottom-link">
 	        <a href="history.html">📜 過去ログを見る</a>
 	      </div>
@@ -393,6 +611,111 @@
         return parsed.toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" });
       }
 
+      function getJstIsoDate(offsetDays = 0) {
+        const parts = new Intl.DateTimeFormat("en-CA", {
+          timeZone: "Asia/Tokyo",
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+        }).formatToParts(new Date());
+        const values = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+        const base = new Date(`${values.year}-${values.month}-${values.day}T00:00:00+09:00`);
+        base.setDate(base.getDate() + offsetDays);
+        return new Intl.DateTimeFormat("en-CA", {
+          timeZone: "Asia/Tokyo",
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+        }).format(base);
+      }
+
+      function buildWeatherReasons(item) {
+        const reasons = [];
+        const science = item.scientific_features || {};
+        const probability = Number(item.castle_event_probability);
+        const expectationScore = Number(item.expectation_score);
+        const baseline = Number(item.recent_baseline_probability);
+        const humidity = Number(science.humidity_05_06_mean ?? item.humidity);
+        const wind = Number(science.wind_06_08_mean ?? item.wind);
+        const cloud = Number(science.cloud_06_08_mean ?? item.cloud);
+        const rain = Number(science.rain_06_08_sum ?? item.rain);
+        const minTemp = Number(science.min_temp_02_04);
+        const cooling = Number(science.temp_drop_to_04);
+        const dewSpread = Number(science.dew_spread_05_06);
+        const month = Number(item.date.slice(5, 7));
+
+        if (expectationScore >= 80) {
+          reasons.push(`天空の城期待指数は${expectationScore}で、AI予測値と月ごとの出現実績から「天空の城チャンス」と判定しています。`);
+          if (Number.isFinite(probability) && Number.isFinite(baseline) && baseline > 0) {
+            reasons.push(`AI予測値は${formatPercent(probability)}で、直近1年の出現率${formatPercent(baseline)}の約${(probability / baseline).toFixed(1)}倍です。`);
+          }
+          if ([9, 10, 11, 12, 1, 2].includes(month)) reasons.push(`${month}月は、天空の城が現れやすい秋冬の時期に入っています。`);
+          if (cooling >= 2) reasons.push(`夜間の気温差は${formatTemperatureChange(cooling)}で、放射冷却が期待できる予報です。`);
+          if (rain <= 0.05) reasons.push(`朝6～8時の雨は${formatValue(rain, "mm")}で、雨による視界の悪化は少ない予報です。`);
+          if (cloud < 40) reasons.push(`朝6～8時の雲量は${formatValue(cloud, "%")}で、城を見通しやすい予報です。`);
+          if (wind <= 10) reasons.push(`朝の風速は${formatValue(wind, "km/h")}で、強風ではありません。`);
+          if (humidity < 85 || dewSpread > 2) {
+            reasons.push(`一方、明け方の湿度は${formatValue(humidity, "%")}、露点差は${formatValue(dewSpread, "℃")}で、雲海ができるかは今後の予報も確認が必要です。`);
+          }
+          return reasons;
+        }
+
+        if (expectationScore >= 50) {
+          reasons.push(`天空の城期待指数は${expectationScore}で、AI予測値と月ごとの出現実績から「期待あり」と判定しています。`);
+          reasons.push(`AI予測値は${formatPercent(probability)}です。夜間の最低気温は${formatValue(minTemp, "℃")}、夜間の気温差は${formatTemperatureChange(cooling)}です。`);
+          if (rain <= 0.05) reasons.push(`朝6～8時の雨は${formatValue(rain, "mm")}で、雨の心配は少ない予報です。`);
+          if (cloud < 60) reasons.push(`朝6～8時の雲量は${formatValue(cloud, "%")}で、城を見通せる可能性があります。`);
+          if (humidity < 85) reasons.push(`湿度は${formatValue(humidity, "%")}で、霧の発生には少し弱い条件です。`);
+          if (dewSpread > 2) reasons.push(`露点差が${formatValue(dewSpread, "℃")}あるため、雲海ができるかは今後の予報も確認してください。`);
+          if (wind > 10) reasons.push(`風速は${formatValue(wind, "km/h")}で、霧が留まりにくい可能性があります。`);
+          return reasons;
+        }
+
+        reasons.push(`夜間の最低気温は${formatValue(minTemp, "℃")}、夜間の気温差は${formatTemperatureChange(cooling)}です。`);
+        if (Number.isFinite(probability)) {
+          reasons.push(`AI予測値は${formatPercent(probability)}で、現時点では天空の城が現れる可能性は低い判定です。`);
+        }
+        if (humidity < 90) reasons.push(`湿度が${formatValue(humidity, "%")}で、霧が十分に発生しやすい水準ではありません。`);
+        if (cooling < 2 && cooling >= 0) reasons.push(`夜間の気温低下は${formatValue(cooling, "℃")}と小さく、放射冷却による霧ができにくい予報です。`);
+        if (cooling < 0) reasons.push(`夜間に気温が${formatValue(Math.abs(cooling), "℃")}上がっており、放射冷却が起こりにくい予報です。`);
+        if (dewSpread > 2) reasons.push(`露点差が${formatValue(dewSpread, "℃")}あり、空気が飽和しにくい予報です。`);
+        if (rain > 0.05) reasons.push(`降水量が${formatValue(rain, "mm")}あり、雨で視界が悪くなる見込みです。`);
+        if (cloud >= 60) reasons.push(`朝6～8時の雲量が${formatValue(cloud, "%")}で、城を見通しにくい予報です。`);
+        if (wind > 10) reasons.push(`風速が${formatValue(wind, "km/h")}と強く、霧が留まりにくい見込みです。`);
+        if ([6, 7, 8].includes(month)) reasons.push("6～8月は過去の出現記録がなく、季節としても天空の城は期待しにくい時期です。");
+        if (reasons.length <= 2) reasons.push("一部に良い条件があっても、過去の出現条件と比べて天空の城を予測する根拠は十分ではありません。");
+        return reasons;
+      }
+
+      function openForecastDialog(item) {
+        const dialog = document.getElementById("forecast-dialog");
+        const title = document.getElementById("dialog-title");
+        const content = document.getElementById("dialog-content");
+        const reasons = buildWeatherReasons(item);
+        const expectationScore = Number(item.expectation_score);
+        const expectationText = expectationLabel(expectationScore);
+        const expectationClass = expectationLabelClass(expectationScore);
+        const upperPercent = Number(item.expectation_upper_percent);
+        const expectationSeason = item.expectation_reference_season || "同じ季節";
+        const baseline = Number(item.recent_baseline_probability);
+        title.textContent = `${formatDate(item.date)} の詳しい説明`;
+
+        content.innerHTML = `
+          <p class="dialog-probability">天空の城期待指数<strong>${Number.isFinite(expectationScore) ? expectationScore : "計算中"}</strong>${expectationText ? `<span class="expectation-label ${expectationClass}">${expectationText}</span>` : ""}</p>
+          <p class="dialog-probability">AI予測値<strong>${formatPercent(item.castle_event_probability)}</strong></p>
+          ${Number.isFinite(upperPercent) ? `<p>過去の${expectationSeason}の予測と比べ、上位約${upperPercent}%に入る条件です。</p>` : ""}
+          ${baselineComparisonText(Number(item.castle_event_probability), baseline)}
+          <section class="explanation-section">
+            <h3>この数字になった主な理由</h3>
+            <ul>${reasons.map((reason) => `<li>${reason}</li>`).join("")}</ul>
+          </section>
+          <p class="dialog-caution">
+            気象予報は毎回更新され、特に数日先の数値は変わることがあります。
+          </p>
+        `;
+        dialog.showModal();
+      }
+
       async function loadForecast() {
         const isFileProtocol = location.protocol === "file:";
         const updatedEl = document.getElementById("updated");
@@ -433,37 +756,49 @@
           }
 
           cardsEl.innerHTML = "";
+          const todayIso = getJstIsoDate();
+          const tomorrowIso = getJstIsoDate(1);
           sorted.forEach((item) => {
             const card = document.createElement("article");
             card.className = "card";
 
-            const event = (item.event || "None").toLowerCase();
-            const badgeClass = event === "castle" ? "castle" : event === "fogonly" ? "fog" : "none";
-            const badgeLabel = event === "castle" ? "天空の城チャンス" : event === "fogonly" ? "霧海の予感" : "";
             const weatherInfo = resolveWeatherInfo(item.weathercode);
-
-            card.classList.add(event === "castle" ? "castle" : event === "fogonly" ? "fogonly" : "none");
+            const science = item.scientific_features || {};
+            const rain = Number(science.rain_06_08_sum ?? item.rain);
+            const cloud = Number(science.cloud_06_08_mean ?? item.cloud);
+            const wind = Number(science.wind_05_06_mean ?? item.wind);
+            const humidity = Number(science.humidity_05_06_mean ?? item.humidity);
+            const expectationScore = Number(item.expectation_score);
+            const castleChance = Number.isFinite(expectationScore) && expectationScore >= 80;
+            const positiveExpectation =
+              Number.isFinite(expectationScore) && expectationScore >= 50 && expectationScore < 80;
+            card.classList.add(castleChance ? "castle" : positiveExpectation ? "positive" : "none");
+            if (item.date === todayIso) card.classList.add("today");
+            if (item.date === tomorrowIso) card.classList.add("tomorrow");
+            const dayMarker = item.date === todayIso ? "今日" : item.date === tomorrowIso ? "明日" : "";
 
             const detailRows = [
-              { label: "雲海率", value: formatPercent(item.fog_probability) },
-              { label: "天空率", value: formatPercent(item.castle_probability) },
-              { label: "気温", value: formatValue(item.temp, "℃") },
-              { label: "湿度", value: formatValue(item.humidity, "%") },
-              { label: "雲量", value: formatValue(item.cloud, "%") },
-              { label: "風速", value: formatValue(item.wind, "m/s") },
-              { label: "降水量", value: formatValue(item.rain, "mm") },
+              { label: "夜間最低気温", value: formatValue(science.min_temp_02_04, "℃") },
+              { label: "夜間の気温差", value: formatTemperatureChange(science.temp_drop_to_04) },
+              { label: "明け方の湿度", value: formatValue(humidity, "%") },
+              { label: "露点差", value: formatValue(science.dew_spread_05_06, "℃") },
+              { label: "朝の雲量", value: formatValue(cloud, "%") },
+              { label: "朝の風速", value: formatValue(wind, "km/h") },
+              { label: "朝の雨", value: formatValue(rain, "mm") },
             ];
 
             card.innerHTML = `
               <h2>
-                <span>${formatDate(item.date)}</span>
-                ${badgeLabel ? `<span class="badge ${badgeClass}">${badgeLabel}</span>` : ""}
+                <span>${dayMarker ? `<span class="day-marker">${dayMarker}</span>` : ""}${formatDate(item.date)}</span>
+                ${castleChance ? `<span class="chance-label">天空の城チャンス</span>` : ""}
+                ${positiveExpectation ? `<span class="positive-label">期待あり</span>` : ""}
               </h2>
               ${weatherInfo ? `<div class="weather-chip">${weatherInfo.icon}<span>${weatherInfo.label}</span></div>` : ""}
               <div class="probability">
-                <span class="prob-label">天空の城出現率</span>
-                <span class="prob-value">${formatPercent(item.castle_event_probability)}</span>
+                <span class="prob-label">天空の城期待指数</span>
+                <span class="prob-value">${Number.isFinite(Number(item.expectation_score)) ? Number(item.expectation_score) : "計算中"}</span>
               </div>
+              <div class="probability-source">AI予測値：${formatPercent(item.castle_event_probability)}</div>
               <div class="detail-grid">
                 ${detailRows
                   .map(
@@ -477,6 +812,16 @@
                   .join("")}
               </div>
             `;
+            card.tabIndex = 0;
+            card.setAttribute("role", "button");
+            card.setAttribute("aria-label", `${formatDate(item.date)}の詳しい説明を開く`);
+            card.addEventListener("click", () => openForecastDialog(item));
+            card.addEventListener("keydown", (event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                openForecastDialog(item);
+              }
+            });
             cardsEl.appendChild(card);
           });
         } catch (err) {
@@ -490,9 +835,45 @@
         return `${Math.round(value * 100)}%`;
       }
 
+      function expectationLabel(value) {
+        const score = Number(value);
+        if (!Number.isFinite(score)) return "";
+        if (score <= 20) return "期待は低め";
+        if (score <= 49) return "条件を確認";
+        if (score <= 79) return "期待あり";
+        return "天空の城チャンス";
+      }
+
+      function expectationLabelClass(value) {
+        const score = Number(value);
+        if (!Number.isFinite(score)) return "";
+        if (score <= 20) return "expectation-low";
+        if (score <= 49) return "expectation-watch";
+        if (score <= 79) return "expectation-positive";
+        return "expectation-high";
+      }
+
+      function baselineComparisonText(probability, baseline) {
+        if (!Number.isFinite(probability) || !Number.isFinite(baseline) || baseline <= 0) return "";
+        const ratio = probability / baseline;
+        let comparison;
+        if (ratio >= 2) comparison = "大きく上回っています";
+        else if (ratio >= 1.2) comparison = "上回っています";
+        else if (ratio > 1) comparison = "少し上回っています";
+        else if (ratio >= 0.8) comparison = "同程度です";
+        else comparison = "下回っています";
+        return `<p>AI予測値は、直近1年の出現率${formatPercent(baseline)}と比べて${comparison}。</p>`;
+      }
+
       function formatValue(value, suffix = "") {
         if (typeof value !== "number" || Number.isNaN(value)) return "-";
         return `${value.toFixed(1)}${suffix}`;
+      }
+
+      function formatTemperatureChange(value) {
+        const numeric = Number(value);
+        if (!Number.isFinite(numeric)) return "-";
+        return numeric < 0 ? `${Math.abs(numeric).toFixed(1)}℃高` : `${numeric.toFixed(1)}℃低`;
       }
 
       function formatDate(dateStr) {
@@ -501,6 +882,12 @@
         const weekday = "日月火水木金土"[date.getDay()];
         return `${date.getMonth() + 1}/${date.getDate()}(${weekday})`;
       }
+
+      const forecastDialog = document.getElementById("forecast-dialog");
+      document.getElementById("dialog-close").addEventListener("click", () => forecastDialog.close());
+      forecastDialog.addEventListener("click", (event) => {
+        if (event.target === forecastDialog) forecastDialog.close();
+      });
 
       loadForecast();
     </script>

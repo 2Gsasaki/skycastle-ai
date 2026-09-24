@@ -50,6 +50,13 @@ jobs:
           python predict_model.py
           python fetch_forecast_window.py --days 14
           python predict_forecast_window.py
+          python predict_scientific_castle_window.py
+
+      - name: Save official 22:30 JST forecast for verification
+        if: github.event.schedule == '30 13 * * *'
+        run: |
+          python archive_forecast.py --issued-at "${{ steps.dates.outputs.timestamp }}"
+          python archive_forecast_window.py --issued-at "${{ steps.dates.outputs.timestamp }}"
 
       - name: Copy latest forecast JSON for public site
         run: |
@@ -66,7 +73,7 @@ jobs:
         env:
           TIMESTAMP: ${{ steps.dates.outputs.timestamp }}
         run: |
-          git add data/feed.json data/weather.csv data/forecast_predictions.json data/forecast_window.json public/data/forecast_predictions.json || true
+          git add data/feed.json data/weather.csv data/forecast_predictions.json data/forecast_window.json data/forecast_verification.csv data/forecast_window_verification.csv public/data/forecast_predictions.json || true
           if git diff --cached --quiet; then
             echo "Nothing to commit."
             exit 0
@@ -127,6 +134,10 @@ jobs:
         run: |
           python fetch_forecast_window.py --days 14
           python predict_forecast_window.py
+          python predict_scientific_castle_window.py
+
+      - name: Refresh public observation history
+        run: python build_history_expectations.py
 
       - name: Copy latest forecast JSON for public site
         run: |
@@ -143,7 +154,7 @@ jobs:
         env:
           TIMESTAMP: ${{ steps.dates.outputs.timestamp }}
         run: |
-          git add data/feed.json data/history.csv data/weather.csv data/forecast_predictions.json data/forecast_window.json public/data/forecast_predictions.json || true
+          git add data/feed.json data/history.csv data/weather.csv data/forecast_predictions.json data/forecast_window.json public/data/forecast_predictions.json public/data/history_expectations.json || true
           if git diff --cached --quiet; then
             echo "Nothing to commit."
             exit 0
@@ -193,6 +204,7 @@ jobs:
       - name: Predict 14-day forecast and copy to public
         run: |
           python predict_forecast_window.py
+          python predict_scientific_castle_window.py
           mkdir -p public/data
           cp data/forecast_predictions.json public/data/forecast_predictions.json
 

@@ -59,7 +59,8 @@ def load_previous_features(current_date: str):
     history_df = history_df.dropna(subset=["date"]).sort_values("date")
 
     target_dt = pd.to_datetime(current_date)
-    prev_rows = history_df[history_df["date"] < target_dt]
+    expected_previous_date = target_dt.normalize() - pd.Timedelta(days=1)
+    prev_rows = history_df[history_df["date"].dt.normalize() == expected_previous_date]
     if prev_rows.empty:
         return None
 

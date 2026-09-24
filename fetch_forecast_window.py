@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Open-Meteo API から最大16日分の早朝気象データを取得して保存する。"""
+"""Open-Meteo APIから、明日以降の早朝気象データを取得して保存する。"""
 
 from __future__ import annotations
 
@@ -11,7 +11,10 @@ from pathlib import Path
 from typing import Iterable, List
 
 import requests
+import pandas as pd
 from zoneinfo import ZoneInfo
+
+import build_hourly_features as hourly_features
 
 LATITUDE = 35.98
 LONGITUDE = 136.49
@@ -44,6 +47,12 @@ def parse_args() -> argparse.Namespace:
         help="取得日数（1〜16）。デフォルトは16日分。",
     )
     parser.add_argument(
+        "--start-offset",
+        type=int,
+        default=1,
+        help="今日から何日後を先頭にするか（デフォルト1、つまり明日）。",
+    )
+    parser.add_argument(
         "--output",
         type=Path,
         default=OUTPUT_PATH,
@@ -52,22 +61,24 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def fetch_hourly_forecast(days: int) -> dict:
+def fetch_hourly_forecast(days: int, start_offset: int = 1) -> tuple[dict, dt.date]:
     today = dt.datetime.now(TZ).date()
-    # Open-Meteo forecast API is inclusive of both start and end dates. To fetch
-    # `days` records starting today, subtract 1 day from the end date.
-    end_date = today + dt.timedelta(days=days - 1)
+    start_date = today + dt.timedelta(days=start_offset)
+    # 最初の予報日（明日）の前夜の冷え込みを計算するため、取得だけは1日前から始める。
+    request_start_date = start_date - dt.timedelta(days=1)
+    # Open-Meteo forecast API is inclusive of both start and end dates.
+    end_date = start_date + dt.timedelta(days=days - 1)
     params = {
         "latitude": LATITUDE,
         "longitude": LONGITUDE,
-        "hourly": "temperature_2m,relativehumidity_2m,windspeed_10m,cloudcover,precipitation,weathercode",
-        "start_date": today.isoformat(),
+        "hourly": "temperature_2m,relative_humidity_2m,wind_speed_10m,cloud_cover,precipitation,weather_code,visibility",
+        "start_date": request_start_date.isoformat(),
         "end_date": end_date.isoformat(),
         "timezone": "Asia/Tokyo",
     }
     resp = requests.get(FORECAST_URL, params=params, timeout=30)
     resp.raise_for_status()
-    return resp.json()
+    return resp.json(), start_date
 
 
 def select_indices_for_hours(times: Iterable[str], target_hours: set[int]) -> dict[str, List[int]]:
@@ -92,35 +103,46 @@ def compute_morning_average(hourly: dict, day_indices: List[int]) -> MorningAver
 
     date = dt.datetime.fromisoformat(hourly["time"][day_indices[0]]).date().isoformat()
     weathercode = None
-    if "weathercode" in hourly:
-        codes = [hourly["weathercode"][i] for i in day_indices]
+    if "weather_code" in hourly:
+        codes = [hourly["weather_code"][i] for i in day_indices]
         weathercode = max(set(codes), key=codes.count) if codes else None
 
     return MorningAverage(
         date=date,
         temp=mean(hourly["temperature_2m"]),
-        humidity=mean(hourly["relativehumidity_2m"]),
-        wind=mean(hourly["windspeed_10m"]),
-        cloud=mean(hourly["cloudcover"]),
+        humidity=mean(hourly["relative_humidity_2m"]),
+        wind=mean(hourly["wind_speed_10m"]),
+        cloud=mean(hourly["cloud_cover"]),
         rain=mean(hourly["precipitation"]),
         weathercode=int(weathercode) if weathercode is not None else None,
     )
 
 
-def aggregate_mornings(weather_json: dict, days: int) -> List[MorningAverage]:
+def aggregate_mornings(weather_json: dict, days: int, start_date: dt.date) -> List[MorningAverage]:
     hourly = weather_json["hourly"]
     grouped_indices = select_indices_for_hours(hourly["time"], {5, 6, 7, 8})
     results: List[MorningAverage] = []
-    for date in sorted(grouped_indices.keys())[:days]:
+    for date in sorted(grouped_indices.keys()):
+        if date < start_date.isoformat():
+            continue
         indices = grouped_indices[date]
         results.append(compute_morning_average(hourly, indices))
+        if len(results) >= days:
+            break
     if not results:
         raise ValueError("対象日数の平均値を計算できませんでした。")
     return results
 
 
-def serialize_results(averages: List[MorningAverage]) -> list[dict]:
-    return [avg.__dict__ for avg in averages]
+def serialize_results(averages: List[MorningAverage], weather_json: dict) -> list[dict]:
+    source = pd.DataFrame(weather_json["hourly"])
+    source["time"] = pd.to_datetime(source["time"], errors="coerce")
+    source = source.dropna(subset=["time"]).set_index("time").sort_index()
+    results = []
+    for average in averages:
+        science = hourly_features.extract_features(dt.date.fromisoformat(average.date), source)
+        results.append({**average.__dict__, "science_features": science})
+    return results
 
 
 def save_json(payload: list[dict], output_path: Path) -> None:
@@ -134,10 +156,12 @@ def main() -> None:
     args = parse_args()
     if args.days < 1 or args.days > 16:
         raise SystemExit("--days は 1〜16 の範囲で指定してください。")
+    if args.start_offset < 0:
+        raise SystemExit("--start-offset は0以上で指定してください。")
 
-    forecast_json = fetch_hourly_forecast(args.days)
-    averages = aggregate_mornings(forecast_json, args.days)
-    payload = serialize_results(averages)
+    forecast_json, start_date = fetch_hourly_forecast(args.days, args.start_offset)
+    averages = aggregate_mornings(forecast_json, args.days, start_date)
+    payload = serialize_results(averages, forecast_json)
     save_json(payload, args.output)
 
 

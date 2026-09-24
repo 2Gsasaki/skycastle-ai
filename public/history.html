@@ -14,11 +14,6 @@
       gtag("js", new Date());
       gtag("config", "G-2FMRXT9MHQ");
     </script>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <script
-      src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"
-      defer
-    ></script>
     <style>
       :root {
         color-scheme: light dark;
@@ -121,9 +116,53 @@
         margin-bottom: 1rem;
         border: 1px solid rgba(0, 0, 0, 0.06);
       }
+      .filter-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      .filter-button {
+        min-width: 130px;
+        border: 2px solid transparent;
+        border-radius: 999px;
+        padding: 0.55rem 1rem;
+        color: var(--text-main);
+        cursor: pointer;
+        font-weight: 700;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .filter-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+      }
+      .filter-button[data-filter="castle"] {
+        background: rgba(251, 191, 36, 0.2);
+        border-color: rgba(217, 154, 0, 0.5);
+        color: #7a5200;
+      }
+      .filter-button[data-filter="fog"] {
+        background: rgba(125, 211, 252, 0.25);
+        border-color: rgba(14, 165, 233, 0.45);
+        color: #0369a1;
+      }
+      .filter-button[data-filter="all"] {
+        background: rgba(100, 116, 139, 0.12);
+        border-color: rgba(100, 116, 139, 0.35);
+        color: #475569;
+      }
+      .filter-button[aria-pressed="true"] {
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.22), 0 5px 12px rgba(0, 0, 0, 0.14);
+      }
       .legend span {
         font-size: 0.85rem;
         color: var(--text-muted);
+      }
+      .legend-description {
+        flex-basis: 100%;
+        line-height: 1.6;
       }
       .legend .badge {
         display: inline-flex;
@@ -254,6 +293,28 @@
         background: rgba(0, 0, 0, 0.05);
         text-align: center;
         font-size: 0.7rem;
+      }
+      .retrospective {
+        margin: 0.55rem 0;
+        padding: 0.55rem;
+        border-radius: 10px;
+        background: rgba(37, 99, 235, 0.08);
+        text-align: center;
+      }
+      .retrospective span {
+        display: block;
+        color: var(--text-muted);
+        font-size: 0.68rem;
+      }
+      .retrospective strong {
+        display: block;
+        margin: 0.1rem 0;
+        font-size: 1.25rem;
+        color: var(--text-main);
+      }
+      .retrospective small {
+        color: var(--text-muted);
+        font-size: 0.68rem;
       }
       .chip strong {
         display: block;
@@ -422,7 +483,7 @@
         <br class="mobile-break" />
         過去ログ
       </h1>
-      <p>2025年10月27日以降の観測ログ。AI予想と実績が合っていたかを一覧できます。</p>
+      <p>2025年10月27日以降の実際の観測記録です。最初に天空の城を確認できた日を表示します。</p>
     </header>
     <main>
       <section class="summary" aria-live="polite">
@@ -431,32 +492,40 @@
           <strong id="summary-castle-days">-</strong>
         </div>
         <div class="summary-card">
-          <span id="summary-hit-title">天空の城チャンス的中率</span>
-          <strong id="summary-hit-rate">-</strong>
-          <small id="summary-hit-note"></small>
-        </div>
-        <div class="summary-card">
           <span>霧のみだった日</span>
           <strong id="summary-fog-days">-</strong>
         </div>
-      <div class="summary-card">
-        <span>記録件数</span>
-        <strong id="summary-total">-</strong>
-      </div>
+        <div class="summary-card">
+          <span>観測日数</span>
+          <strong id="summary-total">-</strong>
+        </div>
+        <div class="summary-card">
+          <span>天空の城出現割合</span>
+          <strong id="summary-castle-rate">-</strong>
+        </div>
     </section>
       <a class="back-link" href="forecast.html">← 雲海予報に戻る</a>
       <div class="legend">
-        <span class="badge badge--castle">ボーダー発光: 予報どおり天空が見えた日</span>
-        <span class="badge badge--fog">霧だけ出現</span>
+        <span class="legend-description">期待指数は、当日の実際の気象をもとに過去を振り返って計算した参考値で、当時の予報値ではありません。</span>
+      </div>
+      <div class="filter-buttons" aria-label="表示する過去ログの種類">
+        <button class="filter-button" type="button" data-filter="castle" aria-pressed="true">天空の城</button>
+        <button class="filter-button" type="button" data-filter="fog" aria-pressed="false">霧のみ</button>
+        <button class="filter-button" type="button" data-filter="all" aria-pressed="false">すべて</button>
       </div>
       <div class="pagination" aria-live="polite">
-        <button id="prev-page" type="button">前へ</button>
-        <span id="pagination-info" class="pagination-info">-</span>
-        <button id="next-page" type="button">次へ</button>
+        <button class="prev-page" type="button">前へ</button>
+        <span class="pagination-info">-</span>
+        <button class="next-page" type="button">次へ</button>
       </div>
       <section id="cards" class="cards" aria-live="polite"></section>
       <div id="empty-state" class="empty-state" hidden>
         データを読み込めませんでした。しばらく待って再読み込みしてください。
+      </div>
+      <div class="pagination" aria-live="polite">
+        <button class="prev-page" type="button">前へ</button>
+        <span class="pagination-info">-</span>
+        <button class="next-page" type="button">次へ</button>
       </div>
       <a class="back-link" href="forecast.html">← 雲海予報に戻る</a>
       <div class="footer">
@@ -466,12 +535,11 @@
       </div>
     </main>
     <script>
-      const HISTORY_CSV_URL =
-        "https://raw.githubusercontent.com/2Gsasaki/skycastle-ai/main/data/history.csv";
-      const LOG_START_DATE = "2025-10-27";
+      const HISTORY_DATA_URL = "data/history_expectations.json";
       const PAGE_SIZE = 60;
       let allRows = [];
       let currentPage = 1;
+      let currentFilter = "castle";
 
       const weekdayFormatter = new Intl.DateTimeFormat("ja-JP", {
         weekday: "short",
@@ -534,10 +602,6 @@
         return null;
       }
 
-      function determinePredictedEvent(row) {
-        return (row.event || "").toString().trim() || "None";
-      }
-
       function buildStatus(row) {
         if (Number(row.castle_visible) === 1) {
           return { label: "天空 出現", type: "castle" };
@@ -545,7 +609,7 @@
         if (Number(row.fog_observed) === 1) {
           return { label: "霧のみ", type: "fog" };
         }
-        return null;
+        return { label: "不出現", type: "none" };
       }
 
       function updateSummary(rows) {
@@ -554,32 +618,15 @@
           (row) => Number(row.fog_observed) === 1 && Number(row.castle_visible) !== 1
         ).length;
         const total = rows.length;
-
-        const predictedCastle = rows.filter(
-          (row) => determinePredictedEvent(row).toLowerCase() === "castle"
-        );
-        const castleHits = predictedCastle.filter((row) => Number(row.castle_visible) === 1).length;
-
-        const hitRatePercent =
-          predictedCastle.length > 0 ? `${((castleHits / predictedCastle.length) * 100).toFixed(1)}%` : "-";
+        const castleRate = total ? castleDays / total : 0;
 
         document.getElementById("summary-castle-days").textContent = `${castleDays} 日`;
         document.getElementById("summary-fog-days").textContent = `${fogDays} 日`;
-        document.getElementById("summary-total").textContent = `${total} 件`;
-        const hitTitleEl = document.getElementById("summary-hit-title");
-        const hitRateEl = document.getElementById("summary-hit-rate");
-        const hitNoteEl = document.getElementById("summary-hit-note");
-        if (predictedCastle.length > 0) {
-          hitTitleEl.textContent = `天空の城チャンス的中率 ${hitRatePercent}`;
-          hitRateEl.textContent = `${predictedCastle.length} 日予想 / ${castleHits} 日的中`;
-          hitNoteEl.hidden = true;
-          hitNoteEl.textContent = "";
-        } else {
-          hitTitleEl.textContent = "天空の城チャンス的中率";
-          hitRateEl.textContent = "-";
-          hitNoteEl.hidden = false;
-          hitNoteEl.textContent = "Castle予報なし";
-        }
+        document.getElementById("summary-total").textContent = `${total} 日`;
+        document.getElementById("summary-castle-rate").textContent = `${castleDays}/${total} 日（${(castleRate * 100).toFixed(1)}%）`;
+        document.querySelector('[data-filter="castle"]').textContent = `天空の城 ${castleDays}日`;
+        document.querySelector('[data-filter="fog"]').textContent = `霧のみ ${fogDays}日`;
+        document.querySelector('[data-filter="all"]').textContent = `すべて ${total}日`;
       }
 
       function renderCards(rows) {
@@ -597,18 +644,16 @@
         rows.forEach((row) => {
           const card = document.createElement("article");
           const statusInfo = buildStatus(row);
-          const actualCastle = statusInfo && statusInfo.type === "castle";
-          const actualFog = statusInfo && statusInfo.type === "fog";
-          const predicted = determinePredictedEvent(row);
-          const predictedClass = predicted.toLowerCase();
+          const actualCastle = statusInfo.type === "castle";
+          const actualFog = statusInfo.type === "fog";
           const weatherInfo = resolveWeatherInfo(row.weathercode);
-          const hitCastle = actualCastle && predictedClass === "castle";
+          const retrospectiveScore = Number(row.retrospective_expectation_score);
+          const retrospectiveProbability = Number(row.retrospective_probability);
 
           const classes = ["card"];
           if (actualFog) classes.push("card--fog");
-          if (hitCastle) {
+          if (actualCastle) {
             classes.push("card--castle");
-            classes.push("hit-castle");
           }
           card.className = classes.join(" ");
 
@@ -616,41 +661,35 @@
           const dateLabel = dateObj
             ? dateFormatter.format(dateObj)
             : row.date || "不明";
-          const weekday = dateObj ? weekdayFormatter.format(dateObj) : "";
+          const weekday = dateObj ? `（${weekdayFormatter.format(dateObj)}）` : "";
 
           card.innerHTML = `
             <div class="card-header">
               <span>${dateLabel}</span><span class="weekday">${weekday}</span>
             </div>
-            <div class="badge-group center">
-              ${
-                statusInfo
-                  ? `<span class="badge-actual ${statusInfo.type === "fog" ? "fogonly" : ""}">
+            ${
+              statusInfo.type !== "none"
+                ? `<div class="badge-group center">
+                    <span class="badge-actual ${statusInfo.type === "fog" ? "fogonly" : ""}">
                       ${statusInfo.label}
-                    </span>`
-                  : ""
-              }
-              ${
-                predictedClass === "none"
-                  ? ""
-                  : `<span class="badge-forecast ${predictedClass}">
-                      ${predictedClass === "castle" ? "天空の城チャンス" : "霧海の予感"}
-                    </span>`
-              }
-            </div>
+                    </span>
+                  </div>`
+                : ""
+            }
             ${
               weatherInfo
                 ? `<div class="weather-chip">${weatherInfo.icon} ${weatherInfo.label}</div>`
                 : ""
             }
-            <div class="probabilities">
-              <div class="chip">天空率<strong>${formatPercent(
-                row.castle_probability
-              )}</strong></div>
-              <div class="chip">霧率<strong>${formatPercent(
-                row.fog_probability
-              )}</strong></div>
-            </div>
+            ${
+              Number.isFinite(retrospectiveScore)
+                ? `<div class="retrospective">
+                    <span>期待指数</span>
+                    <strong>${retrospectiveScore}</strong>
+                    <small>AI推定値 ${formatPercent(retrospectiveProbability)}</small>
+                  </div>`
+                : ""
+            }
             <div class="metrics">
               <div class="metric">
                 気温
@@ -662,7 +701,7 @@
               </div>
               <div class="metric">
                 風速
-                <strong>${formatValue(row.wind, "m/s")}</strong>
+                <strong>${formatValue(row.wind, "km/h")}</strong>
               </div>
               <div class="metric">
                 雲量
@@ -671,7 +710,7 @@
             </div>
             <p class="note">
               <strong>備考</strong>
-              ${row.note && row.note.trim() ? row.note.trim() : "記録なし"}
+              ${row.note && row.note.trim() ? row.note.trim() : ""}
             </p>
           `;
           fragment.appendChild(card);
@@ -681,26 +720,30 @@
 
       function updatePaginationControls(totalRows) {
         const totalPages = Math.max(1, Math.ceil(totalRows / PAGE_SIZE));
-        const infoEl = document.getElementById("pagination-info");
-        const prevBtn = document.getElementById("prev-page");
-        const nextBtn = document.getElementById("next-page");
-
         if (!totalRows) {
-          infoEl.textContent = "データなし";
-          prevBtn.disabled = true;
-          nextBtn.disabled = true;
+          document.querySelectorAll(".pagination-info").forEach((item) => (item.textContent = "データなし"));
+          document.querySelectorAll(".prev-page, .next-page").forEach((button) => (button.disabled = true));
           return;
         }
 
         const startIndex = (currentPage - 1) * PAGE_SIZE + 1;
         const endIndex = Math.min(currentPage * PAGE_SIZE, totalRows);
-        infoEl.textContent = `${startIndex} - ${endIndex} / ${totalRows} 件（ページ ${currentPage}/${totalPages}）`;
-        prevBtn.disabled = currentPage <= 1;
-        nextBtn.disabled = currentPage >= totalPages;
+        document.querySelectorAll(".pagination-info").forEach((item) => {
+          item.textContent = `${startIndex} - ${endIndex} / ${totalRows} 件（ページ ${currentPage}/${totalPages}）`;
+        });
+        document.querySelectorAll(".prev-page").forEach((button) => (button.disabled = currentPage <= 1));
+        document.querySelectorAll(".next-page").forEach((button) => (button.disabled = currentPage >= totalPages));
       }
 
       function renderCurrentPage() {
-        const totalRows = allRows.length;
+        const filteredRows = allRows.filter((row) => {
+          if (currentFilter === "castle") return Number(row.castle_visible) === 1;
+          if (currentFilter === "fog") {
+            return Number(row.fog_observed) === 1 && Number(row.castle_visible) !== 1;
+          }
+          return true;
+        });
+        const totalRows = filteredRows.length;
         if (!totalRows) {
           renderCards([]);
           updatePaginationControls(0);
@@ -709,42 +752,57 @@
         const totalPages = Math.max(1, Math.ceil(totalRows / PAGE_SIZE));
         currentPage = Math.min(Math.max(1, currentPage), totalPages);
         const start = (currentPage - 1) * PAGE_SIZE;
-        const pageRows = allRows.slice(start, start + PAGE_SIZE);
+        const pageRows = filteredRows.slice(start, start + PAGE_SIZE);
         renderCards(pageRows);
         updatePaginationControls(totalRows);
       }
 
       function bindPaginationButtons() {
-        const prevBtn = document.getElementById("prev-page");
-        const nextBtn = document.getElementById("next-page");
-        prevBtn.addEventListener("click", () => {
-          if (currentPage > 1) {
-            currentPage -= 1;
-            renderCurrentPage();
-          }
+        document.querySelectorAll(".prev-page").forEach((button) => {
+          button.addEventListener("click", () => {
+            if (currentPage > 1) {
+              currentPage -= 1;
+              renderCurrentPage();
+            }
+          });
         });
-        nextBtn.addEventListener("click", () => {
-          const totalPages = Math.max(1, Math.ceil(allRows.length / PAGE_SIZE));
-          if (currentPage < totalPages) {
-            currentPage += 1;
+        document.querySelectorAll(".next-page").forEach((button) => {
+          button.addEventListener("click", () => {
+            const filteredCount = allRows.filter((row) => {
+              if (currentFilter === "castle") return Number(row.castle_visible) === 1;
+              if (currentFilter === "fog") return Number(row.fog_observed) === 1 && Number(row.castle_visible) !== 1;
+              return true;
+            }).length;
+            const totalPages = Math.max(1, Math.ceil(filteredCount / PAGE_SIZE));
+            if (currentPage < totalPages) {
+              currentPage += 1;
+              renderCurrentPage();
+            }
+          });
+        });
+      }
+
+      function bindFilterButtons() {
+        document.querySelectorAll(".filter-button").forEach((button) => {
+          button.addEventListener("click", () => {
+            currentFilter = button.dataset.filter;
+            currentPage = 1;
+            document.querySelectorAll(".filter-button").forEach((item) => {
+              item.setAttribute("aria-pressed", String(item === button));
+            });
             renderCurrentPage();
-          }
+          });
         });
       }
 
       async function loadHistory() {
         try {
-          const response = await fetch(HISTORY_CSV_URL, { cache: "no-store" });
-          if (!response.ok) throw new Error("CSV を取得できませんでした");
-          const csvText = await response.text();
-          const parsed = Papa.parse(csvText, {
-            header: true,
-            skipEmptyLines: true,
-          });
-          const todayIso = getTodayJstIsoDate();
-          const rows = parsed.data
-            .filter((row) => row.date && row.date >= LOG_START_DATE && row.date <= todayIso)
-            .sort((a, b) => (a.date > b.date ? -1 : 1));
+          const response = await fetch(HISTORY_DATA_URL, { cache: "no-store" });
+          if (!response.ok) throw new Error("過去ログを取得できませんでした");
+          const payload = await response.json();
+          const rows = Array.isArray(payload.rows)
+            ? payload.rows.sort((a, b) => (a.date > b.date ? -1 : 1))
+            : [];
           allRows = rows;
           currentPage = 1;
           updateSummary(allRows);
@@ -761,12 +819,8 @@
       }
 
       function startHistoryPage() {
-        if (!window.Papa) {
-          // PapaParse script might still be loading on hard reloads.
-          setTimeout(startHistoryPage, 60);
-          return;
-        }
         bindPaginationButtons();
+        bindFilterButtons();
         loadHistory();
       }
 
