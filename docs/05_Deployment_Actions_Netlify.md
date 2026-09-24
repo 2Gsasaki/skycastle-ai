@@ -15,7 +15,7 @@ Netlify 連携を廃止し、GitHub Pages だけで公開する構成です。�
 
 ## 1. 公開構成（GitHub Pages）
 
-- 公開物は `public/` 配下のみ。`public/forecast.html` と `public/data/forecast_predictions.json` を配信する。  
+- 公開物は`public/`配下のみ。`forecast.html`、`history.html`と、それぞれが読む公開用JSONを配信する。
 - GitHub Pages 用の成果物は、Actions が `public/` の中身を `gh-pages` ブランチに反映して公開する。  
 - Netlify 用の設定や Secrets は不要（削除済みで問題なし）。
 
@@ -29,6 +29,13 @@ Netlify 連携を廃止し、GitHub Pages だけで公開する構成です。�
 - 11:05 JST（UTC 02:05）：実測が揃う時間に履歴更新＋予報（必ず実行、キャンセルしない）。  
 - 予報だけ更新（履歴は触らない）：14:05 / 17:05 / 20:05 / 22:30 / 02:30 / 04:30 JST。重なったら古いジョブをキャンセル。  
 - 全ジョブとも Netlify Hook 呼び出しは削除済み。
+- 11:05の履歴更新では、時間別AIデータへ未取得日を追加し、振り返り期待指数も再生成する。
+
+使用ActionはNode.js 24対応版に統一する。
+
+- `actions/checkout@v5`
+- `actions/setup-python@v6`
+- `peaceiris/actions-gh-pages@v4`
 
 `concurrency` 設定で重複を防止：
 - 0:00 用：`group: skycastle-0000`、`cancel-in-progress: false`  
@@ -39,15 +46,15 @@ Netlify 連携を廃止し、GitHub Pages だけで公開する構成です。�
 
 ## 3. GitHub Pages へのデプロイ
 
-`.github/workflows/deploy-gh-pages.yml` が、`main` への push（または workflow_dispatch）で `public/` を `gh-pages` へ同期し、Pages に公開する。Netlify は一切不要。もし Pages の反映が遅い場合は、手動で `Deployments` から再デプロイを実行する。
+`.github/workflows/deploy-gh-pages.yml`は、`SkyCastle Daily Automation`が成功した後の`workflow_run`、または`workflow_dispatch`による手動実行で、`main`の`public/`を`gh-pages`へ同期する。通常の`main`へのpushだけではこの公開処理は始まらない。Netlifyは一切不要。Pagesの反映が遅い場合は、Actionsから手動実行し、`gh-pages`の更新を確認する。
 
 ---
 
 ## 4. 運用メモ（Netlifyからの移行済み）
 
 - Netlify 用の Secrets（`NETLIFY_BUILD_HOOK_URL` など）は不要。登録していても使われない。  
-- データ更新・予報生成はこれまで通り Actions が実行し、`public/data/forecast_predictions.json` を更新する。  
-- 公開URLは GitHub Pages の `https://2gsasaki.github.io/skycastle-ai/forecast.html`。DocsやREADMEもこの前提に統一。
+- データ更新・予報生成はActionsが実行し、`public/data/forecast_predictions.json`と`public/data/history_expectations.json`を更新する。
+- 公開URLは`https://2gsasaki.github.io/skycastle-ai/forecast.html`と`https://2gsasaki.github.io/skycastle-ai/history.html`。
 
 ---
 

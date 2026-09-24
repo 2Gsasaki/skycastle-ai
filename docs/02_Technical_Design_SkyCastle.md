@@ -12,12 +12,55 @@
 - `01_Specification_SkyCastle.md`（要件定義書）
 
 **作成日：** 2025-10-29  
+**最終更新日：** 2026-09-24
 **作成者：** SkyCastle Dev Team  
 **監修：** ChatGPT（GPT-5）
 
 ---
 
-## 2. システム全体構成図
+## 1.1 現在の本番構成（2026年9月24日）
+
+本番の公開経路はGitHub ActionsとGitHub Pagesである。Streamlit、FastAPI、Docker内スケジューラ、旧FogModel／CastleModelの説明は、初期設計・管理用・将来拡張として残す。
+
+```text
+Open-Meteo時間別予報
+  → fetch_forecast_window.py（明日から14日分）
+  → predict_forecast_window.py（互換データ生成）
+  → predict_scientific_castle_window.py（天空の城を直接予測）
+  → data/forecast_predictions.json
+  → public/data/forecast_predictions.json
+  → public/forecast.html
+```
+
+公開用直接予測AIの主な入力は次の16項目である。
+
+- 前夜18～23時の雨量
+- 深夜0～1時の雨量
+- 午前2～4時の最低気温と前夜からの低下量
+- 午前5～6時の湿度・風・雲・雨・露点差
+- 午前6～8時の雲・雨・風
+- 午前6時までに雨が止んでからの時間
+- 月、年周期のsin・cos
+
+AI出力の`castle_event_probability`を公開画面では「AI予測値」と呼ぶ。期待指数はAI推定値を過去実績に沿って0～100へ変換し、月別出現率から求めた上限を適用した5刻みの数値である。基準点は0%=0、3%=20、8%=50、20%=80、50%以上=100。`expectation_upper_percent`は同じ季節内での参考順位であり、期待指数の計算には使わない。
+
+過去ログは次の流れで作成する。
+
+```text
+data/history.csv
+  ＋ data/analysis/daily_history_2017_2026.csv
+  → build_history_expectations.py
+  → public/data/history_expectations.json
+  → public/history.html
+```
+
+振り返り予測は各月より前のデータだけで学習する。対象日の実際の時間別気象を入力するため、当時公開された予報値の再現ではない。`build_daily_history_dataset.py`は毎日、未取得日だけを分析CSVへ追加する。
+
+GitHub ActionsはPython 3.11を使い、`actions/checkout@v5`、`actions/setup-python@v6`、`peaceiris/actions-gh-pages@v4`でNode.js 24対応とする。
+
+---
+
+## 2. 初期設計のシステム全体構成図
 
 ┌─────────────────────────────┐
 │ SkyCastle AI System Overview │
@@ -419,8 +462,9 @@ IoT連携	気温・湿度センサーとの実測比較
 13. 管理情報
 項目	内容
 文書名	SkyCastle AI 技術設計書
-バージョン	v1.0
+バージョン	v2.0
 作成日	2025-10-29
+最終更新日	2026-09-24
 作成者	SkyCastle Dev Team
 監修	ChatGPT（GPT-5）
 関連文書	docs/01_Specification_SkyCastle.md / docs/03_Development_Guide_CodeX.md
