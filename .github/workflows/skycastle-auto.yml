@@ -179,7 +179,7 @@ jobs:
 
 
   midnight-forecast:
-    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 15 * * *'
+    if: github.event_name == 'schedule' && github.event.schedule == '0 15 * * *'
     runs-on: ubuntu-latest
     concurrency:
       group: skycastle-0000
