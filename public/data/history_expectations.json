@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T11:41:42.241744+09:00",
+  "generated_at": "2026-09-24T14:39:16.269642+09:00",
   "method": "past_only_model_with_observed_weather",
   "note": "その月より前の記録で学習し、当日の実際の気象条件で振り返った参考値です。",
   "rows": [
@@ -27,6 +27,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0274,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 70,
       "scientific_features": {
         "prev_18_23_rain_sum": 5.1,
         "rain_00_01_sum": 4.5,
@@ -44,8 +45,7 @@
         "month": 10.0,
         "day_of_year_sin": -0.901,
         "day_of_year_cos": 0.433
-      },
-      "retrospective_month_score_cap": 70
+      }
     },
     {
       "temp": 9.575,
@@ -71,6 +71,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0274,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 70,
       "scientific_features": {
         "prev_18_23_rain_sum": 1.6,
         "rain_00_01_sum": 0.3,
@@ -88,8 +89,7 @@
         "month": 10.0,
         "day_of_year_sin": -0.894,
         "day_of_year_cos": 0.449
-      },
-      "retrospective_month_score_cap": 70
+      }
     },
     {
       "temp": 7.750000000000001,
@@ -115,6 +115,7 @@
       "retrospective_upper_percent": 9,
       "retrospective_baseline_probability": 0.0274,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 70,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -132,8 +133,7 @@
         "month": 10.0,
         "day_of_year_sin": -0.886,
         "day_of_year_cos": 0.464
-      },
-      "retrospective_month_score_cap": 70
+      }
     },
     {
       "temp": 5.925000000000001,
@@ -159,6 +159,7 @@
       "retrospective_upper_percent": 9,
       "retrospective_baseline_probability": 0.0274,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 70,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -176,8 +177,7 @@
         "month": 10.0,
         "day_of_year_sin": -0.878,
         "day_of_year_cos": 0.479
-      },
-      "retrospective_month_score_cap": 70
+      }
     },
     {
       "temp": 13.225,
@@ -203,6 +203,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0274,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 70,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -220,8 +221,7 @@
         "month": 10.0,
         "day_of_year_sin": -0.869,
         "day_of_year_cos": 0.494
-      },
-      "retrospective_month_score_cap": 70
+      }
     },
     {
       "temp": 11.125,
@@ -247,6 +247,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 25.4,
         "rain_00_01_sum": 0.5,
@@ -264,8 +265,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.861,
         "day_of_year_cos": 0.509
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 10.65,
@@ -291,6 +291,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 3.6,
         "rain_00_01_sum": 1.7,
@@ -308,8 +309,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.852,
         "day_of_year_cos": 0.524
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 8.899999999999999,
@@ -335,6 +335,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 2.8,
         "rain_00_01_sum": 2.4,
@@ -352,8 +353,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.843,
         "day_of_year_cos": 0.539
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 4.125,
@@ -379,6 +379,7 @@
       "retrospective_upper_percent": 6,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -396,8 +397,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.833,
         "day_of_year_cos": 0.553
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 9.6,
@@ -423,6 +423,7 @@
       "retrospective_upper_percent": 22,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -440,8 +441,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.824,
         "day_of_year_cos": 0.567
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 9.175,
@@ -467,6 +467,7 @@
       "retrospective_upper_percent": 4,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -484,8 +485,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.814,
         "day_of_year_cos": 0.581
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 10.2,
@@ -511,6 +511,7 @@
       "retrospective_upper_percent": 3,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -528,8 +529,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.804,
         "day_of_year_cos": 0.595
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 6.275,
@@ -555,6 +555,7 @@
       "retrospective_upper_percent": 8,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -572,8 +573,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.793,
         "day_of_year_cos": 0.609
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 13.1,
@@ -599,6 +599,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.7,
@@ -616,8 +617,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.783,
         "day_of_year_cos": 0.623
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 10.35,
@@ -643,6 +643,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 2.9,
         "rain_00_01_sum": 0.5,
@@ -660,8 +661,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.772,
         "day_of_year_cos": 0.636
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 9.225,
@@ -687,6 +687,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.2,
         "rain_00_01_sum": 0.2,
@@ -704,8 +705,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.761,
         "day_of_year_cos": 0.649
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 3.0,
@@ -731,6 +731,7 @@
       "retrospective_upper_percent": 17,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -748,8 +749,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.749,
         "day_of_year_cos": 0.662
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 9.85,
@@ -775,6 +775,7 @@
       "retrospective_upper_percent": 34,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -792,8 +793,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.738,
         "day_of_year_cos": 0.675
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 8.4,
@@ -819,6 +819,7 @@
       "retrospective_upper_percent": 1,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -836,8 +837,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.726,
         "day_of_year_cos": 0.687
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 5.25,
@@ -863,6 +863,7 @@
       "retrospective_upper_percent": 10,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -880,8 +881,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.714,
         "day_of_year_cos": 0.7
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 4.6,
@@ -907,6 +907,7 @@
       "retrospective_upper_percent": 33,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -924,8 +925,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.702,
         "day_of_year_cos": 0.712
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 9.675,
@@ -951,6 +951,7 @@
       "retrospective_upper_percent": 31,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -968,8 +969,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.69,
         "day_of_year_cos": 0.724
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 6.65,
@@ -995,6 +995,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 1.9,
         "rain_00_01_sum": 0.4,
@@ -1012,8 +1013,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.677,
         "day_of_year_cos": 0.736
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 4.4,
@@ -1039,6 +1039,7 @@
       "retrospective_upper_percent": 32,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 3.5,
         "rain_00_01_sum": 0.3,
@@ -1056,8 +1057,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.664,
         "day_of_year_cos": 0.747
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 2.1500000000000004,
@@ -1083,6 +1083,7 @@
       "retrospective_upper_percent": 37,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -1100,8 +1101,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.652,
         "day_of_year_cos": 0.759
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 8.975000000000001,
@@ -1127,6 +1127,7 @@
       "retrospective_upper_percent": 17,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -1144,8 +1145,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.638,
         "day_of_year_cos": 0.77
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 7.425,
@@ -1171,6 +1171,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 1.9,
         "rain_00_01_sum": 0.4,
@@ -1188,8 +1189,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.625,
         "day_of_year_cos": 0.781
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 3.45,
@@ -1215,6 +1215,7 @@
       "retrospective_upper_percent": 34,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -1232,8 +1233,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.612,
         "day_of_year_cos": 0.791
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 4.2,
@@ -1259,6 +1259,7 @@
       "retrospective_upper_percent": 19,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -1276,8 +1277,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.598,
         "day_of_year_cos": 0.802
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 7.199999999999999,
@@ -1303,6 +1303,7 @@
       "retrospective_upper_percent": 15,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -1320,8 +1321,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.584,
         "day_of_year_cos": 0.812
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 7.65,
@@ -1347,6 +1347,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 4.9,
         "rain_00_01_sum": 2.7,
@@ -1364,8 +1365,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.57,
         "day_of_year_cos": 0.822
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 3.75,
@@ -1391,6 +1391,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -1408,8 +1409,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.556,
         "day_of_year_cos": 0.831
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 8.525000000000002,
@@ -1435,6 +1435,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 1.6,
         "rain_00_01_sum": 4.3,
@@ -1452,8 +1453,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.541,
         "day_of_year_cos": 0.841
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 4.35,
@@ -1479,6 +1479,7 @@
       "retrospective_upper_percent": 7,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.5,
         "rain_00_01_sum": 0.0,
@@ -1496,8 +1497,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.527,
         "day_of_year_cos": 0.85
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 4.1,
@@ -1523,6 +1523,7 @@
       "retrospective_upper_percent": 15,
       "retrospective_baseline_probability": 0.0219,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -1540,8 +1541,7 @@
         "month": 11.0,
         "day_of_year_sin": -0.512,
         "day_of_year_cos": 0.859
-      },
-      "retrospective_month_score_cap": 100
+      }
     },
     {
       "temp": 8.425,
@@ -1567,6 +1567,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -1584,8 +1585,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.497,
         "day_of_year_cos": 0.868
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 8.375,
@@ -1611,6 +1611,7 @@
       "retrospective_upper_percent": 25,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.2,
         "rain_00_01_sum": 0.0,
@@ -1628,8 +1629,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.482,
         "day_of_year_cos": 0.876
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 7.8,
@@ -1655,6 +1655,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 2.4,
         "rain_00_01_sum": 0.3,
@@ -1672,8 +1673,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.467,
         "day_of_year_cos": 0.884
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 1.0,
@@ -1699,6 +1699,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 4.6,
         "rain_00_01_sum": 1.4,
@@ -1716,8 +1717,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.452,
         "day_of_year_cos": 0.892
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 3.0249999999999995,
@@ -1743,6 +1743,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 7.3,
         "rain_00_01_sum": 2.5,
@@ -1760,8 +1761,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.436,
         "day_of_year_cos": 0.9
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 1.15,
@@ -1787,6 +1787,7 @@
       "retrospective_upper_percent": 17,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -1804,8 +1805,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.421,
         "day_of_year_cos": 0.907
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 5.825,
@@ -1831,6 +1831,7 @@
       "retrospective_upper_percent": 18,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -1848,8 +1849,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.405,
         "day_of_year_cos": 0.914
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 7.0,
@@ -1875,6 +1875,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -1892,8 +1893,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.389,
         "day_of_year_cos": 0.921
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 3.125,
@@ -1919,6 +1919,7 @@
       "retrospective_upper_percent": 10,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.3,
         "rain_00_01_sum": 0.0,
@@ -1936,8 +1937,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.373,
         "day_of_year_cos": 0.928
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 3.975,
@@ -1963,6 +1963,7 @@
       "retrospective_upper_percent": 23,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -1980,8 +1981,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.357,
         "day_of_year_cos": 0.934
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 4.4750000000000005,
@@ -2007,6 +2007,7 @@
       "retrospective_upper_percent": 32,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -2024,8 +2025,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.341,
         "day_of_year_cos": 0.94
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 2.1,
@@ -2051,6 +2051,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 6.3,
         "rain_00_01_sum": 1.8,
@@ -2068,8 +2069,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.325,
         "day_of_year_cos": 0.946
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": -2.2,
@@ -2095,6 +2095,7 @@
       "retrospective_upper_percent": 16,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -2112,8 +2113,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.309,
         "day_of_year_cos": 0.951
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 7.675,
@@ -2139,6 +2139,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.2,
         "rain_00_01_sum": 0.1,
@@ -2156,8 +2157,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.292,
         "day_of_year_cos": 0.956
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 3.925,
@@ -2183,6 +2183,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 4.4,
         "rain_00_01_sum": 1.4,
@@ -2200,8 +2201,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.276,
         "day_of_year_cos": 0.961
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 4.300000000000001,
@@ -2227,6 +2227,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -2244,8 +2245,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.259,
         "day_of_year_cos": 0.966
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 6.175000000000001,
@@ -2271,6 +2271,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 1.4,
         "rain_00_01_sum": 0.9,
@@ -2288,8 +2289,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.243,
         "day_of_year_cos": 0.97
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 3.5,
@@ -2315,6 +2315,7 @@
       "retrospective_upper_percent": 16,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 8.0,
         "rain_00_01_sum": 0.0,
@@ -2332,8 +2333,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.226,
         "day_of_year_cos": 0.974
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 0.55,
@@ -2359,6 +2359,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -2376,8 +2377,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.209,
         "day_of_year_cos": 0.978
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 12.35,
@@ -2403,6 +2403,7 @@
       "retrospective_upper_percent": 18,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -2420,8 +2421,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.192,
         "day_of_year_cos": 0.981
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 13.375,
@@ -2447,6 +2447,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -2464,8 +2465,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.175,
         "day_of_year_cos": 0.984
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 4.550000000000001,
@@ -2491,6 +2491,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 1.0,
         "rain_00_01_sum": 0.0,
@@ -2508,8 +2509,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.158,
         "day_of_year_cos": 0.987
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": -1.725,
@@ -2535,6 +2535,7 @@
       "retrospective_upper_percent": 10,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -2552,8 +2553,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.141,
         "day_of_year_cos": 0.99
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 8.725,
@@ -2579,6 +2579,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.2,
         "rain_00_01_sum": 1.0,
@@ -2596,8 +2597,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.124,
         "day_of_year_cos": 0.992
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 9.975,
@@ -2623,6 +2623,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.6,
         "rain_00_01_sum": 0.8,
@@ -2640,8 +2641,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.107,
         "day_of_year_cos": 0.994
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 1.625,
@@ -2667,6 +2667,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 3.6,
         "rain_00_01_sum": 0.0,
@@ -2684,8 +2685,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.09,
         "day_of_year_cos": 0.996
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": -3.625,
@@ -2711,6 +2711,7 @@
       "retrospective_upper_percent": 26,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.6,
         "rain_00_01_sum": 0.0,
@@ -2728,8 +2729,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.073,
         "day_of_year_cos": 0.997
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 0.5499999999999999,
@@ -2755,6 +2755,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 3.9,
         "rain_00_01_sum": 1.2,
@@ -2772,8 +2773,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.056,
         "day_of_year_cos": 0.998
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 0.075,
@@ -2799,6 +2799,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -2816,8 +2817,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.039,
         "day_of_year_cos": 0.999
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 2.975,
@@ -2843,6 +2843,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 2.1,
         "rain_00_01_sum": 0.7,
@@ -2860,8 +2861,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.022,
         "day_of_year_cos": 1.0
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 2.3,
@@ -2887,6 +2887,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0301,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 3.5,
         "rain_00_01_sum": 0.5,
@@ -2904,8 +2905,7 @@
         "month": 12.0,
         "day_of_year_sin": -0.004,
         "day_of_year_cos": 1.0
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 0.075,
@@ -2931,6 +2931,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 2.5,
         "rain_00_01_sum": 1.3,
@@ -2948,8 +2949,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.017,
         "day_of_year_cos": 1.0
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": 0.85,
@@ -2975,6 +2975,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 1.5,
         "rain_00_01_sum": 0.5,
@@ -2992,8 +2993,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.034,
         "day_of_year_cos": 0.999
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": -3.6,
@@ -3019,6 +3019,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 5.3,
         "rain_00_01_sum": 3.9,
@@ -3036,8 +3037,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.052,
         "day_of_year_cos": 0.999
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": 1.5750000000000002,
@@ -3063,6 +3063,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 1.8,
         "rain_00_01_sum": 0.0,
@@ -3080,8 +3081,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.069,
         "day_of_year_cos": 0.998
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": 3.225,
@@ -3107,6 +3107,7 @@
       "retrospective_upper_percent": 13,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.6,
         "rain_00_01_sum": 0.2,
@@ -3124,8 +3125,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.086,
         "day_of_year_cos": 0.996
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": -0.3249999999999999,
@@ -3151,6 +3151,7 @@
       "retrospective_upper_percent": 19,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 1.0,
         "rain_00_01_sum": 0.3,
@@ -3168,8 +3169,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.103,
         "day_of_year_cos": 0.995
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": -0.6000000000000001,
@@ -3195,6 +3195,7 @@
       "retrospective_upper_percent": 22,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -3212,8 +3213,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.12,
         "day_of_year_cos": 0.993
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": 2.0500000000000003,
@@ -3239,6 +3239,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.9,
         "rain_00_01_sum": 1.1,
@@ -3256,8 +3257,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.137,
         "day_of_year_cos": 0.991
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": -0.45,
@@ -3283,6 +3283,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.6,
         "rain_00_01_sum": 0.0,
@@ -3300,8 +3301,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.154,
         "day_of_year_cos": 0.988
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": -1.3999999999999997,
@@ -3327,6 +3327,7 @@
       "retrospective_upper_percent": 22,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -3344,8 +3345,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.171,
         "day_of_year_cos": 0.985
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": 2.625,
@@ -3371,6 +3371,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 5.9,
         "rain_00_01_sum": 1.3,
@@ -3388,8 +3389,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.188,
         "day_of_year_cos": 0.982
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": -3.3000000000000003,
@@ -3415,6 +3415,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 2.6,
         "rain_00_01_sum": 0.8,
@@ -3432,8 +3433,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.205,
         "day_of_year_cos": 0.979
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": 2.8,
@@ -3459,6 +3459,7 @@
       "retrospective_upper_percent": 19,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -3476,8 +3477,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.222,
         "day_of_year_cos": 0.975
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": 0.75,
@@ -3503,6 +3503,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 2.9,
         "rain_00_01_sum": 1.4,
@@ -3520,8 +3521,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.239,
         "day_of_year_cos": 0.971
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": 0.8250000000000001,
@@ -3547,6 +3547,7 @@
       "retrospective_upper_percent": 26,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.2,
         "rain_00_01_sum": 0.0,
@@ -3564,8 +3565,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.255,
         "day_of_year_cos": 0.967
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": 4.3,
@@ -3591,6 +3591,7 @@
       "retrospective_upper_percent": 13,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 9.2,
         "rain_00_01_sum": 0.6,
@@ -3608,8 +3609,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.272,
         "day_of_year_cos": 0.962
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": -1.4,
@@ -3635,6 +3635,7 @@
       "retrospective_upper_percent": 17,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -3652,8 +3653,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.288,
         "day_of_year_cos": 0.958
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": -0.5499999999999999,
@@ -3679,6 +3679,7 @@
       "retrospective_upper_percent": 13,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -3696,8 +3697,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.305,
         "day_of_year_cos": 0.952
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": -0.45,
@@ -3723,6 +3723,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -3740,8 +3741,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.321,
         "day_of_year_cos": 0.947
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": 1.975,
@@ -3767,6 +3767,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 6.5,
         "rain_00_01_sum": 2.7,
@@ -3784,8 +3785,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.337,
         "day_of_year_cos": 0.941
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": -1.975,
@@ -3811,6 +3811,7 @@
       "retrospective_upper_percent": 24,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.1,
         "rain_00_01_sum": 0.1,
@@ -3828,8 +3829,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.353,
         "day_of_year_cos": 0.935
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": -3.625,
@@ -3855,6 +3855,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 2.7,
         "rain_00_01_sum": 2.4,
@@ -3872,8 +3873,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.369,
         "day_of_year_cos": 0.929
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": -3.1,
@@ -3899,6 +3899,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 3.7,
         "rain_00_01_sum": 0.1,
@@ -3916,8 +3917,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.385,
         "day_of_year_cos": 0.923
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": -0.3999999999999999,
@@ -3943,6 +3943,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 4.2,
         "rain_00_01_sum": 1.9,
@@ -3960,8 +3961,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.401,
         "day_of_year_cos": 0.916
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": -4.7,
@@ -3987,6 +3987,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 4.1,
         "rain_00_01_sum": 2.1,
@@ -4004,8 +4005,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.417,
         "day_of_year_cos": 0.909
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": -1.725,
@@ -4031,6 +4031,7 @@
       "retrospective_upper_percent": 30,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 1.6,
         "rain_00_01_sum": 0.2,
@@ -4048,8 +4049,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.432,
         "day_of_year_cos": 0.902
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": -1.1,
@@ -4075,6 +4075,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -4092,8 +4093,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.448,
         "day_of_year_cos": 0.894
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": 0.3,
@@ -4119,6 +4119,7 @@
       "retrospective_upper_percent": 17,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 2.3,
         "rain_00_01_sum": 0.0,
@@ -4136,8 +4137,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.463,
         "day_of_year_cos": 0.886
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": -2.7,
@@ -4163,6 +4163,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -4180,8 +4181,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.478,
         "day_of_year_cos": 0.878
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": -2.175,
@@ -4207,6 +4207,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 2.9,
         "rain_00_01_sum": 1.2,
@@ -4224,8 +4225,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.493,
         "day_of_year_cos": 0.87
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": -2.2,
@@ -4251,6 +4251,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 80,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.5,
         "rain_00_01_sum": 0.0,
@@ -4268,8 +4269,7 @@
         "month": 1.0,
         "day_of_year_sin": 0.508,
         "day_of_year_cos": 0.861
-      },
-      "retrospective_month_score_cap": 80
+      }
     },
     {
       "temp": -0.225,
@@ -4295,6 +4295,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.2,
@@ -4312,8 +4313,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.523,
         "day_of_year_cos": 0.852
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 0.075,
@@ -4339,6 +4339,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 4.5,
         "rain_00_01_sum": 1.2,
@@ -4356,8 +4357,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.538,
         "day_of_year_cos": 0.843
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": -1.9250000000000005,
@@ -4383,6 +4383,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 3.8,
         "rain_00_01_sum": 0.7,
@@ -4400,8 +4401,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.552,
         "day_of_year_cos": 0.834
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": -6.45,
@@ -4427,6 +4427,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -4444,8 +4445,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.566,
         "day_of_year_cos": 0.824
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 1.4,
@@ -4471,6 +4471,7 @@
       "retrospective_upper_percent": 19,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.4,
@@ -4488,8 +4489,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.58,
         "day_of_year_cos": 0.814
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 2.25,
@@ -4515,6 +4515,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.1,
         "rain_00_01_sum": 0.5,
@@ -4532,8 +4533,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.594,
         "day_of_year_cos": 0.804
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": -1.5500000000000005,
@@ -4559,6 +4559,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -4576,8 +4577,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.608,
         "day_of_year_cos": 0.794
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": -4.275,
@@ -4603,6 +4603,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -4620,8 +4621,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.622,
         "day_of_year_cos": 0.783
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": -2.825,
@@ -4647,6 +4647,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 4.8,
         "rain_00_01_sum": 1.1,
@@ -4664,8 +4665,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.635,
         "day_of_year_cos": 0.772
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": -4.65,
@@ -4691,6 +4691,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -4708,8 +4709,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.648,
         "day_of_year_cos": 0.761
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 3.5,
@@ -4735,6 +4735,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.8,
         "rain_00_01_sum": 2.3,
@@ -4752,8 +4753,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.661,
         "day_of_year_cos": 0.75
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 0.075,
@@ -4779,6 +4779,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 1.3,
         "rain_00_01_sum": 0.0,
@@ -4796,8 +4797,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.674,
         "day_of_year_cos": 0.739
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 1.475,
@@ -4823,6 +4823,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -4840,8 +4841,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.687,
         "day_of_year_cos": 0.727
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": -0.15,
@@ -4867,6 +4867,7 @@
       "retrospective_upper_percent": 22,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -4884,8 +4885,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.699,
         "day_of_year_cos": 0.715
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 5.025,
@@ -4911,6 +4911,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -4928,8 +4929,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.711,
         "day_of_year_cos": 0.703
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 3.3,
@@ -4955,6 +4955,7 @@
       "retrospective_upper_percent": 24,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.3,
         "rain_00_01_sum": 0.5,
@@ -4972,8 +4973,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.723,
         "day_of_year_cos": 0.691
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": -3.3,
@@ -4999,6 +4999,7 @@
       "retrospective_upper_percent": 22,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.1,
@@ -5016,8 +5017,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.735,
         "day_of_year_cos": 0.678
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": -5.575,
@@ -5043,6 +5043,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -5060,8 +5061,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.747,
         "day_of_year_cos": 0.665
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": -0.85,
@@ -5087,6 +5087,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 3.6,
         "rain_00_01_sum": 0.0,
@@ -5104,8 +5105,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.758,
         "day_of_year_cos": 0.652
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": -6.425000000000001,
@@ -5131,6 +5131,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -5148,8 +5149,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.769,
         "day_of_year_cos": 0.639
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": -1.325,
@@ -5175,6 +5175,7 @@
       "retrospective_upper_percent": 15,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -5192,8 +5193,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.78,
         "day_of_year_cos": 0.626
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 6.275,
@@ -5219,6 +5219,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -5236,8 +5237,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.791,
         "day_of_year_cos": 0.612
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 6.175,
@@ -5263,6 +5263,7 @@
       "retrospective_upper_percent": 8,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -5280,8 +5281,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.801,
         "day_of_year_cos": 0.599
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 2.3,
@@ -5307,6 +5307,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -5324,8 +5325,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.811,
         "day_of_year_cos": 0.585
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 4.800000000000001,
@@ -5351,6 +5351,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 4.6,
         "rain_00_01_sum": 1.5,
@@ -5368,8 +5369,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.821,
         "day_of_year_cos": 0.571
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 5.425,
@@ -5395,6 +5395,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -5412,8 +5413,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.831,
         "day_of_year_cos": 0.557
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 4.8500000000000005,
@@ -5439,6 +5439,7 @@
       "retrospective_upper_percent": 17,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -5456,8 +5457,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.84,
         "day_of_year_cos": 0.542
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 7.975,
@@ -5483,6 +5483,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 50,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.3,
         "rain_00_01_sum": 0.0,
@@ -5500,8 +5501,7 @@
         "month": 2.0,
         "day_of_year_sin": 0.849,
         "day_of_year_cos": 0.528
-      },
-      "retrospective_month_score_cap": 50
+      }
     },
     {
       "temp": 2.6500000000000004,
@@ -5527,6 +5527,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.3,
         "rain_00_01_sum": 0.0,
@@ -5544,8 +5545,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.858,
         "day_of_year_cos": 0.513
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 2.95,
@@ -5571,6 +5571,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -5588,8 +5589,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.867,
         "day_of_year_cos": 0.498
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 6.75,
@@ -5615,6 +5615,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.1,
         "rain_00_01_sum": 0.3,
@@ -5632,8 +5633,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.876,
         "day_of_year_cos": 0.483
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 4.975,
@@ -5659,6 +5659,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 7.6,
         "rain_00_01_sum": 0.5,
@@ -5676,8 +5677,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.884,
         "day_of_year_cos": 0.468
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 3.0,
@@ -5703,6 +5703,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 1.7,
         "rain_00_01_sum": 0.2,
@@ -5720,8 +5721,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.892,
         "day_of_year_cos": 0.453
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 5.525,
@@ -5747,6 +5747,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -5764,8 +5765,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.899,
         "day_of_year_cos": 0.437
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 4.1,
@@ -5791,6 +5791,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 8.1,
         "rain_00_01_sum": 4.3,
@@ -5808,8 +5809,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.907,
         "day_of_year_cos": 0.422
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 0.75,
@@ -5835,6 +5835,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.1,
@@ -5852,8 +5853,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.914,
         "day_of_year_cos": 0.406
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 0.825,
@@ -5879,6 +5879,7 @@
       "retrospective_upper_percent": 1,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -5896,8 +5897,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.921,
         "day_of_year_cos": 0.39
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 1.775,
@@ -5923,6 +5923,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.1,
@@ -5940,8 +5941,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.927,
         "day_of_year_cos": 0.374
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": -1.425,
@@ -5967,6 +5967,7 @@
       "retrospective_upper_percent": 1,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -5984,8 +5985,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.934,
         "day_of_year_cos": 0.358
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": -1.4,
@@ -6011,6 +6011,7 @@
       "retrospective_upper_percent": 1,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -6028,8 +6029,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.94,
         "day_of_year_cos": 0.342
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 0.75,
@@ -6055,6 +6055,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -6072,8 +6073,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.945,
         "day_of_year_cos": 0.326
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 3.875,
@@ -6099,6 +6099,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -6116,8 +6117,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.951,
         "day_of_year_cos": 0.31
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 3.075,
@@ -6143,6 +6143,7 @@
       "retrospective_upper_percent": 1,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -6160,8 +6161,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.956,
         "day_of_year_cos": 0.293
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 3.0500000000000003,
@@ -6187,6 +6187,7 @@
       "retrospective_upper_percent": 1,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -6204,8 +6205,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.961,
         "day_of_year_cos": 0.277
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 1.55,
@@ -6231,6 +6231,7 @@
       "retrospective_upper_percent": 1,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -6248,8 +6249,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.966,
         "day_of_year_cos": 0.26
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 2.8,
@@ -6275,6 +6275,7 @@
       "retrospective_upper_percent": 2,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -6292,8 +6293,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.97,
         "day_of_year_cos": 0.244
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 8.649999999999999,
@@ -6319,6 +6319,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 7.7,
         "rain_00_01_sum": 5.0,
@@ -6336,8 +6337,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.974,
         "day_of_year_cos": 0.227
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 3.2,
@@ -6363,6 +6363,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.1,
         "rain_00_01_sum": 0.0,
@@ -6380,8 +6381,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.978,
         "day_of_year_cos": 0.21
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 0.1999999999999999,
@@ -6407,6 +6407,7 @@
       "retrospective_upper_percent": 2,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 1.6,
         "rain_00_01_sum": 0.0,
@@ -6424,8 +6425,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.981,
         "day_of_year_cos": 0.193
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 1.4250000000000005,
@@ -6451,6 +6451,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -6468,8 +6469,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.984,
         "day_of_year_cos": 0.176
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 7.500000000000001,
@@ -6495,6 +6495,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.1,
@@ -6512,8 +6513,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.987,
         "day_of_year_cos": 0.16
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 4.25,
@@ -6539,6 +6539,7 @@
       "retrospective_upper_percent": 3,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.2,
         "rain_00_01_sum": 0.0,
@@ -6556,8 +6557,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.99,
         "day_of_year_cos": 0.143
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 9.7,
@@ -6583,6 +6583,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -6600,8 +6601,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.992,
         "day_of_year_cos": 0.125
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 8.425,
@@ -6627,6 +6627,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 11.7,
         "rain_00_01_sum": 0.5,
@@ -6644,8 +6645,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.994,
         "day_of_year_cos": 0.108
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 5.775,
@@ -6671,6 +6671,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -6688,8 +6689,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.996,
         "day_of_year_cos": 0.091
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 6.324999999999999,
@@ -6715,6 +6715,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -6732,8 +6733,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.997,
         "day_of_year_cos": 0.074
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 9.625,
@@ -6759,6 +6759,7 @@
       "retrospective_upper_percent": 3,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -6776,8 +6777,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.998,
         "day_of_year_cos": 0.057
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 11.275,
@@ -6803,6 +6803,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -6820,8 +6821,7 @@
         "month": 3.0,
         "day_of_year_sin": 0.999,
         "day_of_year_cos": 0.04
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 14.25,
@@ -6847,6 +6847,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 40,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.1,
@@ -6864,8 +6865,7 @@
         "month": 3.0,
         "day_of_year_sin": 1.0,
         "day_of_year_cos": 0.023
-      },
-      "retrospective_month_score_cap": 40
+      }
     },
     {
       "temp": 10.1,
@@ -6891,6 +6891,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 4.9,
         "rain_00_01_sum": 0.7,
@@ -6908,8 +6909,7 @@
         "month": 4.0,
         "day_of_year_sin": 1.0,
         "day_of_year_cos": 0.005
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 7.050000000000001,
@@ -6935,6 +6935,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 5.2,
         "rain_00_01_sum": 3.0,
@@ -6952,8 +6953,7 @@
         "month": 4.0,
         "day_of_year_sin": 1.0,
         "day_of_year_cos": -0.012
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 6.4,
@@ -6979,6 +6979,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -6996,8 +6997,7 @@
         "month": 4.0,
         "day_of_year_sin": 1.0,
         "day_of_year_cos": -0.029
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 12.825,
@@ -7023,6 +7023,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -7040,8 +7041,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.999,
         "day_of_year_cos": -0.046
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 12.5,
@@ -7067,6 +7067,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 10.6,
         "rain_00_01_sum": 2.0,
@@ -7084,8 +7085,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.998,
         "day_of_year_cos": -0.063
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 12.425,
@@ -7111,6 +7111,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -7128,8 +7129,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.997,
         "day_of_year_cos": -0.081
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 14.125,
@@ -7155,6 +7155,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -7172,8 +7173,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.995,
         "day_of_year_cos": -0.098
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 6.475,
@@ -7199,6 +7199,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.1,
@@ -7216,8 +7217,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.993,
         "day_of_year_cos": -0.115
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 9.45,
@@ -7243,6 +7243,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -7260,8 +7261,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.991,
         "day_of_year_cos": -0.132
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 15.025,
@@ -7287,6 +7287,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 4.8,
         "rain_00_01_sum": 9.4,
@@ -7304,8 +7305,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.989,
         "day_of_year_cos": -0.149
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 13.275,
@@ -7331,6 +7331,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 9.8,
         "rain_00_01_sum": 0.0,
@@ -7348,8 +7349,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.986,
         "day_of_year_cos": -0.166
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 9.3,
@@ -7375,6 +7375,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -7392,8 +7393,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.983,
         "day_of_year_cos": -0.183
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 10.575,
@@ -7419,6 +7419,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -7436,8 +7437,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.98,
         "day_of_year_cos": -0.2
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 11.875,
@@ -7463,6 +7463,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -7480,8 +7481,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.976,
         "day_of_year_cos": -0.217
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 16.275,
@@ -7507,6 +7507,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.1,
@@ -7524,8 +7525,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.972,
         "day_of_year_cos": -0.233
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 11.475,
@@ -7551,6 +7551,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 7.6,
         "rain_00_01_sum": 0.0,
@@ -7568,8 +7569,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.968,
         "day_of_year_cos": -0.25
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 14.275,
@@ -7595,6 +7595,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -7612,8 +7613,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.964,
         "day_of_year_cos": -0.267
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 13.0,
@@ -7639,6 +7639,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -7656,8 +7657,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.959,
         "day_of_year_cos": -0.283
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 13.8,
@@ -7683,6 +7683,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -7700,8 +7701,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.954,
         "day_of_year_cos": -0.3
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 15.675,
@@ -7727,6 +7727,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -7744,8 +7745,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.949,
         "day_of_year_cos": -0.316
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 12.45,
@@ -7771,6 +7771,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 8.0,
         "rain_00_01_sum": 2.7,
@@ -7788,8 +7789,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.943,
         "day_of_year_cos": -0.332
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 9.075,
@@ -7815,6 +7815,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -7832,8 +7833,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.937,
         "day_of_year_cos": -0.348
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 13.225,
@@ -7859,6 +7859,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -7876,8 +7877,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.931,
         "day_of_year_cos": -0.364
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 11.025,
@@ -7903,6 +7903,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 8.6,
         "rain_00_01_sum": 0.1,
@@ -7920,8 +7921,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.925,
         "day_of_year_cos": -0.38
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 11.25,
@@ -7947,6 +7947,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -7964,8 +7965,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.918,
         "day_of_year_cos": -0.396
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 14.025,
@@ -7991,6 +7991,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -8008,8 +8009,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.911,
         "day_of_year_cos": -0.412
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 13.475,
@@ -8035,6 +8035,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.1,
         "rain_00_01_sum": 1.8,
@@ -8052,8 +8053,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.904,
         "day_of_year_cos": -0.428
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 13.75,
@@ -8079,6 +8079,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -8096,8 +8097,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.896,
         "day_of_year_cos": -0.443
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 13.65,
@@ -8123,6 +8123,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.1,
@@ -8140,8 +8141,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.889,
         "day_of_year_cos": -0.458
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 11.225,
@@ -8167,6 +8167,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -8184,8 +8185,7 @@
         "month": 4.0,
         "day_of_year_sin": 0.881,
         "day_of_year_cos": -0.474
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 16.425,
@@ -8211,6 +8211,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.4,
         "rain_00_01_sum": 2.4,
@@ -8228,8 +8229,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.872,
         "day_of_year_cos": -0.489
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 11.75,
@@ -8255,6 +8255,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 11.7,
         "rain_00_01_sum": 7.5,
@@ -8272,8 +8273,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.864,
         "day_of_year_cos": -0.504
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 15.75,
@@ -8299,6 +8299,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -8316,8 +8317,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.855,
         "day_of_year_cos": -0.519
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 15.175,
@@ -8343,6 +8343,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 31.1,
         "rain_00_01_sum": 5.6,
@@ -8360,8 +8361,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.846,
         "day_of_year_cos": -0.533
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 8.825,
@@ -8387,6 +8387,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 3.4,
         "rain_00_01_sum": 0.0,
@@ -8404,8 +8405,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.837,
         "day_of_year_cos": -0.548
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 15.85,
@@ -8431,6 +8431,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -8448,8 +8449,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.827,
         "day_of_year_cos": -0.562
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 16.65,
@@ -8475,6 +8475,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -8492,8 +8493,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.817,
         "day_of_year_cos": -0.576
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 18.05,
@@ -8519,6 +8519,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -8536,8 +8537,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.807,
         "day_of_year_cos": -0.59
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 9.75,
@@ -8563,6 +8563,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 3.8,
         "rain_00_01_sum": 0.2,
@@ -8580,8 +8581,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.797,
         "day_of_year_cos": -0.604
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 10.0,
@@ -8607,6 +8607,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -8624,8 +8625,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.787,
         "day_of_year_cos": -0.617
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 14.875,
@@ -8651,6 +8651,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -8668,8 +8669,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.776,
         "day_of_year_cos": -0.631
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 17.05,
@@ -8695,6 +8695,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -8712,8 +8713,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.765,
         "day_of_year_cos": -0.644
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 16.125,
@@ -8739,6 +8739,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.1,
         "rain_00_01_sum": 0.0,
@@ -8756,8 +8757,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.754,
         "day_of_year_cos": -0.657
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 14.775,
@@ -8783,6 +8783,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -8800,8 +8801,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.742,
         "day_of_year_cos": -0.67
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 14.95,
@@ -8827,6 +8827,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -8844,8 +8845,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.731,
         "day_of_year_cos": -0.683
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 16.45,
@@ -8871,6 +8871,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -8888,8 +8889,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.719,
         "day_of_year_cos": -0.695
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 14.55,
@@ -8915,6 +8915,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -8932,8 +8933,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.707,
         "day_of_year_cos": -0.707
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 18.15,
@@ -8959,6 +8959,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -8976,8 +8977,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.694,
         "day_of_year_cos": -0.72
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 19.0,
@@ -9003,6 +9003,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -9020,8 +9021,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.682,
         "day_of_year_cos": -0.731
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 19.125,
@@ -9047,6 +9047,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -9064,8 +9065,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.669,
         "day_of_year_cos": -0.743
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 20.45,
@@ -9091,6 +9091,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 1.3,
         "rain_00_01_sum": 0.5,
@@ -9108,8 +9109,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.656,
         "day_of_year_cos": -0.754
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 17.875,
@@ -9135,6 +9135,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 15.1,
         "rain_00_01_sum": 1.9,
@@ -9152,8 +9153,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.643,
         "day_of_year_cos": -0.766
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 17.65,
@@ -9179,6 +9179,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.1,
         "rain_00_01_sum": 0.0,
@@ -9196,8 +9197,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.63,
         "day_of_year_cos": -0.777
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 17.775,
@@ -9223,6 +9223,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.1,
@@ -9240,8 +9241,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.617,
         "day_of_year_cos": -0.787
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 17.950000000000003,
@@ -9267,6 +9267,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -9284,8 +9285,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.603,
         "day_of_year_cos": -0.798
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 19.45,
@@ -9311,6 +9311,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -9328,8 +9329,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.589,
         "day_of_year_cos": -0.808
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 20.575,
@@ -9355,6 +9355,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -9372,8 +9373,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.575,
         "day_of_year_cos": -0.818
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 21.775,
@@ -9399,6 +9399,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -9416,8 +9417,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.561,
         "day_of_year_cos": -0.828
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 17.675,
@@ -9443,6 +9443,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 9.6,
         "rain_00_01_sum": 4.7,
@@ -9460,8 +9461,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.547,
         "day_of_year_cos": -0.837
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 15.725,
@@ -9487,6 +9487,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -9504,8 +9505,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.532,
         "day_of_year_cos": -0.847
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 19.675,
@@ -9531,6 +9531,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0356,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 5,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -9548,8 +9549,7 @@
         "month": 5.0,
         "day_of_year_sin": 0.518,
         "day_of_year_cos": -0.856
-      },
-      "retrospective_month_score_cap": 5
+      }
     },
     {
       "temp": 20.15,
@@ -9575,6 +9575,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -9592,8 +9593,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.503,
         "day_of_year_cos": -0.864
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 19.65,
@@ -9619,6 +9619,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -9636,8 +9637,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.488,
         "day_of_year_cos": -0.873
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 18.825000000000003,
@@ -9663,6 +9663,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 9.6,
         "rain_00_01_sum": 3.2,
@@ -9680,8 +9681,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.473,
         "day_of_year_cos": -0.881
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 18.75,
@@ -9707,6 +9707,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.7,
         "rain_00_01_sum": 0.0,
@@ -9724,8 +9725,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.458,
         "day_of_year_cos": -0.889
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 19.95,
@@ -9751,6 +9751,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -9768,8 +9769,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.442,
         "day_of_year_cos": -0.897
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 18.075,
@@ -9795,6 +9795,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 3.4,
         "rain_00_01_sum": 2.0,
@@ -9812,8 +9813,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.427,
         "day_of_year_cos": -0.904
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 20.175,
@@ -9839,6 +9839,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -9856,8 +9857,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.411,
         "day_of_year_cos": -0.912
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 18.35,
@@ -9883,6 +9883,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 2.6,
         "rain_00_01_sum": 0.0,
@@ -9900,8 +9901,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.395,
         "day_of_year_cos": -0.919
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 16.75,
@@ -9927,6 +9927,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 7.0,
         "rain_00_01_sum": 3.0,
@@ -9944,8 +9945,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.379,
         "day_of_year_cos": -0.925
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 16.275,
@@ -9971,6 +9971,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.3,
         "rain_00_01_sum": 0.0,
@@ -9988,8 +9989,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.363,
         "day_of_year_cos": -0.932
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 16.7,
@@ -10015,6 +10015,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -10032,8 +10033,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.347,
         "day_of_year_cos": -0.938
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 17.525,
@@ -10059,6 +10059,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 2.3,
         "rain_00_01_sum": 0.7,
@@ -10076,8 +10077,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.331,
         "day_of_year_cos": -0.944
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 18.2,
@@ -10103,6 +10103,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -10120,8 +10121,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.315,
         "day_of_year_cos": -0.949
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 20.55,
@@ -10147,6 +10147,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -10164,8 +10165,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.299,
         "day_of_year_cos": -0.954
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 19.6,
@@ -10191,6 +10191,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -10208,8 +10209,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.282,
         "day_of_year_cos": -0.959
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 17.975,
@@ -10235,6 +10235,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.2,
         "rain_00_01_sum": 0.0,
@@ -10252,8 +10253,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.266,
         "day_of_year_cos": -0.964
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 21.075,
@@ -10279,6 +10279,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -10296,8 +10297,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.249,
         "day_of_year_cos": -0.969
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 21.725,
@@ -10323,6 +10323,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -10340,8 +10341,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.232,
         "day_of_year_cos": -0.973
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 22.4,
@@ -10367,6 +10367,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -10384,8 +10385,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.215,
         "day_of_year_cos": -0.977
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 23.65,
@@ -10411,6 +10411,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -10428,8 +10429,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.199,
         "day_of_year_cos": -0.98
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 22.325,
@@ -10455,6 +10455,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 17.1,
         "rain_00_01_sum": 7.4,
@@ -10472,8 +10473,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.182,
         "day_of_year_cos": -0.983
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 18.725,
@@ -10499,6 +10499,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 6.9,
         "rain_00_01_sum": 4.0,
@@ -10516,8 +10517,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.165,
         "day_of_year_cos": -0.986
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 17.625,
@@ -10543,6 +10543,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.7,
         "rain_00_01_sum": 0.2,
@@ -10560,8 +10561,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.148,
         "day_of_year_cos": -0.989
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 19.5,
@@ -10587,6 +10587,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.3,
         "rain_00_01_sum": 0.0,
@@ -10604,8 +10605,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.131,
         "day_of_year_cos": -0.991
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 19.975,
@@ -10631,6 +10631,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.3,
@@ -10648,8 +10649,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.114,
         "day_of_year_cos": -0.994
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 21.775,
@@ -10675,6 +10675,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 21.3,
         "rain_00_01_sum": 0.7,
@@ -10692,8 +10693,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.097,
         "day_of_year_cos": -0.995
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 20.225,
@@ -10719,6 +10719,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 9.4,
         "rain_00_01_sum": 4.6,
@@ -10736,8 +10737,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.079,
         "day_of_year_cos": -0.997
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 20.175,
@@ -10763,6 +10763,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -10780,8 +10781,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.062,
         "day_of_year_cos": -0.998
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 21.4,
@@ -10807,6 +10807,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -10824,8 +10825,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.045,
         "day_of_year_cos": -0.999
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 22.15,
@@ -10851,6 +10851,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -10868,8 +10869,7 @@
         "month": 6.0,
         "day_of_year_sin": 0.028,
         "day_of_year_cos": -1.0
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 21.8,
@@ -10895,6 +10895,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -10912,8 +10913,7 @@
         "month": 7.0,
         "day_of_year_sin": 0.011,
         "day_of_year_cos": -1.0
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 20.450000000000003,
@@ -10939,6 +10939,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 16.1,
         "rain_00_01_sum": 16.6,
@@ -10956,8 +10957,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.006,
         "day_of_year_cos": -1.0
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 20.5,
@@ -10983,6 +10983,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 1.7,
         "rain_00_01_sum": 0.7,
@@ -11000,8 +11001,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.024,
         "day_of_year_cos": -1.0
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 22.5,
@@ -11027,6 +11027,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -11044,8 +11045,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.041,
         "day_of_year_cos": -0.999
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 22.375,
@@ -11071,6 +11071,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.4,
         "rain_00_01_sum": 0.0,
@@ -11088,8 +11089,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.058,
         "day_of_year_cos": -0.998
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 20.950000000000003,
@@ -11115,6 +11115,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 23.1,
         "rain_00_01_sum": 1.5,
@@ -11132,8 +11133,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.075,
         "day_of_year_cos": -0.997
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 21.6,
@@ -11159,6 +11159,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -11176,8 +11177,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.092,
         "day_of_year_cos": -0.996
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 23.275,
@@ -11203,6 +11203,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.1,
         "rain_00_01_sum": 0.0,
@@ -11220,8 +11221,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.109,
         "day_of_year_cos": -0.994
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 23.175,
@@ -11247,6 +11247,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.2,
         "rain_00_01_sum": 0.0,
@@ -11264,8 +11265,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.127,
         "day_of_year_cos": -0.992
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 23.35,
@@ -11291,6 +11291,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -11308,8 +11309,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.144,
         "day_of_year_cos": -0.99
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 23.875,
@@ -11335,6 +11335,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -11352,8 +11353,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.161,
         "day_of_year_cos": -0.987
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 25.9,
@@ -11379,6 +11379,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -11396,8 +11397,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.178,
         "day_of_year_cos": -0.984
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 23.925,
@@ -11423,6 +11423,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -11440,8 +11441,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.194,
         "day_of_year_cos": -0.981
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 24.4,
@@ -11467,6 +11467,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.5,
         "rain_00_01_sum": 0.0,
@@ -11484,8 +11485,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.211,
         "day_of_year_cos": -0.977
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 26.325000000000003,
@@ -11511,6 +11511,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -11528,8 +11529,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.228,
         "day_of_year_cos": -0.974
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 24.775,
@@ -11555,6 +11555,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.1,
         "rain_00_01_sum": 0.4,
@@ -11572,8 +11573,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.245,
         "day_of_year_cos": -0.97
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 25.25,
@@ -11599,6 +11599,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -11616,8 +11617,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.261,
         "day_of_year_cos": -0.965
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 27.05,
@@ -11643,6 +11643,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -11660,8 +11661,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.278,
         "day_of_year_cos": -0.961
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 26.75,
@@ -11687,6 +11687,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -11704,8 +11705,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.294,
         "day_of_year_cos": -0.956
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 26.9,
@@ -11731,6 +11731,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -11748,8 +11749,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.311,
         "day_of_year_cos": -0.95
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 26.725,
@@ -11775,6 +11775,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -11792,8 +11793,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.327,
         "day_of_year_cos": -0.945
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 26.5,
@@ -11819,6 +11819,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -11836,8 +11837,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.343,
         "day_of_year_cos": -0.939
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 25.9,
@@ -11863,6 +11863,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -11880,8 +11881,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.359,
         "day_of_year_cos": -0.933
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 25.825000000000003,
@@ -11907,6 +11907,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -11924,8 +11925,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.375,
         "day_of_year_cos": -0.927
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 26.075,
@@ -11951,6 +11951,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -11968,8 +11969,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.391,
         "day_of_year_cos": -0.92
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 25.025,
@@ -11995,6 +11995,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -12012,8 +12013,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.407,
         "day_of_year_cos": -0.913
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 23.775,
@@ -12039,6 +12039,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.8,
         "rain_00_01_sum": 0.1,
@@ -12056,8 +12057,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.423,
         "day_of_year_cos": -0.906
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 24.9,
@@ -12083,6 +12083,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -12100,8 +12101,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.438,
         "day_of_year_cos": -0.899
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 22.675,
@@ -12127,6 +12127,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 21.3,
         "rain_00_01_sum": 0.7,
@@ -12144,8 +12145,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.454,
         "day_of_year_cos": -0.891
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 25.025,
@@ -12171,6 +12171,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -12188,8 +12189,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.469,
         "day_of_year_cos": -0.883
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 25.450000000000003,
@@ -12215,6 +12215,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -12232,8 +12233,7 @@
         "month": 7.0,
         "day_of_year_sin": -0.484,
         "day_of_year_cos": -0.875
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 25.175,
@@ -12259,6 +12259,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -12276,8 +12277,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.499,
         "day_of_year_cos": -0.867
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 26.15,
@@ -12303,6 +12303,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.7,
         "rain_00_01_sum": 0.1,
@@ -12320,8 +12321,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.514,
         "day_of_year_cos": -0.858
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 25.475,
@@ -12347,6 +12347,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 1.0,
         "rain_00_01_sum": 0.0,
@@ -12364,8 +12365,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.529,
         "day_of_year_cos": -0.849
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 25.975,
@@ -12391,6 +12391,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.7,
         "rain_00_01_sum": 0.0,
@@ -12408,8 +12409,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.543,
         "day_of_year_cos": -0.84
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 24.85,
@@ -12435,6 +12435,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.1,
         "rain_00_01_sum": 0.0,
@@ -12452,8 +12453,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.557,
         "day_of_year_cos": -0.83
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 25.775,
@@ -12479,6 +12479,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -12496,8 +12497,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.572,
         "day_of_year_cos": -0.82
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 27.175,
@@ -12523,6 +12523,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -12540,8 +12541,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.586,
         "day_of_year_cos": -0.811
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 25.275,
@@ -12567,6 +12567,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -12584,8 +12585,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.6,
         "day_of_year_cos": -0.8
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 24.55,
@@ -12611,6 +12611,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.7,
         "rain_00_01_sum": 0.0,
@@ -12628,8 +12629,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.613,
         "day_of_year_cos": -0.79
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 24.9,
@@ -12655,6 +12655,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.2,
         "rain_00_01_sum": 0.0,
@@ -12672,8 +12673,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.627,
         "day_of_year_cos": -0.779
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 19.875,
@@ -12699,6 +12699,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -12716,8 +12717,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.64,
         "day_of_year_cos": -0.768
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 23.5,
@@ -12743,6 +12743,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -12760,8 +12761,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.653,
         "day_of_year_cos": -0.757
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 23.325000000000003,
@@ -12787,6 +12787,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.6,
         "rain_00_01_sum": 0.0,
@@ -12804,8 +12805,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.666,
         "day_of_year_cos": -0.746
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 24.0,
@@ -12831,6 +12831,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -12848,8 +12849,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.679,
         "day_of_year_cos": -0.734
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 24.875000000000004,
@@ -12875,6 +12875,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -12892,8 +12893,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.691,
         "day_of_year_cos": -0.723
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 25.375,
@@ -12919,6 +12919,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 1.2,
         "rain_00_01_sum": 0.0,
@@ -12936,8 +12937,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.704,
         "day_of_year_cos": -0.711
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 25.375,
@@ -12963,6 +12963,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -12980,8 +12981,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.716,
         "day_of_year_cos": -0.698
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 25.200000000000003,
@@ -13007,6 +13007,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -13024,8 +13025,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.728,
         "day_of_year_cos": -0.686
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 25.275,
@@ -13051,6 +13051,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -13068,8 +13069,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.739,
         "day_of_year_cos": -0.673
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 26.125,
@@ -13095,6 +13095,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -13112,8 +13113,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.751,
         "day_of_year_cos": -0.66
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 24.3,
@@ -13139,6 +13139,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.3,
         "rain_00_01_sum": 0.0,
@@ -13156,8 +13157,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.762,
         "day_of_year_cos": -0.647
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 25.2,
@@ -13183,6 +13183,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -13200,8 +13201,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.773,
         "day_of_year_cos": -0.634
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 26.825000000000003,
@@ -13227,6 +13227,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -13244,8 +13245,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.784,
         "day_of_year_cos": -0.621
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 27.025,
@@ -13271,6 +13271,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -13288,8 +13289,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.794,
         "day_of_year_cos": -0.607
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 26.125,
@@ -13315,6 +13315,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.7,
         "rain_00_01_sum": 0.0,
@@ -13332,8 +13333,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.805,
         "day_of_year_cos": -0.594
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 26.025,
@@ -13359,6 +13359,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -13376,8 +13377,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.815,
         "day_of_year_cos": -0.58
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 23.275,
@@ -13403,6 +13403,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 9.5,
         "rain_00_01_sum": 0.5,
@@ -13420,8 +13421,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.825,
         "day_of_year_cos": -0.565
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 23.8,
@@ -13447,6 +13447,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 6.2,
         "rain_00_01_sum": 1.1,
@@ -13464,8 +13465,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.834,
         "day_of_year_cos": -0.551
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 23.825,
@@ -13491,6 +13491,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.4,
         "rain_00_01_sum": 0.2,
@@ -13508,8 +13509,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.844,
         "day_of_year_cos": -0.537
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 23.925000000000004,
@@ -13535,6 +13535,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 13.1,
         "rain_00_01_sum": 15.9,
@@ -13552,8 +13553,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.853,
         "day_of_year_cos": -0.522
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 24.025,
@@ -13579,6 +13579,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "春夏",
+      "retrospective_month_score_cap": 0,
       "scientific_features": {
         "prev_18_23_rain_sum": 2.0,
         "rain_00_01_sum": 0.0,
@@ -13596,8 +13597,7 @@
         "month": 8.0,
         "day_of_year_sin": -0.862,
         "day_of_year_cos": -0.507
-      },
-      "retrospective_month_score_cap": 0
+      }
     },
     {
       "temp": 26.0,
@@ -13623,6 +13623,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 10,
       "scientific_features": {
         "prev_18_23_rain_sum": 1.0,
         "rain_00_01_sum": 0.0,
@@ -13640,8 +13641,7 @@
         "month": 9.0,
         "day_of_year_sin": -0.87,
         "day_of_year_cos": -0.493
-      },
-      "retrospective_month_score_cap": 10
+      }
     },
     {
       "temp": 25.875,
@@ -13667,6 +13667,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 10,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -13684,8 +13685,7 @@
         "month": 9.0,
         "day_of_year_sin": -0.879,
         "day_of_year_cos": -0.477
-      },
-      "retrospective_month_score_cap": 10
+      }
     },
     {
       "temp": 23.725,
@@ -13711,6 +13711,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 10,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.2,
         "rain_00_01_sum": 3.2,
@@ -13728,8 +13729,7 @@
         "month": 9.0,
         "day_of_year_sin": -0.887,
         "day_of_year_cos": -0.462
-      },
-      "retrospective_month_score_cap": 10
+      }
     },
     {
       "temp": 22.075000000000003,
@@ -13755,6 +13755,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 10,
       "scientific_features": {
         "prev_18_23_rain_sum": 5.0,
         "rain_00_01_sum": 0.3,
@@ -13772,8 +13773,7 @@
         "month": 9.0,
         "day_of_year_sin": -0.895,
         "day_of_year_cos": -0.447
-      },
-      "retrospective_month_score_cap": 10
+      }
     },
     {
       "temp": 21.725,
@@ -13799,6 +13799,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 10,
       "scientific_features": {
         "prev_18_23_rain_sum": 2.8,
         "rain_00_01_sum": 0.7,
@@ -13816,8 +13817,7 @@
         "month": 9.0,
         "day_of_year_sin": -0.902,
         "day_of_year_cos": -0.432
-      },
-      "retrospective_month_score_cap": 10
+      }
     },
     {
       "temp": 23.200000000000003,
@@ -13843,6 +13843,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 10,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -13860,8 +13861,7 @@
         "month": 9.0,
         "day_of_year_sin": -0.909,
         "day_of_year_cos": -0.416
-      },
-      "retrospective_month_score_cap": 10
+      }
     },
     {
       "temp": 23.05,
@@ -13887,6 +13887,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 10,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.1,
         "rain_00_01_sum": 0.4,
@@ -13904,8 +13905,7 @@
         "month": 9.0,
         "day_of_year_sin": -0.916,
         "day_of_year_cos": -0.4
-      },
-      "retrospective_month_score_cap": 10
+      }
     },
     {
       "temp": 23.8,
@@ -13931,6 +13931,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 10,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.2,
         "rain_00_01_sum": 0.0,
@@ -13948,8 +13949,7 @@
         "month": 9.0,
         "day_of_year_sin": -0.923,
         "day_of_year_cos": -0.384
-      },
-      "retrospective_month_score_cap": 10
+      }
     },
     {
       "temp": 24.450000000000003,
@@ -13975,6 +13975,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 10,
       "scientific_features": {
         "prev_18_23_rain_sum": 20.4,
         "rain_00_01_sum": 17.5,
@@ -13992,8 +13993,7 @@
         "month": 9.0,
         "day_of_year_sin": -0.93,
         "day_of_year_cos": -0.368
-      },
-      "retrospective_month_score_cap": 10
+      }
     },
     {
       "temp": 18.65,
@@ -14019,6 +14019,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 10,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -14036,8 +14037,7 @@
         "month": 9.0,
         "day_of_year_sin": -0.936,
         "day_of_year_cos": -0.352
-      },
-      "retrospective_month_score_cap": 10
+      }
     },
     {
       "temp": 20.525,
@@ -14063,6 +14063,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 10,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -14080,8 +14081,7 @@
         "month": 9.0,
         "day_of_year_sin": -0.942,
         "day_of_year_cos": -0.336
-      },
-      "retrospective_month_score_cap": 10
+      }
     },
     {
       "temp": 22.450000000000003,
@@ -14107,6 +14107,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 10,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -14124,8 +14125,7 @@
         "month": 9.0,
         "day_of_year_sin": -0.947,
         "day_of_year_cos": -0.32
-      },
-      "retrospective_month_score_cap": 10
+      }
     },
     {
       "temp": 24.825000000000003,
@@ -14151,6 +14151,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 10,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.0,
         "rain_00_01_sum": 0.0,
@@ -14168,8 +14169,7 @@
         "month": 9.0,
         "day_of_year_sin": -0.953,
         "day_of_year_cos": -0.304
-      },
-      "retrospective_month_score_cap": 10
+      }
     },
     {
       "temp": 24.8,
@@ -14195,6 +14195,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 10,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.1,
         "rain_00_01_sum": 0.0,
@@ -14212,8 +14213,7 @@
         "month": 9.0,
         "day_of_year_sin": -0.958,
         "day_of_year_cos": -0.287
-      },
-      "retrospective_month_score_cap": 10
+      }
     },
     {
       "temp": 21.95,
@@ -14239,6 +14239,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 10,
       "scientific_features": {
         "prev_18_23_rain_sum": 1.9,
         "rain_00_01_sum": 0.0,
@@ -14256,8 +14257,7 @@
         "month": 9.0,
         "day_of_year_sin": -0.963,
         "day_of_year_cos": -0.271
-      },
-      "retrospective_month_score_cap": 10
+      }
     },
     {
       "temp": 20.95,
@@ -14283,6 +14283,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 10,
       "scientific_features": {
         "prev_18_23_rain_sum": 1.5,
         "rain_00_01_sum": 0.6,
@@ -14300,8 +14301,7 @@
         "month": 9.0,
         "day_of_year_sin": -0.967,
         "day_of_year_cos": -0.254
-      },
-      "retrospective_month_score_cap": 10
+      }
     },
     {
       "temp": 20.375,
@@ -14327,6 +14327,7 @@
       "retrospective_upper_percent": null,
       "retrospective_baseline_probability": 0.0329,
       "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 10,
       "scientific_features": {
         "prev_18_23_rain_sum": 0.3,
         "rain_00_01_sum": 0.0,
@@ -14344,8 +14345,7 @@
         "month": 9.0,
         "day_of_year_sin": -0.971,
         "day_of_year_cos": -0.237
-      },
-      "retrospective_month_score_cap": 10
+      }
     },
     {
       "temp": 21.75,
@@ -14468,23 +14468,23 @@
       "date": "2026-09-23"
     },
     {
-      "temp": 21.025,
-      "humidity": 89.75,
-      "wind": 1.375,
-      "cloud": 45.0,
-      "rain": 0.0,
+      "temp": 21.25,
+      "humidity": 93.25,
+      "wind": 1.15,
+      "cloud": 88.75,
+      "rain": 0.15,
       "fog_observed": 0,
       "castle_visible": 0,
       "note": null,
-      "fog_probability": 0.693,
-      "castle_probability": 0.196,
-      "fog_score": 79.0,
-      "castle_score": 79.0,
-      "dew_point": 19.28,
-      "dew_spread": 1.75,
-      "event": "FogOnly",
-      "updated_at": "2026-09-23T16:40:43.129020+09:00",
-      "castle_event_probability": 0.038,
+      "fog_probability": 0.353,
+      "castle_probability": 0.086,
+      "fog_score": 85.6,
+      "castle_score": 85.6,
+      "dew_point": 20.12,
+      "dew_spread": 1.13,
+      "event": null,
+      "updated_at": "2026-09-24T14:39:07.050172+09:00",
+      "castle_event_probability": 0.006,
       "date": "2026-09-24"
     }
   ]

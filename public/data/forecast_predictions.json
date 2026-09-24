@@ -1,5 +1,9 @@
 {
+<<<<<<< Updated upstream
   "generated_at": "2026-09-24T14:39:08.595404+09:00",
+=======
+  "generated_at": "2026-09-24T14:39:11.760476+09:00",
+>>>>>>> Stashed changes
   "predictions": [
     {
       "date": "2026-09-25",
@@ -11,9 +15,15 @@
       "weathercode": 1,
       "castle_event_probability": 0.0025,
       "event": "None",
+<<<<<<< Updated upstream
       "legacy_fog_probability": 0.517,
       "legacy_castle_probability": 0.356,
       "legacy_castle_event_probability": 0.043,
+=======
+      "legacy_fog_probability": 0.72,
+      "legacy_castle_probability": 0.469,
+      "legacy_castle_event_probability": 0.189,
+>>>>>>> Stashed changes
       "probability_source": "scientific_castle_lightgbm",
       "probability_source_label": "夜間気象・季節・過去実績AI",
       "expectation_score": 0,
