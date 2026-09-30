@@ -122,6 +122,7 @@ jobs:
         id: dates
         run: |
           echo "today_jst=$(TZ=Asia/Tokyo date +%F)" >> "$GITHUB_OUTPUT"
+          echo "yesterday_jst=$(TZ=Asia/Tokyo date -d 'yesterday' +%F)" >> "$GITHUB_OUTPUT"
           echo "timestamp=$(TZ=Asia/Tokyo date -Iseconds)" >> "$GITHUB_OUTPUT"
 
       - name: Run archive pipeline for today's observations
@@ -138,7 +139,7 @@ jobs:
 
       - name: Refresh public observation history
         run: |
-          python build_daily_history_dataset.py --end-date "${{ steps.dates.outputs.today_jst }}"
+          python build_daily_history_dataset.py --end-date "${{ steps.dates.outputs.yesterday_jst }}"
           python build_history_expectations.py
 
       - name: Copy latest forecast JSON for public site

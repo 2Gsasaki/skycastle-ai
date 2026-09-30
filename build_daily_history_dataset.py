@@ -21,6 +21,12 @@ DEFAULT_OUTPUT = Path("data/analysis/daily_history_2017_2026.csv")
 TZ = ZoneInfo("Asia/Tokyo")
 
 
+def latest_available_date(today: dt.date | None = None) -> dt.date:
+    """Archive APIへ渡す最終日を、日本時間の前日として返す。"""
+    local_today = today or dt.datetime.now(TZ).date()
+    return local_today - dt.timedelta(days=1)
+
+
 def load_positive_dates(history_path: Path, end_date: dt.date) -> set[dt.date]:
     frame = pd.read_csv(history_path)
     frame["date"] = pd.to_datetime(frame["date"], errors="coerce")
@@ -88,11 +94,17 @@ def main() -> None:
     parser.add_argument(
         "--end-date",
         type=dt.date.fromisoformat,
-        default=dt.datetime.now(TZ).date(),
-        help="追加する最終日（初期値は日本時間の当日）",
+        default=latest_available_date(),
+        help="追加する最終日（初期値は日本時間の前日。当日以降は前日までに制限）",
     )
     args = parser.parse_args()
-    end_date = args.end_date
+    archive_limit = latest_available_date()
+    end_date = min(args.end_date, archive_limit)
+    if end_date != args.end_date:
+        print(
+            f"Requested end date {args.end_date} is not complete archive data; "
+            f"using {end_date} instead."
+        )
     if end_date < START_DATE:
         raise ValueError(f"終了日は{START_DATE}以降にしてください。")
 
