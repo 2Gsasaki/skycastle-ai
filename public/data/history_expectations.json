@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T17:24:11.242269+09:00",
+  "generated_at": "2026-10-01T08:38:15.957411+09:00",
   "method": "past_only_model_with_observed_weather",
   "note": "その月より前の記録で学習し、当日の実際の気象条件で振り返った参考値です。",
   "rows": [
@@ -14918,6 +14918,26 @@
         "day_of_year_sin": -1.0,
         "day_of_year_cos": -0.016
       }
+    },
+    {
+      "temp": 16.65,
+      "humidity": 95.5,
+      "wind": 2.475,
+      "cloud": 50.75,
+      "rain": 0.0,
+      "fog_observed": 1,
+      "castle_visible": 1,
+      "note": "1号",
+      "fog_probability": 0.428,
+      "castle_probability": 0.196,
+      "fog_score": 91.3,
+      "castle_score": 91.3,
+      "dew_point": 15.93,
+      "dew_spread": 0.72,
+      "event": null,
+      "updated_at": "2026-10-01T08:37:49.448791+09:00",
+      "castle_event_probability": 0.014,
+      "date": "2026-10-01"
     }
   ]
 }
