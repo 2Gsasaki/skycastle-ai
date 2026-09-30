@@ -1,37 +1,5 @@
 [
   {
-    "date": "2026-10-01",
-    "temp": 17.65,
-    "humidity": 86.5,
-    "wind": 1.75,
-    "cloud": 0.75,
-    "rain": 0.0,
-    "weathercode": 0,
-    "science_features": {
-      "date": "2026-10-01",
-      "prev_18_23_rain_sum": 0.0,
-      "rain_00_01_sum": 0.0,
-      "min_temp_02_04": 16.7,
-      "temp_drop_to_04": 2.4166666666666643,
-      "humidity_05_06_mean": 87.5,
-      "wind_05_06_mean": 1.65,
-      "cloud_05_06_mean": 0.5,
-      "rain_05_06_sum": 0.0,
-      "dew_spread_05_06": 2.088581219034605,
-      "cloud_06_08_mean": 0.6666666666666666,
-      "rain_06_08_sum": 0.0,
-      "wind_06_08_mean": 1.4666666666666668,
-      "hours_since_rain_at_06": 24.0,
-      "visibility_05_06_mean": 510.0,
-      "visibility_05_06_min": 500.0,
-      "visibility_06_08_mean": 1266.6666666666667,
-      "visibility_06_08_min": 500.0,
-      "visibility_change_06_08": 2000.0,
-      "fog_code_hours_05_08": 0,
-      "rain_code_hours_06_08": 0
-    }
-  },
-  {
     "date": "2026-10-02",
     "temp": 17.125,
     "humidity": 80.75,
@@ -445,6 +413,38 @@
       "visibility_change_06_08": -1300.0,
       "fog_code_hours_05_08": 0,
       "rain_code_hours_06_08": 3
+    }
+  },
+  {
+    "date": "2026-10-15",
+    "temp": 14.649999999999999,
+    "humidity": 76.75,
+    "wind": 3.4999999999999996,
+    "cloud": 7.75,
+    "rain": 0.0,
+    "weathercode": 0,
+    "science_features": {
+      "date": "2026-10-15",
+      "prev_18_23_rain_sum": 0.0,
+      "rain_00_01_sum": 0.0,
+      "min_temp_02_04": 12.1,
+      "temp_drop_to_04": 2.6000000000000014,
+      "humidity_05_06_mean": 82.0,
+      "wind_05_06_mean": 3.0999999999999996,
+      "cloud_05_06_mean": 7.5,
+      "rain_05_06_sum": 0.0,
+      "dew_spread_05_06": 3.0143491230574657,
+      "cloud_06_08_mean": 8.333333333333334,
+      "rain_06_08_sum": 0.0,
+      "wind_06_08_mean": 3.6999999999999997,
+      "hours_since_rain_at_06": 15.0,
+      "visibility_05_06_mean": 28410.0,
+      "visibility_05_06_min": 27220.0,
+      "visibility_06_08_mean": 29615.0,
+      "visibility_06_08_min": 29240.0,
+      "visibility_change_06_08": -360.0,
+      "fog_code_hours_05_08": 0,
+      "rain_code_hours_06_08": 0
     }
   }
 ]
