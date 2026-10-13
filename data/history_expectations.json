@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T18:03:46.944956+09:00",
+  "generated_at": "2026-10-13T18:20:19.011201+09:00",
   "method": "past_only_model_with_observed_weather",
   "note": "その月より前の記録で学習し、当日の実際の気象条件で振り返った参考値です。",
   "rows": [
@@ -15421,7 +15421,51 @@
       "event": null,
       "updated_at": "2026-10-12T18:03:35.688081+09:00",
       "castle_event_probability": 0.003,
-      "date": "2026-10-12"
+      "date": "2026-10-12",
+      "retrospective_probability": 0.0196,
+      "retrospective_expectation_score": 15,
+      "retrospective_upper_percent": null,
+      "retrospective_baseline_probability": 0.0329,
+      "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 60,
+      "scientific_features": {
+        "prev_18_23_rain_sum": 0.0,
+        "rain_00_01_sum": 0.0,
+        "min_temp_02_04": 12.5,
+        "temp_drop_to_04": 4.067,
+        "humidity_05_06_mean": 96.5,
+        "wind_05_06_mean": 3.55,
+        "cloud_05_06_mean": 99.0,
+        "rain_05_06_sum": 0.0,
+        "dew_spread_05_06": 0.543,
+        "cloud_06_08_mean": 96.0,
+        "rain_06_08_sum": 0.0,
+        "wind_06_08_mean": 3.0,
+        "hours_since_rain_at_06": 24.0,
+        "month": 10.0,
+        "day_of_year_sin": -0.982,
+        "day_of_year_cos": 0.189
+      }
+    },
+    {
+      "temp": 17.5,
+      "humidity": 89.25,
+      "wind": 6.549999999999999,
+      "cloud": 25.0,
+      "rain": 0.0,
+      "fog_observed": 0,
+      "castle_visible": 0,
+      "note": null,
+      "fog_probability": 0.859,
+      "castle_probability": 0.901,
+      "fog_score": 75.3,
+      "castle_score": 66.3,
+      "dew_point": 15.71,
+      "dew_spread": 1.79,
+      "event": "Castle",
+      "updated_at": "2026-10-13T18:18:06.198692+09:00",
+      "castle_event_probability": 0.9,
+      "date": "2026-10-13"
     }
   ]
 }
