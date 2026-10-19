@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T06:39:02.853264+09:00",
+  "generated_at": "2026-10-20T08:01:01.032169+09:00",
   "predictions": [
     {
       "date": "2026-10-21",
@@ -86,7 +86,7 @@
       "wind": 7.6,
       "cloud": 58.25,
       "rain": 0.0,
-      "weathercode": 0,
+      "weathercode": 3,
       "castle_event_probability": 0.085,
       "event": "None",
       "legacy_fog_probability": 0.615,

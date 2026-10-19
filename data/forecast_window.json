@@ -70,7 +70,7 @@
     "wind": 7.6,
     "cloud": 58.25,
     "rain": 0.0,
-    "weathercode": 0,
+    "weathercode": 3,
     "science_features": {
       "date": "2026-10-23",
       "prev_18_23_rain_sum": 0.0,
@@ -91,7 +91,7 @@
       "visibility_06_08_mean": 11366.666666666666,
       "visibility_06_08_min": 3600.0,
       "visibility_change_06_08": 15140.0,
-      "fog_code_hours_05_08": 1,
+      "fog_code_hours_05_08": 0,
       "rain_code_hours_06_08": 0
     }
   },
