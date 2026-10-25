@@ -440,9 +440,9 @@
       "hours_since_rain_at_06": 15.0,
       "visibility_05_06_mean": 18440.0,
       "visibility_05_06_min": 14960.0,
-      "visibility_06_08_mean": 26003.333333333332,
-      "visibility_06_08_min": 21920.0,
-      "visibility_change_06_08": 7270.0,
+      "visibility_06_08_mean": 21641.666666666668,
+      "visibility_06_08_min": 20190.0,
+      "visibility_change_06_08": -1730.0,
       "fog_code_hours_05_08": 0,
       "rain_code_hours_06_08": 0
     }
