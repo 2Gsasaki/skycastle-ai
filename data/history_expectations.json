@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T16:38:17.326896+09:00",
+  "generated_at": "2026-11-02T18:19:06.203860+09:00",
   "method": "past_only_model_with_observed_weather",
   "note": "その月より前の記録で学習し、当日の実際の気象条件で振り返った参考値です。",
   "rows": [
@@ -16343,7 +16343,7 @@
       "dew_point": 10.87,
       "dew_spread": 1.85,
       "event": null,
-      "updated_at": "2026-11-02T16:36:05.311849+09:00",
+      "updated_at": "2026-11-02T18:18:55.398029+09:00",
       "castle_event_probability": 0.014,
       "date": "2026-11-02"
     }
