@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T18:07:28.231155+09:00",
+  "generated_at": "2026-11-02T16:38:17.326896+09:00",
   "method": "past_only_model_with_observed_weather",
   "note": "その月より前の記録で学習し、当日の実際の気象条件で振り返った参考値です。",
   "rows": [
@@ -15890,7 +15890,7 @@
     {
       "temp": 13.525,
       "humidity": 75.0,
-      "wind": 3.7500000000000004,
+      "wind": 3.75,
       "cloud": 51.25,
       "rain": 0.0,
       "fog_observed": 0,
@@ -16108,7 +16108,7 @@
       }
     },
     {
-      "temp": 10.149999999999999,
+      "temp": 10.15,
       "humidity": 93.75,
       "wind": 10.125,
       "cloud": 73.5,
@@ -16198,7 +16198,7 @@
     {
       "temp": 14.85,
       "humidity": 84.75,
-      "wind": 15.524999999999999,
+      "wind": 15.525,
       "cloud": 99.75,
       "rain": 0.375,
       "fog_observed": 0,
@@ -16245,7 +16245,7 @@
       "wind": 3.275,
       "cloud": 65.5,
       "rain": 0.85,
-      "fog_observed": 0,
+      "fog_observed": 1,
       "castle_visible": 0,
       "note": null,
       "fog_probability": 0.121,
@@ -16301,7 +16301,51 @@
       "event": null,
       "updated_at": "2026-11-01T18:05:17.366753+09:00",
       "castle_event_probability": 0.33,
-      "date": "2026-11-01"
+      "date": "2026-11-01",
+      "retrospective_probability": 0.0333,
+      "retrospective_expectation_score": 20,
+      "retrospective_upper_percent": 31,
+      "retrospective_baseline_probability": 0.0329,
+      "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
+      "scientific_features": {
+        "prev_18_23_rain_sum": 0.4,
+        "rain_00_01_sum": 0.0,
+        "min_temp_02_04": 8.7,
+        "temp_drop_to_04": 3.7,
+        "humidity_05_06_mean": 97.0,
+        "wind_05_06_mean": 5.85,
+        "cloud_05_06_mean": 96.0,
+        "rain_05_06_sum": 0.0,
+        "dew_spread_05_06": 0.45,
+        "cloud_06_08_mean": 83.333,
+        "rain_06_08_sum": 0.0,
+        "wind_06_08_mean": 6.633,
+        "hours_since_rain_at_06": 8.0,
+        "month": 11.0,
+        "day_of_year_sin": -0.861,
+        "day_of_year_cos": 0.509
+      }
+    },
+    {
+      "temp": 12.725000000000001,
+      "humidity": 88.5,
+      "wind": 12.0,
+      "cloud": 100.0,
+      "rain": 1.1749999999999998,
+      "fog_observed": 0,
+      "castle_visible": 0,
+      "note": null,
+      "fog_probability": 0.013,
+      "castle_probability": 0.819,
+      "fog_score": 53.6,
+      "castle_score": 45.6,
+      "dew_point": 10.87,
+      "dew_spread": 1.85,
+      "event": null,
+      "updated_at": "2026-11-02T16:36:05.311849+09:00",
+      "castle_event_probability": 0.014,
+      "date": "2026-11-02"
     }
   ]
 }
