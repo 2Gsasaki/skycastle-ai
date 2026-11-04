@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T08:21:48.400639+09:00",
+  "generated_at": "2026-11-04T17:59:15.063448+09:00",
   "method": "past_only_model_with_observed_weather",
   "note": "その月より前の記録で学習し、当日の実際の気象条件で振り返った参考値です。",
   "rows": [
@@ -16416,23 +16416,23 @@
       }
     },
     {
-      "temp": 8.825,
-      "humidity": 72.5,
-      "wind": 3.425,
-      "cloud": 29.25,
+      "temp": 7.375,
+      "humidity": 88.75,
+      "wind": 5.7,
+      "cloud": 35.75,
       "rain": 0.0,
       "fog_observed": 1,
       "castle_visible": 1,
       "note": "2号",
-      "fog_probability": 0.618,
-      "castle_probability": 0.929,
-      "fog_score": 43.9,
-      "castle_score": 17.5,
-      "dew_point": 4.15,
-      "dew_spread": 4.67,
-      "event": "Castle",
-      "updated_at": "2026-11-04T08:19:35.854687+09:00",
-      "castle_event_probability": 0.638,
+      "fog_probability": 0.432,
+      "castle_probability": 0.983,
+      "fog_score": 78.3,
+      "castle_score": 75.8,
+      "dew_point": 5.64,
+      "dew_spread": 1.74,
+      "event": null,
+      "updated_at": "2026-11-04T17:59:07.483053+09:00",
+      "castle_event_probability": 0.36,
       "date": "2026-11-04"
     }
   ]
