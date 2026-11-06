@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="福井県大野市・越前大野城の「天空の城」雲海予報。気象データと過去の記録をもとに、明日から14日間の期待指数とAI予測値を公開しています。" />
+    <meta name="theme-color" content="#102a40" />
+    <link rel="canonical" href="https://2gsasaki.github.io/skycastle-ai/" />
+    <title>越前大野城の天空の城・雲海予報｜明日から14日間</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2FMRXT9MHQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-2FMRXT9MHQ");
+    </script>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+        color: #173047;
+        background: #f7f9f9;
+        font-synthesis: none;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; line-height: 1.7; }
+      a { color: inherit; }
+      a:focus-visible { outline: 3px solid #f8bd68; outline-offset: 4px; }
+      .skip-link {
+        position: absolute;
+        left: 1rem;
+        top: -5rem;
+        z-index: 10;
+        padding: .6rem 1rem;
+        background: #fff;
+        color: #173047;
+      }
+      .skip-link:focus { top: 1rem; }
+      .site-header { background: #102a40; color: #fff; }
+      .header-inner, .hero-inner, .content-inner, .footer-inner {
+        width: min(100% - 2.5rem, 1080px);
+        margin-inline: auto;
+      }
+      .header-inner {
+        min-height: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      .brand { font-size: .94rem; font-weight: 800; letter-spacing: .09em; text-decoration: none; }
+      .header-nav { display: flex; flex-wrap: wrap; gap: .3rem 1.1rem; font-size: .88rem; }
+      .header-nav a { text-decoration-thickness: 1px; text-underline-offset: .22em; }
+      .hero {
+        overflow: hidden;
+        background: linear-gradient(145deg, #102a40 0%, #244e65 56%, #c78e68 100%);
+        color: #fff;
+      }
+      .hero-inner {
+        display: grid;
+        grid-template-columns: 1.1fr .9fr;
+        align-items: center;
+        gap: 2.4rem;
+        padding-block: clamp(3.1rem, 7vw, 6.5rem);
+      }
+      .eyebrow { margin: 0 0 .8rem; color: #f9d6a6; font-size: .85rem; font-weight: 800; letter-spacing: .13em; }
+      h1 { margin: 0; font-size: clamp(2.15rem, 3.7vw, 3rem); line-height: 1.3; letter-spacing: .02em; }
+      h1 span { display: block; }
+      @media (min-width: 761px) {
+        h1 .hero-title-main { white-space: nowrap; }
+      }
+      .hero-lead { max-width: 37rem; margin: 1.2rem 0 0; font-size: clamp(1rem, 1.7vw, 1.18rem); }
+      .hero-note { margin: 1rem 0 0; color: #e1e9e9; font-size: .9rem; }
+      .actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
+      .button {
+        display: inline-flex;
+        min-height: 52px;
+        align-items: center;
+        justify-content: center;
+        padding: .7rem 1.4rem;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        font-weight: 800;
+        text-align: center;
+        text-decoration: none;
+        transition: transform .15s ease, background-color .15s ease;
+      }
+      .button:hover { transform: translateY(-2px); }
+      .button-primary { background: #ffd58d; color: #173047; }
+      .button-primary:hover { background: #ffe2ae; }
+      .button-secondary { border-color: rgba(255, 255, 255, .75); color: #fff; }
+      .button-secondary:hover { background: rgba(255, 255, 255, .12); }
+      .hero-art {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 24px;
+        box-shadow: 0 28px 70px rgba(6, 20, 32, .27);
+      }
+      .hero-figure { margin: 0; }
+      .hero-figure figcaption { margin-top: .55rem; color: #e1e9e9; font-size: .78rem; text-align: right; }
+      .content { padding-block: clamp(3rem, 6vw, 5rem); }
+      .section-heading { margin: 0 0 .6rem; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.4; }
+      .section-intro { margin: 0 0 1.8rem; color: #526677; }
+      .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+      .info-card {
+        padding: 1.35rem 1.45rem;
+        border: 1px solid #dfe8eb;
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: 0 8px 28px rgba(16, 42, 64, .04);
+      }
+      .info-card strong { display: block; margin-bottom: .4rem; font-size: 1.07rem; }
+      .info-card p { margin: 0; color: #526677; font-size: .94rem; }
+      .info-card a { color: #165b78; text-underline-offset: .2em; }
+      .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-top: 3.5rem;
+        padding: 2rem;
+        border-radius: 22px;
+        background: #eaf1f1;
+      }
+      .about h2 { margin: 0 0 .7rem; font-size: 1.35rem; }
+      .about p { margin: 0; color: #3c5667; }
+      .about p + p { margin-top: .8rem; }
+      .site-footer { padding: 2rem 0; background: #102a40; color: #d5e1e5; font-size: .88rem; }
+      .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .7rem 1.5rem; }
+      .footer-inner p { margin: 0; }
+      .footer-inner a { text-underline-offset: .2em; }
+      @media (max-width: 760px) {
+        .header-inner { min-height: 64px; }
+        .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+        .hero-figure { width: min(100%, 520px); margin-inline: auto; }
+        .info-grid { grid-template-columns: 1fr; }
+        .about { grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2.5rem; padding: 1.5rem; }
+      }
+      @media (max-width: 480px) {
+        .header-inner, .hero-inner, .content-inner, .footer-inner { width: min(100% - 2rem, 1080px); }
+        .brand { font-size: .82rem; }
+        .header-nav { font-size: .82rem; gap: .5rem; }
+        .actions { flex-direction: column; }
+        .button { width: 100%; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .button { transition: none; }
+        .button:hover { transform: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">本文へ移動</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="./">SKYCASTLE AI</a>
+        <nav class="header-nav" aria-label="サイト内の案内">
+          <a href="forecast.html">14日間の予報</a>
+          <a href="history.html">過去ログ</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <div>
+            <p class="eyebrow">福井県大野市・越前大野城</p>
+            <h1 id="hero-title"><span class="hero-title-main">天空の城越前大野城</span><span>雲海予報</span></h1>
+            <p class="hero-lead">気象データと過去の出現記録から、明日から14日間の「天空の城」の見られやすさを案内します。</p>
+            <p class="hero-note">11月は特に出現しやすい季節。朝のお出かけ前に、最新の予報をご確認ください。</p>
+            <div class="actions">
+              <a class="button button-primary" href="forecast.html">14日間の予報を見る →</a>
+              <a class="button button-secondary" href="history.html">過去の出現記録を見る</a>
+            </div>
+          </div>
+          <figure class="hero-figure">
+            <img class="hero-art" src="img/onocastle.png" alt="雲海の上に浮かぶ越前大野城と、奥に連なる山々" width="734" height="488" fetchpriority="high" />
+            <figcaption>写真：佐々木修氏</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="content" aria-labelledby="guide-title">
+        <div class="content-inner">
+          <h2 class="section-heading" id="guide-title">予報を見る前に</h2>
+          <p class="section-intro">天空の城を見に行く計画に役立つ、3つのポイントです。</p>
+          <div class="info-grid">
+            <div class="info-card">
+              <strong>見る時間と場所</strong>
+              <p>見頃は朝6時から8時頃。<a href="https://www.onocastle.net/skycastle/" target="_blank" rel="noopener noreferrer">天空の城越前大野城の案内</a>で、観賞場所やアクセスもご確認ください。</p>
+            </div>
+            <div class="info-card">
+              <strong>期待指数の意味</strong>
+              <p>0〜100の期待指数は、その日の条件の良さを示す目安です。「80」は出現確率80%という意味ではありません。</p>
+            </div>
+            <div class="info-card">
+              <strong>実際の記録も確認</strong>
+              <p><a href="history.html">過去ログ</a>では、実際に天空の城や霧を確認した日と、気象データによる振り返りを見られます。</p>
+            </div>
+          </div>
+          <div class="about">
+            <div>
+              <h2>この予報について</h2>
+              <p>SkyCastle AIは、夜間の気温差、湿度、風、雲、雨、季節と過去の出現記録をもとに、天空の城が見られる可能性をAIで推定しています。予報は定期的に更新しています。</p>
+            </div>
+            <div>
+              <h2>現在はテスト公開中です</h2>
+              <p>天気予報は変わるため、期待指数やAI予測値も更新されます。これらの数値は出現を保証するものではありません。最新の予報と現地の天気を合わせてご判断ください。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>© 2025 <a href="https://www.2ndgate.jp/" target="_blank" rel="noopener noreferrer">セカンドゲート</a>　|　Powered by Open-Meteo</p>
+        <p><a href="privacy.html">プライバシーポリシー</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
