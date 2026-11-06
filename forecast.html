@@ -65,6 +65,8 @@
       .nav-links {
         display: flex;
         justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 0.5rem;
         margin-bottom: 0.5rem;
       }
       .nav-links.bottom-link {
@@ -563,9 +565,10 @@
           <div id="dialog-content"></div>
         </div>
       </dialog>
-	      <div class="nav-links bottom-link">
+	      <nav class="nav-links bottom-link" aria-label="ページ移動">
+	        <a href="index.html">← トップへ戻る</a>
 	        <a href="history.html">📜 過去ログを見る</a>
-	      </div>
+	      </nav>
       <div class="footer">
         <span class="footer-line primary">© 2025 <a href="https://www.2ndgate.jp/" target="_blank" rel="noreferrer noopener">セカンドゲート</a></span>
         <span class="footer-line secondary">| Powered by Open-Meteo | 推論モデル: SkyCastle AI</span><br />
