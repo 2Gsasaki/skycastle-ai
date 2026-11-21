@@ -1,11 +1,11 @@
 {
   "date": "2026-11-22",
-  "fog_score": 79.0,
-  "castle_score": 79.0,
-  "dew_point": 1.95,
-  "dew_spread": 0.95,
-  "fog_probability": 0.067,
+  "fog_score": 82.2,
+  "castle_score": 82.2,
+  "dew_point": 1.98,
+  "dew_spread": 0.65,
+  "fog_probability": 0.105,
   "castle_probability": 0.202,
-  "castle_event_probability": 0.003,
+  "castle_event_probability": 0.004,
   "event": "None"
 }
