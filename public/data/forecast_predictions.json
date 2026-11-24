@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T06:05:26.007421+09:00",
+  "generated_at": "2026-11-25T08:10:04.040720+09:00",
   "predictions": [
     {
       "date": "2026-11-26",
@@ -11,9 +11,9 @@
       "weathercode": 0,
       "castle_event_probability": 0.0611,
       "event": "None",
-      "legacy_fog_probability": 0.864,
-      "legacy_castle_probability": 0.942,
-      "legacy_castle_event_probability": 0.925,
+      "legacy_fog_probability": 0.761,
+      "legacy_castle_probability": 0.903,
+      "legacy_castle_event_probability": 0.816,
       "probability_source": "scientific_castle_lightgbm",
       "probability_source_label": "夜間気象・季節・過去実績AI",
       "expectation_score": 40,
