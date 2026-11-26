@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T19:44:22.891485+09:00",
+  "generated_at": "2026-11-27T08:15:27.206676+09:00",
   "method": "past_only_model_with_observed_weather",
   "note": "その月より前の記録で学習し、当日の実際の気象条件で振り返った参考値です。",
   "rows": [
@@ -17384,7 +17384,7 @@
       }
     },
     {
-      "temp": -0.19999999999999996,
+      "temp": -0.1999999999999999,
       "humidity": 89.25,
       "wind": 13.05,
       "cloud": 48.75,
@@ -17401,7 +17401,51 @@
       "event": null,
       "updated_at": "2026-11-26T19:44:15.278442+09:00",
       "castle_event_probability": 0.054,
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "retrospective_probability": 0.0484,
+      "retrospective_expectation_score": 30,
+      "retrospective_upper_percent": 23,
+      "retrospective_baseline_probability": 0.0329,
+      "retrospective_reference_season": "秋冬",
+      "retrospective_month_score_cap": 100,
+      "scientific_features": {
+        "prev_18_23_rain_sum": 1.6,
+        "rain_00_01_sum": 0.0,
+        "min_temp_02_04": -0.5,
+        "temp_drop_to_04": 5.333,
+        "humidity_05_06_mean": 92.0,
+        "wind_05_06_mean": 13.05,
+        "cloud_05_06_mean": 38.5,
+        "rain_05_06_sum": 0.0,
+        "dew_spread_05_06": 1.135,
+        "cloud_06_08_mean": 52.333,
+        "rain_06_08_sum": 0.0,
+        "wind_06_08_mean": 13.033,
+        "hours_since_rain_at_06": 9.0,
+        "month": 11.0,
+        "day_of_year_sin": -0.57,
+        "day_of_year_cos": 0.822
+      }
+    },
+    {
+      "temp": 8.925,
+      "humidity": 75.75,
+      "wind": 9.1,
+      "cloud": 11.0,
+      "rain": 0.0,
+      "fog_observed": 1,
+      "castle_visible": 0,
+      "note": null,
+      "fog_probability": 0.435,
+      "castle_probability": 0.893,
+      "fog_score": 41.1,
+      "castle_score": 7.3,
+      "dew_point": 4.87,
+      "dew_spread": 4.05,
+      "event": null,
+      "updated_at": "2026-11-27T08:13:18.933490+09:00",
+      "castle_event_probability": 0.274,
+      "date": "2026-11-27"
     }
   ]
 }
